@@ -1,0 +1,575 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>R语言常用函数 | 欢迎来到刘小贝的小窝</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="刘备备">
+    
+
+    
+    <meta name="description" content="getwd（），setwd（），help（），example（） 第一章，向量  length（），x[  ]，运算自动循环补齐，索引，％％，％╱％，其他运算，str（），attribute（），class（），mode（），seq（from，to，length，by），rep（data，time，each），all（），any（），sqrt（），ABS（），trunc（），round（x，dig">
+<meta name="keywords" content="R语言,数据分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="R语言常用函数">
+<meta property="og:url" content="http://yoursite.com/2017/04/08/R语言常用函数/index.html">
+<meta property="og:site_name" content="欢迎来到刘小贝的小窝">
+<meta property="og:description" content="getwd（），setwd（），help（），example（） 第一章，向量  length（），x[  ]，运算自动循环补齐，索引，％％，％╱％，其他运算，str（），attribute（），class（），mode（），seq（from，to，length，by），rep（data，time，each），all（），any（），sqrt（），ABS（），trunc（），round（x，dig">
+<meta property="og:updated_time" content="2017-04-08T03:23:03.308Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="R语言常用函数">
+<meta name="twitter:description" content="getwd（），setwd（），help（），example（） 第一章，向量  length（），x[  ]，运算自动循环补齐，索引，％％，％╱％，其他运算，str（），attribute（），class（），mode（），seq（from，to，length，by），rep（data，time，each），all（），any（），sqrt（），ABS（），trunc（），round（x，dig">
+
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="欢迎来到刘小贝的小窝" title="欢迎来到刘小贝的小窝"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="欢迎来到刘小贝的小窝">欢迎来到刘小贝的小窝</a></h1>
+				<h2 class="blog-motto">我走的很慢，但我从不后退。</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页 | Home</a></li>
+					
+						<li><a href="/archives">归档 | Archives</a></li>
+					
+						<li><a href="/about">简介 | About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/04/08/R语言常用函数/" title="R语言常用函数" itemprop="url">R语言常用函数</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
+		
+  <p class="article-time">
+    <time datetime="2017-04-08T03:13:28.000Z" itemprop="datePublished"> Published 2017-04-08</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			
+		
+		</div>
+		
+		<pre><code>getwd（），setwd（），help（），example（）
+</code></pre><p>第一章，向量</p>
+<blockquote>
+<p>length（），x[  ]，运算自动循环补齐，索引，％％，％╱％，其他运算，str（），attribute（），class（），mode（），seq（from，to，length，by），rep（data，time，each），all（），any（），sqrt（），ABS（），trunc（），round（x，digit），signif（x，digits），head（），tail（），quantile（x，probs），<br><a id="more"></a><br>sapply(vector，f），is.na（），na.rm(），na.omit（），duplicated（）找重复元素，identical（）判断两向量是否一样<br>x$a[x$a==“”]&lt;-NA定义缺失值<br>变量重编码类似，不再写了。<br>x[筛选条件式]<br>x&lt;12类似运算式返回布尔值<br>which（条件式，arr.ind=T）返回角标，subset（data，条件，select），与或运算。<br>names（），NULL值的应用</p>
+</blockquote>
+<p>第二章 矩阵和数组</p>
+<blockquote>
+<p>matrix（data，byrow，ncol，nrow，dimname=list（））<br>％*％，矩阵索引，和向量运算时矩阵看做按列的向量，which（），cov（），cor（），row（），col（）返回矩阵，apply（data，1╱2，f（x））x为data行或者列，t（），cbind（），rbind（），dim（），z[，，drop=F]取矩阵不转向量，rownames（），colnames（）。<br>数组<br>array（data，c（a，b，c），dimname）<br>索引x[a，b，c]</p>
+</blockquote>
+<p>第三章，列表</p>
+<blockquote>
+<p>list（a，b），索引，$和[[ ]]取一个类别为取的对象本身，[  ]取几个用类别还是list，增删改用索引选取&lt;-定义值，定义NULL为删除，c（list，list）合并列表。length（）获取列表长度，x&lt;-list（）定义空列表，列表转向量unlist（列表名），lapply（列表，f）若函数内列表为vector则强制转为list，sapply（c（list，list），f），names（），<br>递归型列表list（a，e=list（b，c））</p>
+</blockquote>
+<p>第四章，数据框</p>
+<blockquote>
+<p>data.frame（a，b，StringsAsFactors=F）<br>索引  mt[运算式，]，类似矩阵，which（），subset（），sample（data，k，replace=），sqldf（），rbind（），cbind（），complete.cases（dataframe）返回为没一行是否有NA的布尔值，apply（），sapply（）和lapply（）把每一列看做列表，merge（x，y，by.x，by.y），order（，decrease=T），rank（），sort（），as.numeric（），as.matrix╱character╱data.frame╱factor╱logical（），as.Date（date，格式），format（date，format），difftime（s，e，units），transform（data，），str（），summary（），fix（），edit（），attach（）和detach（），cut(a,b,labels)。</p>
+</blockquote>
+<p>第五章 因子和表</p>
+<blockquote>
+<p>factor（data，ordered=T有序，levels，labels），unclass（），tapply（vec，factor╱list（f，f），function），split（vec╱dataframe，factor╱list（）），by（vec╱dataframe，factor，function），aggregate（data，by，function），cut（x，b，labels），table（），subtab（tn，list（行，列）），tabdom（tn，k）</p>
+</blockquote>
+<p>r语言编程结构</p>
+<blockquote>
+<p>function（）｛｝自建函数，函数可以相互套用，函数能读取上层环境中的变量对象，超赋值只能找上层环境中赋值对象赋值。<br>for（i in x）｛｝，while（T）｛｝break跳出循环和next跳到下一次迭代，if（）｛｝else｛｝，ifelse（x ，a，b），if（）｛｝，get（）得到对象，&amp;，|，&amp;&amp;，||，return（），print（），可用list（）存多个对象返回，formals（），body（），quote（），source（），％…％创造自己的二元运算符。</p>
+</blockquote>
+<p>第八章，数学运算</p>
+<blockquote>
+<p>exp（），log(10,exp(1))，log（），logx（），sqrt（），abs（），min（），pmin（），max（），pmax（），mean（），sum（），prod（），cumsum（），cumprod（），crossprod（），round（，digits），solve（a，b），solve（a），t（），eigen（），diag（）取对角线，sweep（x，1╱2，vec，运算符），向量高级运算union（x，y）交，intersect（x，y）并，setdiff（x，y），setequal（x，y），choose（x，n），％in％，combn（x，k）取子集，median（）中位数，sd（）标准差，var（）方差，mad（）绝对中位差，diff（）差分，range（）求值域。</p>
+</blockquote>
+<p>第九第十章</p>
+<blockquote>
+<p>ls（），rm（），exists（），scan（“文件名”，what=“”，sep=“”，encoding=“UTF-8”），readline（），scan（“”），cat（x，sep=“”╱vector），read.table（），f&lt;-file（“文件”，“r”），readLines（f，n=1）建立连接一次读一行，write.table（对象名，“存储文件名”）。</p>
+</blockquote>
+<pre><code>f=file（&quot;&quot;，&quot;a&quot;）
+
+writeLines（string，f）
+
+
+close（f）
+</code></pre><p>r  只读  见Python</p>
+<p>去重：</p>
+<blockquote>
+<p>unre&lt;-re[!duplicated(re$V1),]</p>
+</blockquote>
+<p>detach(“package:RMySQL”)移除函数包</p>
+<p>remove.packages(“RMySQL”)  删除函数包</p>
+<p>生成时间序列向量</p>
+<blockquote>
+<p>seq(as.Date(“2017-03-01”), by=”day”, length.out=31)</p>
+</blockquote>
+<p>转换为unix时间戳</p>
+<blockquote>
+<p>as.numeric(as.POSIXct(date, format=”%Y/%m/%d”))</p>
+</blockquote>
+<p>demo：输出带分秒的时间并转换为时间戳</p>
+<blockquote>
+<p>date&lt;-seq(as.POSIXct(strptime(“2011-03-27 01:30:00”, “%Y-%m-%d %H:%M:%S”)),by=”day”,length.out = 31)<br>as.numeric(as.POSIXct(date, format=”%Y/%m/%d %h:%m:%s”))</p>
+</blockquote>
+<p>列表转矩阵</p>
+<pre><code>do.call(rbind,xxx)
+do.call(cbind,xxx)
+</code></pre><p>table：</p>
+<blockquote>
+<p>prop.table(table(data))  显示频率</p>
+<p>addmargins(mytable) 增加边际和</p>
+</blockquote>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/R语言/">R语言</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/R语言/">R语言</a><a href="/tags/数据分析/">数据分析</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2017/04/08/R语言常用函数/" data-title="R语言常用函数 | 欢迎来到刘小贝的小窝" data-tsina="3861042298" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2017/04/07/随机森林/" title="随机森林">
+  <strong>上一篇：</strong><br/>
+  <span>
+  随机森林</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2017/04/08/sql语句卡片/"  title="sql语句卡片">
+ <strong>下一篇：</strong><br/> 
+ <span>sql语句卡片
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ 
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/R语言/" title="R语言">R语言<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/sql/" title="sql">sql<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/动漫/" title="动漫">动漫<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/算法理解/" title="算法理解">算法理解<sup>2</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/R语言/" title="R语言">R语言<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/数据分析/" title="数据分析">数据分析<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/sql/" title="sql">sql<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/算法/" title="算法">算法<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/R，数据分析/" title="R，数据分析">R，数据分析<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/动漫/" title="动漫">动漫<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/图册/" title="图册">图册<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://bcy.net/start/ 别说我没有给你福利" target="_blank" title="半次元">半次元</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="weiboshow">
+  <p class="asidetitle">Weibo</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=3861042298&verifier=d69fd380&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,我是刘备备，一个热爱数据的分析师. <br/>
+			这是我的博客，欢迎右下角联系我.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/3861042298" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/liubeibei125" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		<a href="http://www.zhihu.com/people/liu-bei-bei-55-36" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:1528843876@qq.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2017 
+		
+		<a href="/about" target="_blank" title="刘备备">刘备备</a>
+		
+		
+		</p>
+</div>
+
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+<!-- add calendar widget -->
+
+
+  </body>
+</html>
+
+
