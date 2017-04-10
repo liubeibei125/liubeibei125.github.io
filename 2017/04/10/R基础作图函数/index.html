@@ -4,24 +4,24 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>demo | 欢迎来到刘小贝的小窝</title>
+    <title>R基础作图函数 | 欢迎来到刘小贝的小窝</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="刘备备">
     
 
     
-    <meta name="description" content="法规和法国父发过火发过火父">
-<meta name="keywords">
+    <meta name="description" content="第一部分  opar&amp;lt;-par（no.readonly=T）复制当前图形配置环境，par（opar）还原。dev.new（），pch，lty，lwd，cex，col，main，xlab，ylab，xlim，ylim，title（），col╱cex╱font.axis╱main╱sub╱lab，bg后景色，fg前景色，axis（side，at，labels，lty，col，las，…）坐标轴函">
+<meta name="keywords" content="R,数据分析">
 <meta property="og:type" content="article">
-<meta property="og:title" content="demo">
-<meta property="og:url" content="http://yoursite.com/2017/04/10/demo/index.html">
+<meta property="og:title" content="R基础作图函数">
+<meta property="og:url" content="http://yoursite.com/2017/04/10/R基础作图函数/index.html">
 <meta property="og:site_name" content="欢迎来到刘小贝的小窝">
-<meta property="og:description" content="法规和法国父发过火发过火父">
-<meta property="og:updated_time" content="2017-04-10T05:22:29.047Z">
+<meta property="og:description" content="第一部分  opar&amp;lt;-par（no.readonly=T）复制当前图形配置环境，par（opar）还原。dev.new（），pch，lty，lwd，cex，col，main，xlab，ylab，xlim，ylim，title（），col╱cex╱font.axis╱main╱sub╱lab，bg后景色，fg前景色，axis（side，at，labels，lty，col，las，…）坐标轴函">
+<meta property="og:updated_time" content="2017-04-10T10:38:17.995Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="demo">
-<meta name="twitter:description" content="法规和法国父发过火发过火父">
+<meta name="twitter:title" content="R基础作图函数">
+<meta name="twitter:description" content="第一部分  opar&amp;lt;-par（no.readonly=T）复制当前图形配置环境，par（opar）还原。dev.new（），pch，lty，lwd，cex，col，main，xlab，ylab，xlim，ylim，title（），col╱cex╱font.axis╱main╱sub╱lab，bg后景色，fg前景色，axis（side，at，labels，lty，col，las，…）坐标轴函">
 
     
     
@@ -47,7 +47,7 @@
 				<h1 class="site-name"><a href="/" title="欢迎来到刘小贝的小窝">欢迎来到刘小贝的小窝</a></h1>
 				<h2 class="blog-motto">我走的很慢，但我从不后退。</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -63,7 +63,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
 						<input type="hidden" name="q" value="site:yoursite.com">
 					</form>
 					
@@ -79,32 +79,89 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/04/10/demo/" title="demo" itemprop="url">demo</a>
+      <a href="/2017/04/10/R基础作图函数/" title="R基础作图函数" itemprop="url">R基础作图函数</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
 		
   <p class="article-time">
-    <time datetime="2017-04-10T05:20:10.000Z" itemprop="datePublished"> Published 2017-04-10</time>
+    <time datetime="2017-04-10T10:32:20.000Z" itemprop="datePublished"> 发表于 2017-04-10</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">Contents</strong>
+			<strong class="toc-title">文章目录</strong>
 		
 			
 		
 		</div>
 		
-		<p>法规和法国父发过火发过火父</p>
+		<p>第一部分</p>
+<blockquote>
+<p>opar&lt;-par（no.readonly=T）复制当前图形配置环境，par（opar）还原。<br>dev.new（），pch，lty，lwd，cex，col，main，xlab，ylab，xlim，ylim，title（），col╱cex╱font.axis╱main╱sub╱lab，bg后景色，fg前景色，axis（side，at，labels，lty，col，las，…）坐标轴函数配合axex=F，xaxt=“n”和yaxt=“n”使用，<br>hmisc包里面的次要坐标轴函数minor.tick（nx，ny，tick.ratio=0.5），参考线abline（h╱v，…），abline（lm（y～x）），参考线legend（“topleft”，inset=0.5，title，c（），…），text（x，y，labels，pos），par（mfrow╱nfcol=c（）），layout（matrix，heights高度比，weights宽度比）。</p>
+</blockquote>
+<p>第二部分，基本作图函数</p>
+<p>简单条形图</p>
+<blockquote>
+<p>barplot（vector，horiz=T水平放置）</p>
+</blockquote>
+<p>堆砌条形图和分组条形图</p>
+<blockquote>
+<p>barplot（matrix，col=c（“”，“”，“”），legend=rownames（matrix）标签为一个字符串向量，beside=T分组默认堆砌）</p>
+</blockquote>
+<p>均值条形图</p>
+<blockquote>
+<p>barplot（数值向量，names.arg=字符向量用作坐标轴标签）</p>
+</blockquote>
+<p>棘状图</p>
+<blockquote>
+<p>vcd包spline（matrix），显示比例情况<br><a id="more"></a><br>饼图<br>pie（vector，labels）</p>
+</blockquote>
+<p>直方图</p>
+<blockquote>
+<p>hist（vector）</p>
+<p>hist（vec，breaks=12╱vec，freq=T频数╱F密度），rug（vec，side）添加轴须图看出数据分布情况，lines（density（vec））添加核密度曲线用来观察连续变量的分布情况。</p>
+</blockquote>
+<p>箱线图</p>
+<blockquote>
+<p>boxplot（vec）</p>
+<p>boxplot（y～x*z，data）分组箱线图</p>
+<p>boxplot（formula，data，notch=T加凹槽，varwidth=T使箱宽度跟样本大小成正比）</p>
+</blockquote>
+<p>点图</p>
+<blockquote>
+<p>dotchart（vec，labels，groups=因子vec，gcolor=“”因子标签颜色，color点颜色），x轴默认1-n补齐。</p>
+</blockquote>
+<p>网格线</p>
+<blockquote>
+<p>grid（nx，ny=NA）</p>
+<p>plot（），type=p画点╱i画线╱b点线╱c将b中点去掉╱h铅垂线╱s阶梯线╱n空图</p>
+<p>lines（x，y）在plot中添加线╱曲线</p>
+</blockquote>
+<p>线段</p>
+<blockquote>
+<p>segments（x，y，x，y，…）</p>
+<p>带箭头线段arrows（x，y，x，y，angle）</p>
+</blockquote>
+<p>气泡图</p>
+<blockquote>
+<blockquote>
+<p>Symbols（x，y，circle=r，inches=0.3）</p>
+</blockquote>
+</blockquote>
   
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/R/">R</a><a href="/tags/数据分析/">数据分析</a>
+  </div>
 
 </div>
 
@@ -112,7 +169,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2017/04/10/demo/" data-title="demo | 欢迎来到刘小贝的小窝" data-tsina="3861042298" class="share clearfix">
+	  <div data-url="http://yoursite.com/2017/04/10/R基础作图函数/" data-title="R基础作图函数 | 欢迎来到刘小贝的小窝" data-tsina="3861042298" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -135,9 +192,9 @@
 
 
 <div class="next">
-<a href="/2017/04/10/hello-world/"  title="Hello World">
+<a href="/2017/04/10/Excel函数/"  title="Excel函数">
  <strong>下一篇：</strong><br/> 
- <span>Hello World
+ <span>Excel函数
 </span>
 </a>
 </div>
@@ -147,26 +204,30 @@
 	
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">Contents</strong>
+  <strong class="toc-title">文章目录</strong>
  
  
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
 
   
 <div class="categorieslist">
-	<p class="asidetitle">Categories</p>
+	<p class="asidetitle">分类</p>
 		<ul>
 		
 		  
 			<li><a href="/categories/R语言/" title="R语言">R语言<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/excel/" title="excel">excel<sup>1</sup></a></li>
 		  
 		
 		  
@@ -189,15 +250,11 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">Tags</p>
+	<p class="asidetitle">标签</p>
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/R语言/" title="R语言">R语言<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/数据分析/" title="数据分析">数据分析<sup>2</sup></a></li>
+				<li><a href="/tags/数据分析/" title="数据分析">数据分析<sup>3</sup></a></li>
 			
 		
 			
@@ -205,7 +262,19 @@
 			
 		
 			
+				<li><a href="/tags/R语言/" title="R语言">R语言<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/算法/" title="算法">算法<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/excel/" title="excel">excel<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/R/" title="R">R<sup>1</sup></a></li>
 			
 		
 			
@@ -225,7 +294,7 @@
 
 
   <div class="linkslist">
-  <p class="asidetitle">Links</p>
+  <p class="asidetitle">友情链接</p>
     <ul>
         
           <li>
@@ -241,7 +310,7 @@
 
 
   <div class="weiboshow">
-  <p class="asidetitle">Weibo</p>
+  <p class="asidetitle">新浪微博</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=3861042298&verifier=d69fd380&dpc=1"></iframe>
 </div>
 
@@ -475,7 +544,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
