@@ -4,24 +4,24 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>随机森林 | 欢迎来到刘小贝的小窝</title>
+    <title>系统聚类 | 欢迎来到刘小贝的小窝</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="刘备备">
     
 
     
-    <meta name="description" content="原理，从训练集中有放回的取出n个样本单元，形成m个训练集，在每一个节点随机抽取m个变量，作为分割该节点的候选变量，每一个节点处的变量数应一致。形成大量决策树，无需剪枝，终端节点的所属类别由节点对应众数决定，对于新样本点，应用所有决策树，选择结果的众数表示预测结果。 简单来说，随机森林就是由多棵CART（Classification And Regression Tree）构成的。对于每棵树，它们">
+    <meta name="description" content="1.单连接法，最短距离法，单连接方法认为，只要单个样本之间的相异度小，就认为两个组就是紧密靠拢的，而不管组间其他样本的相异度如何。这倾向于合并由一系列本身位置（原始数据集中样本的排列）靠近的样本。这种现象称为“链条”（ｃｈａｉｎｎｉｎｇ）是该方法的不足之处。故单连接方法产生的聚类可能破坏类的“紧凑性”。">
 <meta name="keywords" content="算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="随机森林">
-<meta property="og:url" content="http://yoursite.com/2017/04/07/随机森林/index.html">
+<meta property="og:title" content="系统聚类">
+<meta property="og:url" content="http://yoursite.com/2017/04/13/系统聚类/index.html">
 <meta property="og:site_name" content="欢迎来到刘小贝的小窝">
-<meta property="og:description" content="原理，从训练集中有放回的取出n个样本单元，形成m个训练集，在每一个节点随机抽取m个变量，作为分割该节点的候选变量，每一个节点处的变量数应一致。形成大量决策树，无需剪枝，终端节点的所属类别由节点对应众数决定，对于新样本点，应用所有决策树，选择结果的众数表示预测结果。 简单来说，随机森林就是由多棵CART（Classification And Regression Tree）构成的。对于每棵树，它们">
-<meta property="og:updated_time" content="2017-04-08T02:59:50.739Z">
+<meta property="og:description" content="1.单连接法，最短距离法，单连接方法认为，只要单个样本之间的相异度小，就认为两个组就是紧密靠拢的，而不管组间其他样本的相异度如何。这倾向于合并由一系列本身位置（原始数据集中样本的排列）靠近的样本。这种现象称为“链条”（ｃｈａｉｎｎｉｎｇ）是该方法的不足之处。故单连接方法产生的聚类可能破坏类的“紧凑性”。">
+<meta property="og:updated_time" content="2017-04-13T10:18:58.704Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="随机森林">
-<meta name="twitter:description" content="原理，从训练集中有放回的取出n个样本单元，形成m个训练集，在每一个节点随机抽取m个变量，作为分割该节点的候选变量，每一个节点处的变量数应一致。形成大量决策树，无需剪枝，终端节点的所属类别由节点对应众数决定，对于新样本点，应用所有决策树，选择结果的众数表示预测结果。 简单来说，随机森林就是由多棵CART（Classification And Regression Tree）构成的。对于每棵树，它们">
+<meta name="twitter:title" content="系统聚类">
+<meta name="twitter:description" content="1.单连接法，最短距离法，单连接方法认为，只要单个样本之间的相异度小，就认为两个组就是紧密靠拢的，而不管组间其他样本的相异度如何。这倾向于合并由一系列本身位置（原始数据集中样本的排列）靠近的样本。这种现象称为“链条”（ｃｈａｉｎｎｉｎｇ）是该方法的不足之处。故单连接方法产生的聚类可能破坏类的“紧凑性”。">
 
     
     
@@ -79,14 +79,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/04/07/随机森林/" title="随机森林" itemprop="url">随机森林</a>
+      <a href="/2017/04/13/系统聚类/" title="系统聚类" itemprop="url">系统聚类</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
 		
   <p class="article-time">
-    <time datetime="2017-04-07T09:53:43.000Z" itemprop="datePublished"> Published 2017-04-07</time>
+    <time datetime="2017-04-13T10:15:42.000Z" itemprop="datePublished"> Published 2017-04-13</time>
     
   </p>
 </header>
@@ -100,25 +100,40 @@
 		</div>
 		
 		<blockquote>
-<p>原理，从训练集中有放回的取出n个样本单元，形成m个训练集，在每一个节点随机抽取m个变量，作为分割该节点的候选变量，每一个节点处的变量数应一致。形成大量决策树，无需剪枝，终端节点的所属类别由节点对应众数决定，对于新样本点，应用所有决策树，选择结果的众数表示预测结果。</p>
-<p>简单来说，随机森林就是由多棵CART（Classification And Regression Tree）构成的。对于每棵树，它们使用的训练集是从总的训练集中有放回采样出来的，这意味着，总的训练集中的有些样本可能多次出现在一棵树的训练集中，也可能从未出现在一棵树的训练集中。在训练每棵树的节点时，使用的特征是从所有特征中按照一定比例随机地无放回的抽取的，根据Leo Breiman的建议，假设总的特征数量为M，这个比例可以是sqrt(M),1/2sqrt(M),2sqrt(M)。</p>
+<p>1.单连接法，最短距离法，单连接方法认为，只要单个样本之间的相异度小，就认为两个组就是紧密靠拢的，而不管组间其他样本的相异度如何。这倾向于合并由一系列本身位置（原始数据集中样本的排列）靠近的样本。这种现象称为“链条”（ｃｈａｉｎｎｉｎｇ）是该方法的不足之处。故单连接方法产生的聚类可能破坏类的“紧凑性”。<br><a id="more"></a><br>2.完全连接法，最长距离法，类与类之间的最长距离的最短，对异常值敏感</p>
+<p>3.离差平方和法，该方法认为，如果分类正确，同类样本的离差平方和应当较小，类与类的离差平方和应当较大。此方法类似于前面描述的几种聚类方法，都是先将ｎ个样本自成一类，此时Ｓ＝０，然后将其中两类合并成一类，即每次缩小一类。每缩小一类离差平方和Ｓ就要增大，每次都是选择使Ｓ增加最小的两类合并，直至所有的样本归为一类为止。</p>
+<p>采用离差平方和法，样本间的距离必须采用欧氏距离。在实际应用中，离差平方和分类效果较好，应用也比较广泛，对异常值敏感</p>
+<p>4.平均距离法，此聚类方法在定义类与类之间的距离时，既不采用两类之间的最近距离，也不采用最远距离，而是采用介于两者之间的中间距离，故该方法也称为中间距离法。它避免了最远距离与最短距离计算上的弊端</p>
+<p>5.质心法，对异常值不是那么敏感，</p>
 </blockquote>
-<a id="more"></a>
-<p>##因此，随机森林的训练过程可以总结如下：</p>
-<p>1.原始训练集为N，应用bootstrap法有放回地随机抽取k个新的自助样本集，并由此构建k棵分类树，每次未被抽到的样本组成了k个袋外数据；</p>
-<p>2.设有mall个变量，则在每一棵树的每个节点处随机抽取mtry个变量(mtry n mall)，然后在mtry中选择一个最具有分类能力的变量，变量分类的阈值通过检查每一个分类点确定,</p>
-<p>3.每棵树最大限度地生长, 不做任何修剪；</p>
-<p>4.将生成的多棵分类树组成随机森林，用随机森林分类器对新的数据进行判别与分类，分类结果按树分类器的投票多少而定。</p>
+<p>聚类结果的评价</p>
 <blockquote>
-<p>在建立每一棵决策树的过程中，有两点需要注意 - 采样与完全分裂。首先是两个随机采样的过程，random forest对输入的数据要进行行、列的采样。对于行采样，采用有放回的方式，也就是在采样得到的样本集合中，可能有重复的样本。假设输入样本为N个，那么采样的样本也为N个。这样使得在训练的时候，每一棵树的输入样本都不是全部的样本，使得相对不容易出现over-fitting。然后进行列采样，从M个feature中，选择m个(m &lt;&lt; M)。之后就是对采样之后的数据使用完全分裂的方式建立出决策树，这样决策树的某一个叶子节点要么是无法继续分裂的，要么里面的所有样本的都是指向的同一个分类。一般很多的决策树算法都一个重要的步骤 - 剪枝，但是这里不这样干，由于之前的两个随机采样的过程保证了随机性，所以就算不剪枝，也不会出现over-fitting。<br>按这种算法得到的随机森林中的每一棵都是很弱的，但是大家组合起来就很厉害了。我觉得可以这样比喻随机森林算法：每一棵决策树就是一个精通于某一个窄领域的专家（因为我们从M个feature中选择m让每一棵决策树进行学习），这样在随机森林中就有了很多个精通不同领域的专家，对一个新的问题（新的输入数据），可以用不同的角度去看待它，最终由各个专家，投票得到结果。</p>
+<p>迅速评价聚类结果，在上述迭代运算中是很重要的，特别是具有高维特征向量的模式，不能直接看清聚类效果，因此，可考虑用以下几个指标来评价聚类效果：</p>
+<p>聚类中心之间的距离</p>
+<p>距离值大，通常可考虑分为不同类</p>
+<p>聚类域中的样本数目</p>
+<p>样本数目少且聚类中心距离远，可考虑是否为噪声</p>
+<p>聚类域内样本的距离方差</p>
+<p>方差过大的样本可考虑是否属于这一类</p>
 </blockquote>
-<p>###randomForest包</p>
-<pre><code>set.seed（1234）
-randomForest（foumule，data，na.action=，importance=T…)
-importance（fit，type=2）#列出变量的重要度
-predict（fit，data）
-</code></pre><p>##优点<br>1.在当前的很多数据集上，相对其他算法有着很大的优势，表现良好<br>2.它能够处理很高维度（feature很多）的数据，并且不用做特征选择，特征子集是随机选择的<br>3.在训练完后，它能够给出哪些feature比较重要<br>4.模型泛化能力强<br>5.在训练过程中，能够检测到feature间的互相影响<br>6.实现比较简单<br>7.对于不平衡的数据集来说，它可以平衡误差。<br>8.如果有很大一部分的特征遗失，仍可以维持准确度。</p>
-<p>##缺点：<br>1、随机森林已经被证明在某些噪音较大的分类或回归问题上会过拟<br>2、对于有不同取值的属性的数据，取值划分较多的属性会对随机森林产生更大的影响，所以随机森林在这种数据上产出的属性权值是不可信的。</p>
+<p>函数实现</p>
+<pre><code>data&lt;-scale（data）
+d&lt;-dist（data）
+</code></pre><p>确定聚类数Nbclust包中的Nbclust函数</p>
+<pre><code>nc&lt;-Nbclust（data，distance=“euclidean”，min.nc=2，
+max.nc=15，method=“average”）
+table（nc$Best.n［1，］）
+</code></pre><p>聚类函数算法实现</p>
+<pre><code>fit&lt;-hclust（d，method=“”）
+</code></pre><blockquote>
+<p>single 最短距离法，complete 完全联结法（最长距离），average 平均距离，ward 离差平方和，centroid 质心法</p>
+<pre><code>plot（fit）
+cutree（fit，k=5）
+</code></pre></blockquote>
+<p>层次聚类：</p>
+<blockquote>
+<p>优点：1，距离和规则的相似度容易定义，限制少；2，不需要预先制定聚类数；3，可以发现类的层次关系；4，可以聚类成其它形状，不限制为球状聚类，5.只能对连续变量<br>缺点：1，计算复杂度太高；2，奇异值也能产生很大影响；3，算法很可能聚类成链状，4.不适合大数据集</p>
+</blockquote>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -141,7 +156,7 @@ predict（fit，data）
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2017/04/07/随机森林/" data-title="随机森林 | 欢迎来到刘小贝的小窝" data-tsina="3861042298" class="share clearfix">
+	  <div data-url="http://yoursite.com/2017/04/13/系统聚类/" data-title="系统聚类 | 欢迎来到刘小贝的小窝" data-tsina="3861042298" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -155,18 +170,18 @@ predict（fit，data）
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2017/04/07/时间序列分析步骤/" title="时间序列分析步骤">
+ <a href="/2017/04/10/Excel函数/" title="Excel函数">
   <strong>上一篇：</strong><br/>
   <span>
-  时间序列分析步骤</span>
+  Excel函数</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2017/04/08/R语言常用函数/"  title="R语言常用函数">
+<a href="/2017/04/13/关联算法/"  title="关联算法">
  <strong>下一篇：</strong><br/> 
- <span>R语言常用函数
+ <span>关联算法
 </span>
 </a>
 </div>

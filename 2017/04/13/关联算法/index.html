@@ -4,24 +4,24 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>随机森林 | 欢迎来到刘小贝的小窝</title>
+    <title>关联算法 | 欢迎来到刘小贝的小窝</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="刘备备">
     
 
     
-    <meta name="description" content="原理，从训练集中有放回的取出n个样本单元，形成m个训练集，在每一个节点随机抽取m个变量，作为分割该节点的候选变量，每一个节点处的变量数应一致。形成大量决策树，无需剪枝，终端节点的所属类别由节点对应众数决定，对于新样本点，应用所有决策树，选择结果的众数表示预测结果。 简单来说，随机森林就是由多棵CART（Classification And Regression Tree）构成的。对于每棵树，它们">
+    <meta name="description" content="用于从数据中发现数据项之间的关系。  信任度，把购买商品1记为事件A，购买商品2记为事件B，则1=&amp;gt;2的信任度为同时购买12的次数除以购买1的次数，衡量商品12 的关联度。confidence（item1=&amp;gt;item2）=P（AB）╱P（A）。">
 <meta name="keywords" content="算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="随机森林">
-<meta property="og:url" content="http://yoursite.com/2017/04/07/随机森林/index.html">
+<meta property="og:title" content="关联算法">
+<meta property="og:url" content="http://yoursite.com/2017/04/13/关联算法/index.html">
 <meta property="og:site_name" content="欢迎来到刘小贝的小窝">
-<meta property="og:description" content="原理，从训练集中有放回的取出n个样本单元，形成m个训练集，在每一个节点随机抽取m个变量，作为分割该节点的候选变量，每一个节点处的变量数应一致。形成大量决策树，无需剪枝，终端节点的所属类别由节点对应众数决定，对于新样本点，应用所有决策树，选择结果的众数表示预测结果。 简单来说，随机森林就是由多棵CART（Classification And Regression Tree）构成的。对于每棵树，它们">
-<meta property="og:updated_time" content="2017-04-08T02:59:50.739Z">
+<meta property="og:description" content="用于从数据中发现数据项之间的关系。  信任度，把购买商品1记为事件A，购买商品2记为事件B，则1=&amp;gt;2的信任度为同时购买12的次数除以购买1的次数，衡量商品12 的关联度。confidence（item1=&amp;gt;item2）=P（AB）╱P（A）。">
+<meta property="og:updated_time" content="2017-04-13T10:24:57.260Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="随机森林">
-<meta name="twitter:description" content="原理，从训练集中有放回的取出n个样本单元，形成m个训练集，在每一个节点随机抽取m个变量，作为分割该节点的候选变量，每一个节点处的变量数应一致。形成大量决策树，无需剪枝，终端节点的所属类别由节点对应众数决定，对于新样本点，应用所有决策树，选择结果的众数表示预测结果。 简单来说，随机森林就是由多棵CART（Classification And Regression Tree）构成的。对于每棵树，它们">
+<meta name="twitter:title" content="关联算法">
+<meta name="twitter:description" content="用于从数据中发现数据项之间的关系。  信任度，把购买商品1记为事件A，购买商品2记为事件B，则1=&amp;gt;2的信任度为同时购买12的次数除以购买1的次数，衡量商品12 的关联度。confidence（item1=&amp;gt;item2）=P（AB）╱P（A）。">
 
     
     
@@ -79,14 +79,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/04/07/随机森林/" title="随机森林" itemprop="url">随机森林</a>
+      <a href="/2017/04/13/关联算法/" title="关联算法" itemprop="url">关联算法</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
 		
   <p class="article-time">
-    <time datetime="2017-04-07T09:53:43.000Z" itemprop="datePublished"> Published 2017-04-07</time>
+    <time datetime="2017-04-13T10:20:43.000Z" itemprop="datePublished"> Published 2017-04-13</time>
     
   </p>
 </header>
@@ -99,26 +99,27 @@
 		
 		</div>
 		
-		<blockquote>
-<p>原理，从训练集中有放回的取出n个样本单元，形成m个训练集，在每一个节点随机抽取m个变量，作为分割该节点的候选变量，每一个节点处的变量数应一致。形成大量决策树，无需剪枝，终端节点的所属类别由节点对应众数决定，对于新样本点，应用所有决策树，选择结果的众数表示预测结果。</p>
-<p>简单来说，随机森林就是由多棵CART（Classification And Regression Tree）构成的。对于每棵树，它们使用的训练集是从总的训练集中有放回采样出来的，这意味着，总的训练集中的有些样本可能多次出现在一棵树的训练集中，也可能从未出现在一棵树的训练集中。在训练每棵树的节点时，使用的特征是从所有特征中按照一定比例随机地无放回的抽取的，根据Leo Breiman的建议，假设总的特征数量为M，这个比例可以是sqrt(M),1/2sqrt(M),2sqrt(M)。</p>
-</blockquote>
-<a id="more"></a>
-<p>##因此，随机森林的训练过程可以总结如下：</p>
-<p>1.原始训练集为N，应用bootstrap法有放回地随机抽取k个新的自助样本集，并由此构建k棵分类树，每次未被抽到的样本组成了k个袋外数据；</p>
-<p>2.设有mall个变量，则在每一棵树的每个节点处随机抽取mtry个变量(mtry n mall)，然后在mtry中选择一个最具有分类能力的变量，变量分类的阈值通过检查每一个分类点确定,</p>
-<p>3.每棵树最大限度地生长, 不做任何修剪；</p>
-<p>4.将生成的多棵分类树组成随机森林，用随机森林分类器对新的数据进行判别与分类，分类结果按树分类器的投票多少而定。</p>
+		<p>用于从数据中发现数据项之间的关系。</p>
 <blockquote>
-<p>在建立每一棵决策树的过程中，有两点需要注意 - 采样与完全分裂。首先是两个随机采样的过程，random forest对输入的数据要进行行、列的采样。对于行采样，采用有放回的方式，也就是在采样得到的样本集合中，可能有重复的样本。假设输入样本为N个，那么采样的样本也为N个。这样使得在训练的时候，每一棵树的输入样本都不是全部的样本，使得相对不容易出现over-fitting。然后进行列采样，从M个feature中，选择m个(m &lt;&lt; M)。之后就是对采样之后的数据使用完全分裂的方式建立出决策树，这样决策树的某一个叶子节点要么是无法继续分裂的，要么里面的所有样本的都是指向的同一个分类。一般很多的决策树算法都一个重要的步骤 - 剪枝，但是这里不这样干，由于之前的两个随机采样的过程保证了随机性，所以就算不剪枝，也不会出现over-fitting。<br>按这种算法得到的随机森林中的每一棵都是很弱的，但是大家组合起来就很厉害了。我觉得可以这样比喻随机森林算法：每一棵决策树就是一个精通于某一个窄领域的专家（因为我们从M个feature中选择m让每一棵决策树进行学习），这样在随机森林中就有了很多个精通不同领域的专家，对一个新的问题（新的输入数据），可以用不同的角度去看待它，最终由各个专家，投票得到结果。</p>
+<p>信任度，把购买商品1记为事件A，购买商品2记为事件B，则1=&gt;2的信任度为同时购买12的次数除以购买1的次数，衡量商品12 的关联度。confidence（item1=&gt;item2）=P（AB）╱P（A）。<br><a id="more"></a><br>支持度，如果商品12的信任度很大，但是在总体集合中同时购买商品12的人并不多，那么信任度的结论并没有什么意义。1=&gt;2的支持度=同时购买商品12的次数除以集合总数，support（item1=&gt;item2）=P（AB）。item2本身的支持度support（item2）=P（B）。</p>
+<p>提升度，<br>lift（item1=&gt;item2）=confidence（item1=&gt;item2）╱support（item2）。</p>
+<p>综上表示，如果用户不做任何推荐购买商品2的概率为support（item2），如果购买了商品1后给用户推荐2，则购买概率为confidence（item1=&gt;item2），提升度大于1，说明通过商品1推荐商品2的购买概率比未推荐前有提高。</p>
 </blockquote>
-<p>###randomForest包</p>
-<pre><code>set.seed（1234）
-randomForest（foumule，data，na.action=，importance=T…)
-importance（fit，type=2）#列出变量的重要度
-predict（fit，data）
-</code></pre><p>##优点<br>1.在当前的很多数据集上，相对其他算法有着很大的优势，表现良好<br>2.它能够处理很高维度（feature很多）的数据，并且不用做特征选择，特征子集是随机选择的<br>3.在训练完后，它能够给出哪些feature比较重要<br>4.模型泛化能力强<br>5.在训练过程中，能够检测到feature间的互相影响<br>6.实现比较简单<br>7.对于不平衡的数据集来说，它可以平衡误差。<br>8.如果有很大一部分的特征遗失，仍可以维持准确度。</p>
-<p>##缺点：<br>1、随机森林已经被证明在某些噪音较大的分类或回归问题上会过拟<br>2、对于有不同取值的属性的数据，取值划分较多的属性会对随机森林产生更大的影响，所以随机森林在这种数据上产出的属性权值是不可信的。</p>
+<p>关联分析实质上就是在集合中找到符合以下条件的关联规则</p>
+<pre><code>itemi=&gt;itemj。
+confidence（itemi=&gt;itemj）&gt;min_cof，
+support（item1=&gt;item2）&gt;min_sup，
+</code></pre><blockquote>
+<p>并且lift&gt;1的关联规则。</p>
+</blockquote>
+<p>arules包里面的apriori函数</p>
+<blockquote>
+<p>数据预处理，如果是疏散矩阵01矩阵，则<br>    a.class&lt;-as（a.matrix，“transactions”）</p>
+<p>如果是分类变量矩阵或数据框，不做处理。</p>
+<p>apriori（data，parameter=list（supp，conf，target=“rules”），appearance=list（rhs=，default=“lhs”）或者appearance=list（lhs=，default=“rhs”）用来筛选关联规则）<br>lhs，rhs表示关联规则itemi=&gt;itemj的左右两边的item。如rhs=“item3”，表示筛选出itemi=&gt;item3的规则。</p>
+<p>inspect（rule）</p>
+<p>Python实现：<a href="http://blog.csdn.net/huruzun/article/details/40835053" target="_blank" rel="external">http://blog.csdn.net/huruzun/article/details/40835053</a></p>
+</blockquote>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -141,7 +142,7 @@ predict（fit，data）
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2017/04/07/随机森林/" data-title="随机森林 | 欢迎来到刘小贝的小窝" data-tsina="3861042298" class="share clearfix">
+	  <div data-url="http://yoursite.com/2017/04/13/关联算法/" data-title="关联算法 | 欢迎来到刘小贝的小窝" data-tsina="3861042298" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -155,18 +156,18 @@ predict（fit，data）
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2017/04/07/时间序列分析步骤/" title="时间序列分析步骤">
+ <a href="/2017/04/13/系统聚类/" title="系统聚类">
   <strong>上一篇：</strong><br/>
   <span>
-  时间序列分析步骤</span>
+  系统聚类</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2017/04/08/R语言常用函数/"  title="R语言常用函数">
+<a href="/2017/04/13/序列关联算法/"  title="序列关联算法">
  <strong>下一篇：</strong><br/> 
- <span>R语言常用函数
+ <span>序列关联算法
 </span>
 </a>
 </div>
