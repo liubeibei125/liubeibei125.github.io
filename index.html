@@ -42,7 +42,7 @@
 				<h1 class="site-name"><a href="/" title="欢迎来到刘小贝的小窝">欢迎来到刘小贝的小窝</a></h1>
 				<h2 class="blog-motto">我走的很慢，但我从不后退。</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -58,7 +58,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
 						<input type="hidden" name="q" value="site:yoursite.com">
 					</form>
 					
@@ -76,148 +76,88 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/04/13/re从零开始的异世界/" title="re从零开始的异世界" itemprop="url">re从零开始的异世界</a>
+      <a href="/2017/04/14/sklearn-knn算法实现/" title="sklearn knn算法实现" itemprop="url">sklearn knn算法实现</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
 		
   <p class="article-time">
-    <time datetime="2017-04-13T10:44:07.000Z" itemprop="datePublished"> Published 2017-04-13</time>
+    <time datetime="2017-04-14T05:52:05.000Z" itemprop="datePublished"> 发表于 2017-04-14</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <p><img src="http://oo19quur7.bkt.clouddn.com/%5BROAME%5D%5B20170413%5D%5B183116%5D%5B0005%5D%5B307982%5D.jpg" alt="Alt text"></p>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2017/04/13/re从零开始的异世界/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/动漫/">动漫</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/动漫/">动漫</a><a href="/tags/图册/">图册</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/04/13/序列关联算法/" title="序列关联算法" itemprop="url">序列关联算法</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
-		
-  <p class="article-time">
-    <time datetime="2017-04-13T10:20:55.000Z" itemprop="datePublished"> Published 2017-04-13</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <blockquote>
-<p>在一组有序的数据列组成的数据集中，经常出现的那些序列组合构成的模式。跟我们所熟知的关联规则挖掘不一样，序列模式挖掘的对象以及结果都是有序的，即数据集中的每个序列的条目在时间或空间上是有序排列的，输出的结果也是有序的。<br>
-        
-        
-        <p class="article-more-link">
-          
-            <a href="/2017/04/13/序列关联算法/#more">Read More</a>
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/算法理解/">算法理解</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/算法/">算法</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/04/13/关联算法/" title="关联算法" itemprop="url">关联算法</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
-		
-  <p class="article-time">
-    <time datetime="2017-04-13T10:20:43.000Z" itemprop="datePublished"> Published 2017-04-13</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>用于从数据中发现数据项之间的关系。</p>
+        <p>KNN 的计算成本很高。</p>
 <blockquote>
-<p>信任度，把购买商品1记为事件A，购买商品2记为事件B，则1=&gt;2的信任度为同时购买12的次数除以购买1的次数，衡量商品12 的关联度。confidence（item1=&gt;item2）=P（AB）╱P（A）。<br>
+<p>变量应该先标准化（normalized），不然会被更高范围的变量偏倚。<br>在使用KNN之前，要在野值去除和噪音去除等前期处理多花功夫。<br>
         
         
         <p class="article-more-link">
           
-            <a href="/2017/04/13/关联算法/#more">Read More</a>
+            <a href="/2017/04/14/sklearn-knn算法实现/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Python/">Python</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/算法/">算法</a><a href="/tags/python/">python</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/04/14/回归分析简单介绍/" title="回归分析简单介绍" itemprop="url">回归分析简单介绍</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
+		
+  <p class="article-time">
+    <time datetime="2017-04-14T05:35:30.000Z" itemprop="datePublished"> 发表于 2017-04-14</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <blockquote>
+<p>回归分析法是在掌握大量观察数据的基础上，利用数理统计方法建立因变量（解释变量）与自变量（响应变量）之间的回归关系函数表达式（称回归方程式）。<br>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2017/04/14/回归分析简单介绍/#more">Read More</a>
           
        </p>
     </div>
@@ -259,26 +199,28 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/04/13/系统聚类/" title="系统聚类" itemprop="url">系统聚类</a>
+      <a href="/2017/04/14/相关与参数检验/" title="相关与参数检验" itemprop="url">相关与参数检验</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
 		
   <p class="article-time">
-    <time datetime="2017-04-13T10:15:42.000Z" itemprop="datePublished"> Published 2017-04-13</time>
+    <time datetime="2017-04-14T05:04:09.000Z" itemprop="datePublished"> 发表于 2017-04-14</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <blockquote>
-<p>1.单连接法，最短距离法，单连接方法认为，只要单个样本之间的相异度小，就认为两个组就是紧密靠拢的，而不管组间其他样本的相异度如何。这倾向于合并由一系列本身位置（原始数据集中样本的排列）靠近的样本。这种现象称为“链条”（ｃｈａｉｎｎｉｎｇ）是该方法的不足之处。故单连接方法产生的聚类可能破坏类的“紧凑性”。<br>
+        <p>相关分析</p>
+<p>1.变量间的相关关系cor（）</p>
+<pre><code>cor.test（x，y，alternative=）
+</code></pre><p>psych包<br>    corr.test（data）<br>
         
         
         <p class="article-more-link">
           
-            <a href="/2017/04/13/系统聚类/#more">Read More</a>
+            <a href="/2017/04/14/相关与参数检验/#more">Read More</a>
           
        </p>
     </div>
@@ -316,30 +258,32 @@
 
    
     
-    <article class="post-expand photo" itemprop="articleBody"> 
+    <article class="post-expand post" itemprop="articleBody"> 
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/04/10/Excel函数/" title="Excel函数" itemprop="url">Excel函数</a>
+      <a href="/2017/04/14/EFA因子分析/" title="EFA因子分析" itemprop="url">EFA因子分析</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
 		
   <p class="article-time">
-    <time datetime="2017-04-10T10:38:01.000Z" itemprop="datePublished"> Published 2017-04-10</time>
+    <time datetime="2017-04-14T05:00:46.000Z" itemprop="datePublished"> 发表于 2017-04-14</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <p>a$2与a2的区别，a$2：a3，前面固定</p>
-<p>若表固定用$a$2：$f$13<br>
+        <blockquote>
+<p>因子分析efa  x=af1+bf2….+e 发现潜在结构</p>
+<p>主成分分析pca   f1=ax1+bx2….+e  数据降纬</p>
+<p>主成分分析是将主要成分表示为原始观察变量的线性组合，而因子分析是将原始观察变量表示为新因子的线性组合，原始观察变量在两种情况下所处的位置不同。<br>
         
         
         <p class="article-more-link">
           
-            <a href="/2017/04/10/Excel函数/#more">Read More</a>
+            <a href="/2017/04/14/EFA因子分析/#more">Read More</a>
           
        </p>
     </div>
@@ -348,13 +292,74 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/excel/">excel</a>
+  <a class="article-category-link" href="/categories/算法理解/">算法理解</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/excel/">excel</a>
+  <span></span> <a href="/tags/算法/">算法</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/04/14/svm简单介绍及实现/" title="svm简单介绍及实现" itemprop="url">svm简单介绍及实现</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
+		
+  <p class="article-time">
+    <time datetime="2017-04-14T04:57:50.000Z" itemprop="datePublished"> 发表于 2017-04-14</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <blockquote>
+<p>svm是在多维空间中找到一个能将全部样本单元分成两类的最优平面，这个平面使两类中的最近点的间距最大，在间距边界的点称为支持向量，分割的超平面位于间距的中间，如果n个变量，最优超平面是n-1维的。<br>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2017/04/14/svm简单介绍及实现/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/算法理解/">算法理解</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/算法/">算法</a>
   </div>
 
 </div>
@@ -377,20 +382,24 @@
 
 
   <nav id="page-nav" class="clearfix">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
   </nav>
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
 
   
 <div class="categorieslist">
-	<p class="asidetitle">Categories</p>
+	<p class="asidetitle">分类</p>
 		<ul>
+		
+		  
+			<li><a href="/categories/Python/" title="Python">Python<sup>1</sup></a></li>
+		  
 		
 		  
 			<li><a href="/categories/R语言/" title="R语言">R语言<sup>3</sup></a></li>
@@ -409,7 +418,7 @@
 		  
 		
 		  
-			<li><a href="/categories/算法理解/" title="算法理解">算法理解<sup>5</sup></a></li>
+			<li><a href="/categories/算法理解/" title="算法理解">算法理解<sup>12</sup></a></li>
 		  
 		
 		</ul>
@@ -420,11 +429,11 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">Tags</p>
+	<p class="asidetitle">标签</p>
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/算法/" title="算法">算法<sup>5</sup></a></li>
+				<li><a href="/tags/算法/" title="算法">算法<sup>13</sup></a></li>
 			
 		
 			
@@ -456,6 +465,10 @@
 			
 		
 			
+				<li><a href="/tags/python/" title="python">python<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/R，数据分析/" title="R，数据分析">R，数据分析<sup>1</sup></a></li>
 			
 		
@@ -464,7 +477,7 @@
 
 
   <div class="linkslist">
-  <p class="asidetitle">Links</p>
+  <p class="asidetitle">友情链接</p>
     <ul>
         
           <li>
@@ -480,7 +493,7 @@
 
 
   <div class="weiboshow">
-  <p class="asidetitle">Weibo</p>
+  <p class="asidetitle">新浪微博</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=3861042298&verifier=d69fd380&dpc=1"></iframe>
 </div>
 
@@ -637,7 +650,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
