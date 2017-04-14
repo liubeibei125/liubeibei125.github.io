@@ -42,7 +42,7 @@
 				<h1 class="site-name"><a href="/" title="欢迎来到刘小贝的小窝">欢迎来到刘小贝的小窝</a></h1>
 				<h2 class="blog-motto">我走的很慢，但我从不后退。</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -58,7 +58,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:yoursite.com">
 					</form>
 					
@@ -76,28 +76,27 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/04/07/随机森林/" title="随机森林" itemprop="url">随机森林</a>
+      <a href="/2017/04/08/r字符处理函数/" title="r字符处理函数" itemprop="url">r字符处理函数</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
 		
   <p class="article-time">
-    <time datetime="2017-04-07T09:53:43.000Z" itemprop="datePublished"> 发表于 2017-04-07</time>
+    <time datetime="2017-04-08T07:48:27.000Z" itemprop="datePublished"> Published 2017-04-08</time>
     
   </p>
 </header>
     <div class="article-content">
         
         <blockquote>
-<p>原理，从训练集中有放回的取出n个样本单元，形成m个训练集，在每一个节点随机抽取m个变量，作为分割该节点的候选变量，每一个节点处的变量数应一致。形成大量决策树，无需剪枝，终端节点的所属类别由节点对应众数决定，对于新样本点，应用所有决策树，选择结果的众数表示预测结果。</p>
-<p>简单来说，随机森林就是由多棵CART（Classification And Regression Tree）构成的。对于每棵树，它们使用的训练集是从总的训练集中有放回采样出来的，这意味着，总的训练集中的有些样本可能多次出现在一棵树的训练集中，也可能从未出现在一棵树的训练集中。在训练每棵树的节点时，使用的特征是从所有特征中按照一定比例随机地无放回的抽取的，根据Leo Breiman的建议，假设总的特征数量为M，这个比例可以是sqrt(M),1/2sqrt(M),2sqrt(M)。</p>
-</blockquote>
+<p>grep（pattern，vec，fixed=T╱F）在字符向量中找pattern返回找到vec［i］中存在pattern字符串的索引i向量，若fixed为F，则pattern为一个正则表达式</p>
+<p>nchar（vec）返回字符串长度<br>
         
         
         <p class="article-more-link">
           
-            <a href="/2017/04/07/随机森林/#more">Read More</a>
+            <a href="/2017/04/08/r字符处理函数/#more">Read More</a>
           
        </p>
     </div>
@@ -106,13 +105,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/算法理解/">算法理解</a>
+  <a class="article-category-link" href="/categories/R语言/">R语言</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/算法/">算法</a>
+  <span></span> <a href="/tags/数据分析/">数据分析</a><a href="/tags/R语言/">R语言</a>
   </div>
 
 </div>
@@ -139,34 +138,26 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/04/07/时间序列分析步骤/" title="时间序列分析步骤" itemprop="url">时间序列分析步骤</a>
+      <a href="/2017/04/08/mysql数据类型/" title="mysql数据类型" itemprop="url">mysql数据类型</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
 		
   <p class="article-time">
-    <time datetime="2017-04-07T08:28:12.000Z" itemprop="datePublished"> 发表于 2017-04-07</time>
+    <time datetime="2017-04-08T06:12:17.000Z" itemprop="datePublished"> Published 2017-04-08</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <blockquote>
-<p>创建时间序列</p>
-</blockquote>
-<pre><code>ts（data，start，end，frequency=12）
-xts包xts（data，date）
-</code></pre><blockquote>
-<p>通过简单移动平均进行平滑处理，可以把抖动的曲线平滑化，从而弱化短期周期变化和随机变化的影响，进而更明显的显示出来长期的变化趋势。<br>简单移动平均</p>
-</blockquote>
-<pre><code>y（t）=（x（t-1)+…+x（t-n））╱n
-</code></pre>
+        <p>mysql数据类型：</p>
+<p><img src="http://oo19quur7.bkt.clouddn.com/clipboard.png" alt="Alt text"></p>
         
         
         <p class="article-more-link">
           
-            <a href="/2017/04/07/时间序列分析步骤/#more">Read More</a>
+            <a href="/2017/04/08/mysql数据类型/#more">Read More</a>
           
        </p>
     </div>
@@ -175,13 +166,203 @@ xts包xts（data，date）
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/算法理解/">算法理解</a>
+  <a class="article-category-link" href="/categories/sql/">sql</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/算法/">算法</a>
+  <span></span> <a href="/tags/sql/">sql</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/04/08/r参考卡片/" title="r参考卡片" itemprop="url">r参考卡片</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
+		
+  <p class="article-time">
+    <time datetime="2017-04-08T05:54:21.000Z" itemprop="datePublished"> Published 2017-04-08</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>1.变量变换</p>
+<pre><code>as.array(x),as.data.frame(x),as.numeric(x),
+as.logical(x),as.complex(x),as.character(x),
+...转换变量类型；使用如下命令可得到全部列表，methods(as)
+factor()：将一个向量转化为一个因子
+</code></pre>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2017/04/08/r参考卡片/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/R语言/">R语言</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/R，数据分析/">R，数据分析</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/04/08/sql语句卡片/" title="sql语句卡片" itemprop="url">sql语句卡片</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
+		
+  <p class="article-time">
+    <time datetime="2017-04-08T05:36:33.000Z" itemprop="datePublished"> Published 2017-04-08</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>基本数据类型</p>
+<blockquote>
+<p>char（），varchar（），float（m，d），decimal（m，d），int，tinyint，date，year，time，datetime，enum（）枚举，text<br>注意tinyint（m） zerofill  0填充<br>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2017/04/08/sql语句卡片/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/sql/">sql</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/sql/">sql</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/04/08/R语言常用函数/" title="R语言常用函数" itemprop="url">R语言常用函数</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
+		
+  <p class="article-time">
+    <time datetime="2017-04-08T03:13:28.000Z" itemprop="datePublished"> Published 2017-04-08</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <pre><code>getwd（），setwd（），help（），example（）
+</code></pre><p>第一章，向量</p>
+<blockquote>
+<p>length（），x[  ]，运算自动循环补齐，索引，％％，％╱％，其他运算，str（），attribute（），class（），mode（），seq（from，to，length，by），rep（data，time，each），all（），any（），sqrt（），ABS（），trunc（），round（x，digit），signif（x，digits），head（），tail（），quantile（x，probs），<br>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2017/04/08/R语言常用函数/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/R语言/">R语言</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/数据分析/">数据分析</a><a href="/tags/R语言/">R语言</a>
   </div>
 
 </div>
@@ -204,24 +385,20 @@ xts包xts（data，date）
 
 
   <nav id="page-nav" class="clearfix">
-    <a class="extend prev" rel="prev" href="/page/4/"><span></span>Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
+    <a class="extend prev" rel="prev" href="/page/4/"><span></span>Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/">Next<span></span></a>
   </nav>
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 
   
 <div class="categorieslist">
-	<p class="asidetitle">分类</p>
+	<p class="asidetitle">Categories</p>
 		<ul>
-		
-		  
-			<li><a href="/categories/Python/" title="Python">Python<sup>1</sup></a></li>
-		  
 		
 		  
 			<li><a href="/categories/R语言/" title="R语言">R语言<sup>3</sup></a></li>
@@ -229,6 +406,10 @@ xts包xts（data，date）
 		
 		  
 			<li><a href="/categories/excel/" title="excel">excel<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/sklearn/" title="sklearn">sklearn<sup>6</sup></a></li>
 		  
 		
 		  
@@ -251,15 +432,23 @@ xts包xts（data，date）
 
   
 <div class="tagslist">
-	<p class="asidetitle">标签</p>
+	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/算法/" title="算法">算法<sup>13</sup></a></li>
+				<li><a href="/tags/算法/" title="算法">算法<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/python/" title="python">python<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/数据分析/" title="数据分析">数据分析<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/R语言/" title="R语言">R语言<sup>2</sup></a></li>
 			
 		
 			
@@ -275,19 +464,11 @@ xts包xts（data，date）
 			
 		
 			
-				<li><a href="/tags/R语言/" title="R语言">R语言<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/excel/" title="excel">excel<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/R/" title="R">R<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/python/" title="python">python<sup>1</sup></a></li>
+				<li><a href="/tags/excel/" title="excel">excel<sup>1</sup></a></li>
 			
 		
 			
@@ -299,7 +480,7 @@ xts包xts（data，date）
 
 
   <div class="linkslist">
-  <p class="asidetitle">友情链接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
@@ -315,7 +496,7 @@ xts包xts（data，date）
 
 
   <div class="weiboshow">
-  <p class="asidetitle">新浪微博</p>
+  <p class="asidetitle">Weibo</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=3861042298&verifier=d69fd380&dpc=1"></iframe>
 </div>
 
@@ -472,7 +653,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 

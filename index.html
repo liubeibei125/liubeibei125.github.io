@@ -42,7 +42,7 @@
 				<h1 class="site-name"><a href="/" title="欢迎来到刘小贝的小窝">欢迎来到刘小贝的小窝</a></h1>
 				<h2 class="blog-motto">我走的很慢，但我从不后退。</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -58,7 +58,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:yoursite.com">
 					</form>
 					
@@ -76,27 +76,25 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/04/14/sklearn-knn算法实现/" title="sklearn knn算法实现" itemprop="url">sklearn knn算法实现</a>
+      <a href="/2017/04/14/sklearn-K均值/" title="sklearn-K均值" itemprop="url">sklearn-K均值</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
 		
   <p class="article-time">
-    <time datetime="2017-04-14T05:52:05.000Z" itemprop="datePublished"> 发表于 2017-04-14</time>
+    <time datetime="2017-04-14T10:17:42.000Z" itemprop="datePublished"> Published 2017-04-14</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <p>KNN 的计算成本很高。</p>
-<blockquote>
-<p>变量应该先标准化（normalized），不然会被更高范围的变量偏倚。<br>在使用KNN之前，要在野值去除和噪音去除等前期处理多花功夫。<br>
+        <p>如果问题中没有指定 k的值，可以通过肘部法则这一技术来估计聚类数量。肘部法则会把不同 k值的<br>成本函数值画出来。随着 k值的增大，平均畸变程度会减小；每个类包含的样本数会减少，于是样本<br>离其重心会更近。但是，随着 值继续增大，平均畸变程度的改善效果会不断减低。 值增大过程<br>中，畸变程度的改善效果下降幅度最大的位置对应的 k值就是肘部。</p>
         
         
         <p class="article-more-link">
           
-            <a href="/2017/04/14/sklearn-knn算法实现/#more">Read More</a>
+            <a href="/2017/04/14/sklearn-K均值/#more">Read More</a>
           
        </p>
     </div>
@@ -105,7 +103,7 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/Python/">Python</a>
+  <a class="article-category-link" href="/categories/sklearn/">sklearn</a>
 </div>
 
 
@@ -138,26 +136,26 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/04/14/回归分析简单介绍/" title="回归分析简单介绍" itemprop="url">回归分析简单介绍</a>
+      <a href="/2017/04/14/sklearn-朴素贝叶斯/" title="sklearn-朴素贝叶斯" itemprop="url">sklearn-朴素贝叶斯</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
 		
   <p class="article-time">
-    <time datetime="2017-04-14T05:35:30.000Z" itemprop="datePublished"> 发表于 2017-04-14</time>
+    <time datetime="2017-04-14T10:14:03.000Z" itemprop="datePublished"> Published 2017-04-14</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <blockquote>
-<p>回归分析法是在掌握大量观察数据的基础上，利用数理统计方法建立因变量（解释变量）与自变量（响应变量）之间的回归关系函数表达式（称回归方程式）。<br>
+        <p>我们选用的朴素贝叶斯分类器类别：MultinomialNB，这个分类器以出现次数作为特征值，我们使用的TF-IDF也能符合这类分布。</p>
+<p>其他的朴素贝叶斯分类器如GaussianNB适用于高斯分布（正态分布）的特征，而BernoulliNB适用于伯努利分布（二值分布）的特征。</p>
         
         
         <p class="article-more-link">
           
-            <a href="/2017/04/14/回归分析简单介绍/#more">Read More</a>
+            <a href="/2017/04/14/sklearn-朴素贝叶斯/#more">Read More</a>
           
        </p>
     </div>
@@ -166,13 +164,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/算法理解/">算法理解</a>
+  <a class="article-category-link" href="/categories/sklearn/">sklearn</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/算法/">算法</a>
+  <span></span> <a href="/tags/算法/">算法</a><a href="/tags/python/">python</a>
   </div>
 
 </div>
@@ -199,28 +197,29 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/04/14/相关与参数检验/" title="相关与参数检验" itemprop="url">相关与参数检验</a>
+      <a href="/2017/04/14/sklearn-决策树/" title="sklearn-决策树" itemprop="url">sklearn-决策树</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
 		
   <p class="article-time">
-    <time datetime="2017-04-14T05:04:09.000Z" itemprop="datePublished"> 发表于 2017-04-14</time>
+    <time datetime="2017-04-14T10:03:16.000Z" itemprop="datePublished"> Published 2017-04-14</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <p>相关分析</p>
-<p>1.变量间的相关关系cor（）</p>
-<pre><code>cor.test（x，y，alternative=）
-</code></pre><p>psych包<br>    corr.test（data）<br>
+        <pre><code>import numpy as np
+import pandas as pd
+from sklearn import tree
+from sklearn import metrics
+</code></pre>
         
         
         <p class="article-more-link">
           
-            <a href="/2017/04/14/相关与参数检验/#more">Read More</a>
+            <a href="/2017/04/14/sklearn-决策树/#more">Read More</a>
           
        </p>
     </div>
@@ -229,13 +228,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/算法理解/">算法理解</a>
+  <a class="article-category-link" href="/categories/sklearn/">sklearn</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/算法/">算法</a>
+  <span></span> <a href="/tags/算法/">算法</a><a href="/tags/python/">python</a>
   </div>
 
 </div>
@@ -262,28 +261,30 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/04/14/EFA因子分析/" title="EFA因子分析" itemprop="url">EFA因子分析</a>
+      <a href="/2017/04/14/sklearn-LR回归/" title="sklearn-LR回归" itemprop="url">sklearn-LR回归</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
 		
   <p class="article-time">
-    <time datetime="2017-04-14T05:00:46.000Z" itemprop="datePublished"> 发表于 2017-04-14</time>
+    <time datetime="2017-04-14T09:56:03.000Z" itemprop="datePublished"> Published 2017-04-14</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <blockquote>
-<p>因子分析efa  x=af1+bf2….+e 发现潜在结构</p>
-<p>主成分分析pca   f1=ax1+bx2….+e  数据降纬</p>
-<p>主成分分析是将主要成分表示为原始观察变量的线性组合，而因子分析是将原始观察变量表示为新因子的线性组合，原始观察变量在两种情况下所处的位置不同。<br>
+        <p>原理参见算法理解模块，关于似然估计，梯度上升</p>
+<pre><code>import numpy as np
+import pandas as pd
+from sklearn import metrics
+from sklearn.linear_model import LogisticRegression
+</code></pre>
         
         
         <p class="article-more-link">
           
-            <a href="/2017/04/14/EFA因子分析/#more">Read More</a>
+            <a href="/2017/04/14/sklearn-LR回归/#more">Read More</a>
           
        </p>
     </div>
@@ -292,13 +293,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/算法理解/">算法理解</a>
+  <a class="article-category-link" href="/categories/sklearn/">sklearn</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/算法/">算法</a>
+  <span></span> <a href="/tags/算法/">算法</a><a href="/tags/python/">python</a>
   </div>
 
 </div>
@@ -325,26 +326,33 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/04/14/svm简单介绍及实现/" title="svm简单介绍及实现" itemprop="url">svm简单介绍及实现</a>
+      <a href="/2017/04/14/sklearn-回归分析/" title="sklearn-回归分析" itemprop="url">sklearn-回归分析</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
 		
   <p class="article-time">
-    <time datetime="2017-04-14T04:57:50.000Z" itemprop="datePublished"> 发表于 2017-04-14</time>
+    <time datetime="2017-04-14T09:49:55.000Z" itemprop="datePublished"> Published 2017-04-14</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <blockquote>
-<p>svm是在多维空间中找到一个能将全部样本单元分成两类的最优平面，这个平面使两类中的最近点的间距最大，在间距边界的点称为支持向量，分割的超平面位于间距的中间，如果n个变量，最优超平面是n-1维的。<br>
+        <p>算法理解有回归理论和R方面的内容，再次不在详细描述</p>
+<pre><code>import numpy as np
+import pandas as pd
+from datetime import date, datetime
+from pandasql import sqldf
+from sklearn import linear_model
+from sklearn import metrics
+import matplotlib.pyplot as plt
+</code></pre>
         
         
         <p class="article-more-link">
           
-            <a href="/2017/04/14/svm简单介绍及实现/#more">Read More</a>
+            <a href="/2017/04/14/sklearn-回归分析/#more">Read More</a>
           
        </p>
     </div>
@@ -353,13 +361,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/算法理解/">算法理解</a>
+  <a class="article-category-link" href="/categories/sklearn/">sklearn</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/算法/">算法</a>
+  <span></span> <a href="/tags/算法/">算法</a><a href="/tags/python/">python</a>
   </div>
 
 </div>
@@ -382,24 +390,20 @@
 
 
   <nav id="page-nav" class="clearfix">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
   </nav>
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 
   
 <div class="categorieslist">
-	<p class="asidetitle">分类</p>
+	<p class="asidetitle">Categories</p>
 		<ul>
-		
-		  
-			<li><a href="/categories/Python/" title="Python">Python<sup>1</sup></a></li>
-		  
 		
 		  
 			<li><a href="/categories/R语言/" title="R语言">R语言<sup>3</sup></a></li>
@@ -407,6 +411,10 @@
 		
 		  
 			<li><a href="/categories/excel/" title="excel">excel<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/sklearn/" title="sklearn">sklearn<sup>6</sup></a></li>
 		  
 		
 		  
@@ -429,15 +437,23 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">标签</p>
+	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/算法/" title="算法">算法<sup>13</sup></a></li>
+				<li><a href="/tags/算法/" title="算法">算法<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/python/" title="python">python<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/数据分析/" title="数据分析">数据分析<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/R语言/" title="R语言">R语言<sup>2</sup></a></li>
 			
 		
 			
@@ -453,19 +469,11 @@
 			
 		
 			
-				<li><a href="/tags/R语言/" title="R语言">R语言<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/excel/" title="excel">excel<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/R/" title="R">R<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/python/" title="python">python<sup>1</sup></a></li>
+				<li><a href="/tags/excel/" title="excel">excel<sup>1</sup></a></li>
 			
 		
 			
@@ -477,7 +485,7 @@
 
 
   <div class="linkslist">
-  <p class="asidetitle">友情链接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
@@ -493,7 +501,7 @@
 
 
   <div class="weiboshow">
-  <p class="asidetitle">新浪微博</p>
+  <p class="asidetitle">Weibo</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=3861042298&verifier=d69fd380&dpc=1"></iframe>
 </div>
 
@@ -650,7 +658,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
