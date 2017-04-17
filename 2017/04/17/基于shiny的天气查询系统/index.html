@@ -4,24 +4,28 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>r字符处理函数 | 欢迎来到刘小贝的小窝</title>
+    <title>基于shiny的天气查询系统 | 欢迎来到刘小贝的小窝</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="刘备备">
     
 
     
-    <meta name="description" content="grep（pattern，vec，fixed=T╱F）在字符向量中找pattern返回找到vec［i］中存在pattern字符串的索引i向量，若fixed为F，则pattern为一个正则表达式 nchar（vec）返回字符串长度">
-<meta name="keywords" content="R语言,数据分析">
+    <meta name="description" content="思想很简单，基于Rvest函数制作爬虫，应用shiny搭建平台展示，源代码如下，测试本地可运行，但deploy到shinyapps出错，若你有好的思路，欢迎与我交流">
+<meta name="keywords" content="R语言,数据分析,shiny">
 <meta property="og:type" content="article">
-<meta property="og:title" content="r字符处理函数">
-<meta property="og:url" content="http://yoursite.com/2017/04/08/r字符处理函数/index.html">
+<meta property="og:title" content="基于shiny的天气查询系统">
+<meta property="og:url" content="http://yoursite.com/2017/04/17/基于shiny的天气查询系统/index.html">
 <meta property="og:site_name" content="欢迎来到刘小贝的小窝">
-<meta property="og:description" content="grep（pattern，vec，fixed=T╱F）在字符向量中找pattern返回找到vec［i］中存在pattern字符串的索引i向量，若fixed为F，则pattern为一个正则表达式 nchar（vec）返回字符串长度">
-<meta property="og:updated_time" content="2017-04-08T07:51:42.532Z">
+<meta property="og:description" content="思想很简单，基于Rvest函数制作爬虫，应用shiny搭建平台展示，源代码如下，测试本地可运行，但deploy到shinyapps出错，若你有好的思路，欢迎与我交流">
+<meta property="og:image" content="http://oo19quur7.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170417170435.png">
+<meta property="og:image" content="http://oo19quur7.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170417170516.png">
+<meta property="og:image" content="http://oo19quur7.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170417170625.png">
+<meta property="og:updated_time" content="2017-04-17T09:10:50.341Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="r字符处理函数">
-<meta name="twitter:description" content="grep（pattern，vec，fixed=T╱F）在字符向量中找pattern返回找到vec［i］中存在pattern字符串的索引i向量，若fixed为F，则pattern为一个正则表达式 nchar（vec）返回字符串长度">
+<meta name="twitter:title" content="基于shiny的天气查询系统">
+<meta name="twitter:description" content="思想很简单，基于Rvest函数制作爬虫，应用shiny搭建平台展示，源代码如下，测试本地可运行，但deploy到shinyapps出错，若你有好的思路，欢迎与我交流">
+<meta name="twitter:image" content="http://oo19quur7.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170417170435.png">
 
     
     
@@ -79,14 +83,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/04/08/r字符处理函数/" title="r字符处理函数" itemprop="url">r字符处理函数</a>
+      <a href="/2017/04/17/基于shiny的天气查询系统/" title="基于shiny的天气查询系统" itemprop="url">基于shiny的天气查询系统</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
 		
   <p class="article-time">
-    <time datetime="2017-04-08T07:48:27.000Z" itemprop="datePublished"> Published 2017-04-08</time>
+    <time datetime="2017-04-17T08:48:50.000Z" itemprop="datePublished"> Published 2017-04-17</time>
     
   </p>
 </header>
@@ -99,18 +103,105 @@
 		
 		</div>
 		
-		<blockquote>
-<p>grep（pattern，vec，fixed=T╱F）在字符向量中找pattern返回找到vec［i］中存在pattern字符串的索引i向量，若fixed为F，则pattern为一个正则表达式</p>
-<p>nchar（vec）返回字符串长度<br><a id="more"></a><br>paste（“x”，1:3，sep=“.”）将字符串连接起来，x.1，x.2，x.3</p>
-<p>substr（vec，start，end）返回一个字符串的子字符串，start，end可以为数值向量</p>
-<p>strsplit（“2016-5-6”，split=“-”，fixed）将字符串按照split的要求分割开，2006，5，6。</p>
-<p>regexpr（pattern，text，fixed）在字符串text中找pattern，返回他在text的第一个子字符串位置索引。</p>
-<p>gregexpr（pattern，text，fixed）返回为查找全部子字符串的起始索引。</p>
-<p>regmatches（data，rules）</p>
-<p>toupper（）大写转换，tolower（）小写转换。</p>
-<p>sub（pattern，replacement，x，fixed），在x中查找pattern，用replacement替换。只查找替换第一个</p>
-<p>gsub（pattern，replacement，x）</p>
-</blockquote>
+		<p>思想很简单，基于Rvest函数制作爬虫，应用shiny搭建平台展示，源代码如下，测试本地可运行，但deploy到shinyapps出错，若你有好的思路，欢迎与我交流</p>
+<a id="more"></a>
+<p>UI端：</p>
+<pre><code>library(shiny)
+library(rvest)
+
+shinyUI(fluidPage(
+
+titlePanel(&quot;weather forecast&quot;),
+#标题
+
+sidebarLayout(
+sidebarPanel(
+  textInput(&quot;city&quot;,&quot;city:&quot;,&quot;河南 商丘 城区&quot;),
+  actionButton(&quot;gocity&quot;, &quot;gocity&quot;),
+  #定义按钮，点击查询天气
+
+  radioButtons(&quot;new&quot;, &quot;new:&quot;,
+               list(&quot;true&quot; = TRUE,
+                    &quot;false&quot; = FALSE
+              )),
+  actionButton(&quot;updata&quot;, &quot;updata&quot;)
+  #定义按钮，点击从中国天气网爬天气信息
+),
+
+
+mainPanel(
+
+tableOutput(&quot;tianqi&quot;))
+#接受服务端输出
+
+   )
+ )
+)
+</code></pre><p>服务端：</p>
+<pre><code>library(shiny)
+library(rvest)
+
+shinyServer(function(input, output) {
+
+datasetInput &lt;- reactive({
+
+  df1()
+ })
+  #接收按钮事件df1
+
+observeEvent(input$gocity, {
+  cat(&quot;Showing&quot;, input$city, &quot;\n&quot;)
+ })
+
+df &lt;- eventReactive(input$gocity, {
+  xx=datasetInput()
+  xx[,input$city]
+
+ })
+# 定义查询城市的按钮事件df
+observeEvent(input$updata, {
+  cat(&quot;Showing&quot;, input$new, &quot;\n&quot;)
+ })
+
+df1 &lt;- eventReactive(input$updata, {
+ web&lt;-read_html(&quot;http://www.weather.com.cn/textFC/henan.shtml&quot;,encoding=&quot;UTF-8&quot;)
+ position&lt;-web %&gt;% html_nodes(&quot;div.conMidtab3&quot;)%&gt;%html_nodes(&quot;a&quot;)%&gt;%html_attr(&quot;href&quot;)
+ position&lt;-na.omit(position)
+ position&lt;-as.vector(position)
+ position&lt;-position[!duplicated(position)]
+
+ tt&lt;-list()
+ for(i in position){
+   web&lt;-read_html(i,encoding = &quot;UTF-8&quot;)
+   pos1&lt;-web%&gt;%html_nodes(&quot;div.crumbs.fl&quot;)%&gt;%html_nodes(&quot;a&quot;)%&gt;%html_text()
+   pos2&lt;-web%&gt;%html_nodes(&quot;div.crumbs.fl&quot;)%&gt;%html_nodes(&quot;span&quot;)%&gt;%html_text()
+   pos2&lt;-pos2[[3]]
+   cityname&lt;-paste(pos1[[1]],pos1[[2]],pos2,sep=&quot; &quot;)
+   tianqi&lt;-web%&gt;%html_nodes(&quot;script&quot;)%&gt;%html_text()
+   tianqi&lt;-tianqi[[4]]
+   rules&lt;-gregexpr(&quot;[0-9]+日[0-9]+时.{10,20}风&quot;,tianqi)
+   tianqi&lt;-regmatches(tianqi,rules)
+   tianqi&lt;-unlist(tianqi)
+   tianqi&lt;-gsub(&quot;[nd][0-9][0-9],&quot;,&quot;&quot;,tianqi)
+   tt[[cityname]]&lt;-tianqi
+ }
+
+ xx&lt;-do.call(cbind,tt)
+
+})
+#定义按钮事件df1，爬虫，爬虫涉及rvest包，正则表达式，xml解析
+#等内容，不在详细备注
+
+
+output$tianqi &lt;- renderTable({
+ df()
+})
+#接收按钮事件df，输出到ui端
+})
+</code></pre><p>本地截图：</p>
+<p><img src="http://oo19quur7.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170417170435.png" alt="Alt text"></p>
+<p><img src="http://oo19quur7.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170417170516.png" alt="Alt text"></p>
+<p><img src="http://oo19quur7.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170417170625.png" alt="Alt text"></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -118,13 +209,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/R语言/">R语言</a>
+  <a class="article-category-link" href="/categories/应用案列/">应用案列</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/R语言/">R语言</a><a href="/tags/数据分析/">数据分析</a>
+  <span></span> <a href="/tags/R语言/">R语言</a><a href="/tags/数据分析/">数据分析</a><a href="/tags/shiny/">shiny</a>
   </div>
 
 </div>
@@ -133,7 +224,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2017/04/08/r字符处理函数/" data-title="r字符处理函数 | 欢迎来到刘小贝的小窝" data-tsina="3861042298" class="share clearfix">
+	  <div data-url="http://yoursite.com/2017/04/17/基于shiny的天气查询系统/" data-title="基于shiny的天气查询系统 | 欢迎来到刘小贝的小窝" data-tsina="3861042298" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -147,21 +238,13 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2017/04/08/mysql数据类型/" title="mysql数据类型">
+ <a href="/2017/04/14/sklearn-K均值/" title="sklearn-K均值">
   <strong>上一篇：</strong><br/>
   <span>
-  mysql数据类型</span>
+  sklearn-K均值</span>
 </a>
 </div>
 
-
-<div class="next">
-<a href="/2017/04/08/为美好的世界献上祝福图册/"  title="为美好的世界献上祝福">
- <strong>下一篇：</strong><br/> 
- <span>为美好的世界献上祝福
-</span>
-</a>
-</div>
 
 </nav>
 
