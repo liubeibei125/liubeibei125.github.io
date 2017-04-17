@@ -4,24 +4,24 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>chaid条件推断树 | 欢迎来到刘小贝的小窝</title>
+    <title>豆瓣相册爬虫 | 欢迎来到刘小贝的小窝</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="刘备备">
     
 
     
-    <meta name="description" content="原理  先假设目标变量和自变量之间相互独立，卡方检验或者方差分析不通过，说明目标变量和自变量之间有显著影响，则该变量可作为节点，再计算相关性，相关性最强的作为本次的决策点，然后用置换检验选择决策点中最好的分割点。">
-<meta name="keywords" content="算法">
+    <meta name="description" content="本次爬取的为豆瓣博主笨笨的小熊的相册，全是温馨的情侣照工具：R，RCurl，xml">
+<meta name="keywords" content="数据分析,R语言">
 <meta property="og:type" content="article">
-<meta property="og:title" content="chaid条件推断树">
-<meta property="og:url" content="http://yoursite.com/2017/04/14/chaid条件推断树/index.html">
+<meta property="og:title" content="豆瓣相册爬虫">
+<meta property="og:url" content="http://yoursite.com/2017/04/17/豆瓣相册爬虫/index.html">
 <meta property="og:site_name" content="欢迎来到刘小贝的小窝">
-<meta property="og:description" content="原理  先假设目标变量和自变量之间相互独立，卡方检验或者方差分析不通过，说明目标变量和自变量之间有显著影响，则该变量可作为节点，再计算相关性，相关性最强的作为本次的决策点，然后用置换检验选择决策点中最好的分割点。">
-<meta property="og:updated_time" content="2017-04-14T04:56:14.558Z">
+<meta property="og:description" content="本次爬取的为豆瓣博主笨笨的小熊的相册，全是温馨的情侣照工具：R，RCurl，xml">
+<meta property="og:updated_time" content="2017-04-17T09:38:23.040Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="chaid条件推断树">
-<meta name="twitter:description" content="原理  先假设目标变量和自变量之间相互独立，卡方检验或者方差分析不通过，说明目标变量和自变量之间有显著影响，则该变量可作为节点，再计算相关性，相关性最强的作为本次的决策点，然后用置换检验选择决策点中最好的分割点。">
+<meta name="twitter:title" content="豆瓣相册爬虫">
+<meta name="twitter:description" content="本次爬取的为豆瓣博主笨笨的小熊的相册，全是温馨的情侣照工具：R，RCurl，xml">
 
     
     
@@ -79,14 +79,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/04/14/chaid条件推断树/" title="chaid条件推断树" itemprop="url">chaid条件推断树</a>
+      <a href="/2017/04/17/豆瓣相册爬虫/" title="豆瓣相册爬虫" itemprop="url">豆瓣相册爬虫</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
 		
   <p class="article-time">
-    <time datetime="2017-04-14T04:54:57.000Z" itemprop="datePublished"> Published 2017-04-14</time>
+    <time datetime="2017-04-17T09:30:55.000Z" itemprop="datePublished"> Published 2017-04-17</time>
     
   </p>
 </header>
@@ -99,18 +99,57 @@
 		
 		</div>
 		
-		<p>原理</p>
-<blockquote>
-<p>先假设目标变量和自变量之间相互独立，卡方检验或者方差分析不通过，说明目标变量和自变量之间有显著影响，则该变量可作为节点，再计算相关性，相关性最强的作为本次的决策点，然后用置换检验选择决策点中最好的分割点。<br><a id="more"></a><br>优点，计算量小。能选出来对目标变量影响高的自变量。</p>
-<p>缺点，更容易形成臃肿的树，也更容易过度拟合。只能二分枝。</p>
-</blockquote>
-<p>r实现，<br>party包中</p>
-<pre><code>ctree（fomule，data，control=ctree.control（））
-</code></pre><p>前剪枝，无后剪枝<br>    minsplit，minbucket，maxdepth</p>
-<p>图</p>
-<pre><code>plot（fit）
-</code></pre><p>预测</p>
-<pre><code>predict（fit，data，type=“prob”）
+		<p>本次爬取的为豆瓣博主笨笨的小熊的相册，全是温馨的情侣照<br>工具：R，RCurl，xml</p>
+<a id="more"></a>
+<pre><code>install.packages(&quot;RCurl&quot;)
+install.packages(&quot;XML&quot;)
+library(RCurl)
+library(XML)
+
+myHttpheader &lt;- c(&quot;User-Agent&quot;=&quot;Mozilla/5.0 
+(Windows; U; Windows NT 5.1; zh-CN; rv:1.9.1.6) &quot;,
+&quot;Accept&quot;=&quot;text/html,application/xhtml+xml,application/
+xml;q=0.9,*/*;q=0.8&quot;,&quot;Accept-Language&quot;=&quot;en-us&quot;,
+&quot;Connection&quot;=&quot;keep-alive&quot;,
+&quot;Accept-Charset&quot;=&quot;GB2312,utf-8;q=0.7,*;q=0.7&quot;)
+#模拟浏览器头部信息
+
+ye&lt;-c(1,seq(18,576,18))
+info&lt;-NULL
+
+for(i in ye){
+url&lt;-paste(&quot;https://www.douban.com/photos/
+album/153818385/?start=&quot;,i,sep=&quot;&quot;)
+web&lt;-getURL(url,httpheader=myHttpheader)
+doc&lt;- htmlTreeParse(web,encoding=&quot;UTF-8&quot;, 
+error=function(...){}, useInternalNodes = TRUE,trim=TRUE)
+node&lt;-getNodeSet(doc, &quot;//div[@class=&apos;photo_wrap&apos;]/a&quot;)
+info=c(info,sapply(node,xmlGetAttr,&quot;href&quot;))
+}
+
+x&lt;-1
+dir.create(&quot;E:/image1/&quot;) 
+for(urlweb in info){
+web1&lt;-getURL(urlweb,httpheader=myHttpheader)
+doc1&lt;- htmlTreeParse(web1,encoding=&quot;UTF-8&quot;, 
+error=function(...){}, useInternalNodes = 
+TRUE,trim=TRUE)
+node1&lt;-getNodeSet(doc1, &quot;//div[@class=&apos;photo-edit&apos;]/a&quot;)
+info1=sapply(node1,xmlGetAttr,&quot;href&quot;)
+web2&lt;-getURL(info1,httpheader=myHttpheader)
+doc2&lt;- htmlTreeParse(web2,encoding=&quot;UTF-8&quot;,
+ error=function(...){}, useInternalNodes = TRUE,trim=TRUE)
+node2&lt;-getNodeSet(doc2, &quot;//td[@id=&apos;pic-viewer&apos;]/a/img&quot;)
+info2=sapply(node2,xmlGetAttr,&quot;src&quot;)
+y&lt;-paste(&quot;E:/image1/&quot;,x,&quot;.jpg&quot;)
+
+#创新点使用下载函数及异常处理
+tryCatch({
+download.file(info2,y,mode=&quot;wb&quot;)
+x&lt;-x+1},error=function(e){
+cat(&quot;ERROR:&quot;,conditionMessage(e),&quot;\n&quot;)
+print(&quot;loser&quot;)})
+}
 </code></pre>  
 	</div>
 		<footer class="article-footer clearfix">
@@ -118,13 +157,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/算法理解/">算法理解</a>
+  <a class="article-category-link" href="/categories/应用案列/">应用案列</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/算法/">算法</a>
+  <span></span> <a href="/tags/数据分析/">数据分析</a><a href="/tags/R语言/">R语言</a>
   </div>
 
 </div>
@@ -133,7 +172,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2017/04/14/chaid条件推断树/" data-title="chaid条件推断树 | 欢迎来到刘小贝的小窝" data-tsina="3861042298" class="share clearfix">
+	  <div data-url="http://yoursite.com/2017/04/17/豆瓣相册爬虫/" data-title="豆瓣相册爬虫 | 欢迎来到刘小贝的小窝" data-tsina="3861042298" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -147,21 +186,13 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2017/04/14/pam聚类/" title="pam聚类">
+ <a href="/2017/04/17/基于shiny的天气查询系统/" title="基于shiny的天气查询系统">
   <strong>上一篇：</strong><br/>
   <span>
-  pam聚类</span>
+  基于shiny的天气查询系统</span>
 </a>
 </div>
 
-
-<div class="next">
-<a href="/2017/04/14/svm简单介绍及实现/"  title="svm简单介绍及实现">
- <strong>下一篇：</strong><br/> 
- <span>svm简单介绍及实现
-</span>
-</a>
-</div>
 
 </nav>
 
