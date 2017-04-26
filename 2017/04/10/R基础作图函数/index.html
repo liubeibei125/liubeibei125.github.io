@@ -1,0 +1,592 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>R基础作图函数 | 欢迎来到数学的世界</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="刘备备">
+    
+
+    
+    <meta name="description" content="第一部分  opar&amp;lt;-par（no.readonly=T）复制当前图形配置环境，par（opar）还原。dev.new（），pch，lty，lwd，cex，col，main，xlab，ylab，xlim，ylim，title（），col╱cex╱font.axis╱main╱sub╱lab，bg后景色，fg前景色，axis（side，at，labels，lty，col，las，…）坐标轴函">
+<meta name="keywords" content="R,数据分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="R基础作图函数">
+<meta property="og:url" content="http://yoursite.com/2017/04/10/R基础作图函数/index.html">
+<meta property="og:site_name" content="欢迎来到数学的世界">
+<meta property="og:description" content="第一部分  opar&amp;lt;-par（no.readonly=T）复制当前图形配置环境，par（opar）还原。dev.new（），pch，lty，lwd，cex，col，main，xlab，ylab，xlim，ylim，title（），col╱cex╱font.axis╱main╱sub╱lab，bg后景色，fg前景色，axis（side，at，labels，lty，col，las，…）坐标轴函">
+<meta property="og:updated_time" content="2017-04-11T00:57:24.258Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="R基础作图函数">
+<meta name="twitter:description" content="第一部分  opar&amp;lt;-par（no.readonly=T）复制当前图形配置环境，par（opar）还原。dev.new（），pch，lty，lwd，cex，col，main，xlab，ylab，xlim，ylim，title（），col╱cex╱font.axis╱main╱sub╱lab，bg后景色，fg前景色，axis（side，at，labels，lty，col，las，…）坐标轴函">
+
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="欢迎来到数学的世界" title="欢迎来到数学的世界"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="欢迎来到数学的世界">欢迎来到数学的世界</a></h1>
+				<h2 class="blog-motto">我走的很慢，但我从不后退。</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页 | Home</a></li>
+					
+						<li><a href="/archives">归档 | Archives</a></li>
+					
+						<li><a href="/about">简介 | About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/04/10/R基础作图函数/" title="R基础作图函数" itemprop="url">R基础作图函数</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
+		
+  <p class="article-time">
+    <time datetime="2017-04-10T10:32:20.000Z" itemprop="datePublished"> Published 2017-04-10</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			
+		
+		</div>
+		
+		<p>第一部分</p>
+<blockquote>
+<p>opar&lt;-par（no.readonly=T）复制当前图形配置环境，par（opar）还原。<br>dev.new（），pch，lty，lwd，cex，col，main，xlab，ylab，xlim，ylim，title（），col╱cex╱font.axis╱main╱sub╱lab，bg后景色，fg前景色，axis（side，at，labels，lty，col，las，…）坐标轴函数配合axex=F，xaxt=“n”和yaxt=“n”使用，<br>hmisc包里面的次要坐标轴函数minor.tick（nx，ny，tick.ratio=0.5），参考线abline（h╱v，…），abline（lm（y～x）），参考线legend（“topleft”，inset=0.5，title，c（），…），text（x，y，labels，pos），par（mfrow╱nfcol=c（）），layout（matrix，heights高度比，weights宽度比）。<br><a id="more"></a><br>第二部分，基本作图函数</p>
+</blockquote>
+<p>简单条形图</p>
+<blockquote>
+<p>barplot（vector，horiz=T水平放置）</p>
+</blockquote>
+<p>堆砌条形图和分组条形图</p>
+<blockquote>
+<p>barplot（matrix，col=c（“”，“”，“”），legend=rownames（matrix）标签为一个字符串向量，beside=T分组默认堆砌）</p>
+</blockquote>
+<p>均值条形图</p>
+<blockquote>
+<p>barplot（数值向量，names.arg=字符向量用作坐标轴标签）</p>
+</blockquote>
+<p>棘状图</p>
+<blockquote>
+<p>vcd包spline（matrix），显示比例情况</p>
+</blockquote>
+<p>饼图</p>
+<blockquote>
+<p>pie（vector，labels）</p>
+</blockquote>
+<p>直方图</p>
+<blockquote>
+<p>hist（vector）</p>
+<p>hist（vec，breaks=12╱vec，freq=T频数╱F密度），rug（vec，side）添加轴须图看出数据分布情况，lines（density（vec））添加核密度曲线用来观察连续变量的分布情况。</p>
+</blockquote>
+<p>箱线图</p>
+<blockquote>
+<p>boxplot（vec）</p>
+<p>boxplot（y～x*z，data）分组箱线图</p>
+<p>boxplot（formula，data，notch=T加凹槽，varwidth=T使箱宽度跟样本大小成正比）</p>
+</blockquote>
+<p>点图</p>
+<blockquote>
+<p>dotchart（vec，labels，groups=因子vec，gcolor=“”因子标签颜色，color点颜色），x轴默认1-n补齐。</p>
+</blockquote>
+<p>网格线</p>
+<blockquote>
+<p>grid（nx，ny=NA）</p>
+<p>plot（），type=p画点╱i画线╱b点线╱c将b中点去掉╱h铅垂线╱s阶梯线╱n空图</p>
+<p>lines（x，y）在plot中添加线╱曲线</p>
+</blockquote>
+<p>线段</p>
+<blockquote>
+<p>segments（x，y，x，y，…）</p>
+<p>带箭头线段arrows（x，y，x，y，angle）</p>
+</blockquote>
+<p>气泡图</p>
+<blockquote>
+<blockquote>
+<p>Symbols（x，y，circle=r，inches=0.3）</p>
+</blockquote>
+</blockquote>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/R/">R</a><a href="/tags/数据分析/">数据分析</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2017/04/10/R基础作图函数/" data-title="R基础作图函数 | 欢迎来到数学的世界" data-tsina="3861042298" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2017/04/08/为美好的世界献上祝福图册/" title="为美好的世界献上祝福">
+  <strong>上一篇：</strong><br/>
+  <span>
+  为美好的世界献上祝福</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2017/04/10/Excel函数/"  title="Excel函数">
+ <strong>下一篇：</strong><br/> 
+ <span>Excel函数
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ 
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/R语言/" title="R语言">R语言<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/excel/" title="excel">excel<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/sklearn/" title="sklearn">sklearn<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/sql/" title="sql">sql<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/动漫/" title="动漫">动漫<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/应用案列/" title="应用案列">应用案列<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/算法理解/" title="算法理解">算法理解<sup>12</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/算法/" title="算法">算法<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/python/" title="python">python<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/R语言/" title="R语言">R语言<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/数据分析/" title="数据分析">数据分析<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/动漫/" title="动漫">动漫<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/sql/" title="sql">sql<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/实战/" title="实战">实战<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/图册/" title="图册">图册<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/shiny/" title="shiny">shiny<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/R，数据分析/" title="R，数据分析">R，数据分析<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/R/" title="R">R<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/excel/" title="excel">excel<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://bcy.net/start/ 别说我没有给你福利" target="_blank" title="半次元">半次元</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="weiboshow">
+  <p class="asidetitle">Weibo</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=3861042298&verifier=d69fd380&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,我是刘备备，一个热爱数据的分析师. <br/>
+			这是我的博客，欢迎右下角联系我.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/3861042298" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/liubeibei125" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		<a href="http://www.zhihu.com/people/liu-bei-bei-55-36" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:1528843876@qq.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2017 
+		
+		<a href="/about" target="_blank" title="刘备备">刘备备</a>
+		
+		
+		</p>
+</div>
+
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?77e3c54cad81ed7b0020dd2bad00c3b1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+<!-- add calendar widget -->
+
+
+  </body>
+</html>
+
+

@@ -1,0 +1,566 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>回归分析简单介绍 | 欢迎来到数学的世界</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="刘备备">
+    
+
+    
+    <meta name="description" content="回归分析法是在掌握大量观察数据的基础上，利用数理统计方法建立因变量（解释变量）与自变量（响应变量）之间的回归关系函数表达式（称回归方程式）。">
+<meta name="keywords" content="算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="回归分析简单介绍">
+<meta property="og:url" content="http://yoursite.com/2017/04/14/回归分析简单介绍/index.html">
+<meta property="og:site_name" content="欢迎来到数学的世界">
+<meta property="og:description" content="回归分析法是在掌握大量观察数据的基础上，利用数理统计方法建立因变量（解释变量）与自变量（响应变量）之间的回归关系函数表达式（称回归方程式）。">
+<meta property="og:updated_time" content="2017-04-14T05:38:09.933Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="回归分析简单介绍">
+<meta name="twitter:description" content="回归分析法是在掌握大量观察数据的基础上，利用数理统计方法建立因变量（解释变量）与自变量（响应变量）之间的回归关系函数表达式（称回归方程式）。">
+
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="欢迎来到数学的世界" title="欢迎来到数学的世界"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="欢迎来到数学的世界">欢迎来到数学的世界</a></h1>
+				<h2 class="blog-motto">我走的很慢，但我从不后退。</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页 | Home</a></li>
+					
+						<li><a href="/archives">归档 | Archives</a></li>
+					
+						<li><a href="/about">简介 | About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/04/14/回归分析简单介绍/" title="回归分析简单介绍" itemprop="url">回归分析简单介绍</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="刘备备" target="_blank" itemprop="author">刘备备</a>
+		
+  <p class="article-time">
+    <time datetime="2017-04-14T05:35:30.000Z" itemprop="datePublished"> Published 2017-04-14</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			
+		
+		</div>
+		
+		<blockquote>
+<p>回归分析法是在掌握大量观察数据的基础上，利用数理统计方法建立因变量（解释变量）与自变量（响应变量）之间的回归关系函数表达式（称回归方程式）。<br><a id="more"></a><br>可以用来挑选与响应变量有关的解释变量，描述两者的关系，也可以生成回归方程，通过解释变量来预测响应变量。</p>
+<p>t检验常能用作检验回归方程中各个参数的显著性，</p>
+<p>而f检验则能用作检验整个回归关系的显著性。<br>各解释变量联合起来对被解释变量有显著的线性关系，并不意味着每一个解释变量分别对被解释变量有显著的线性关系</p>
+<p>最小二乘法回归分析，ols回归</p>
+<p>最小二乘法，取一个样本点（x，y），预测数据点（x，y），则在误差平方和最小的情况下，计算模型的回归系数。</p>
+<p>判定系数缺点，自变量越多，判断系数越大，为了调整缺点引入了调整的判断系数</p>
+<p>回归分析法是依据事物发展变化的因果关系来预测事物未来的发展走势，它是研究变量间相互关系的一种定量预测方法，又称回归模型预测法或因果法，应用于经济预测、科技预测和企业人力资源的预测等。</p>
+</blockquote>
+<p>ols回归的数据需要满足基本假设</p>
+<p>正态性，对于固定的自变量值，因变量值成正态分布。残差正态分布图</p>
+<p>独立性，Y值之间相互独立。DW检验</p>
+<p>线性，因变量和自变量之间线性相关，线性图。</p>
+<p>同方差性，因变量的方差不随自变量水平的不同而变化。拟合值和学生会残差的散点图，没有规则的随机分布说明满足。</p>
+<pre><code>lm（formula，data）
+coef（fit）
+fitted（fit）
+residuals（fit）
+anova（fit，fit）
+AIC（fit）
+plot（fit）
+predict（fit，data）。
+</code></pre><blockquote>
+<p>多重共线性，自变量之间存在极强的相关性，使回归模型F检验通过，但回归系数t检验不通过，使模型的回归系数检验失效，模型不可信，car包vif（fit）方差膨胀因子√vif&gt;2说明存在多重共线性。可以用广义差分法消除，或box-cox变换。</p>
+</blockquote>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/算法理解/">算法理解</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/算法/">算法</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2017/04/14/回归分析简单介绍/" data-title="回归分析简单介绍 | 欢迎来到数学的世界" data-tsina="3861042298" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2017/04/14/相关与参数检验/" title="相关与参数检验">
+  <strong>上一篇：</strong><br/>
+  <span>
+  相关与参数检验</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2017/04/14/sklearn-knn算法实现/"  title="sklearn knn算法实现">
+ <strong>下一篇：</strong><br/> 
+ <span>sklearn knn算法实现
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ 
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/R语言/" title="R语言">R语言<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/excel/" title="excel">excel<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/sklearn/" title="sklearn">sklearn<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/sql/" title="sql">sql<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/动漫/" title="动漫">动漫<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/应用案列/" title="应用案列">应用案列<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/算法理解/" title="算法理解">算法理解<sup>12</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/算法/" title="算法">算法<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/python/" title="python">python<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/R语言/" title="R语言">R语言<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/数据分析/" title="数据分析">数据分析<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/动漫/" title="动漫">动漫<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/sql/" title="sql">sql<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/实战/" title="实战">实战<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/图册/" title="图册">图册<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/shiny/" title="shiny">shiny<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/R，数据分析/" title="R，数据分析">R，数据分析<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/R/" title="R">R<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/excel/" title="excel">excel<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://bcy.net/start/ 别说我没有给你福利" target="_blank" title="半次元">半次元</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="weiboshow">
+  <p class="asidetitle">Weibo</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=3861042298&verifier=d69fd380&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,我是刘备备，一个热爱数据的分析师. <br/>
+			这是我的博客，欢迎右下角联系我.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/3861042298" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/liubeibei125" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		<a href="http://www.zhihu.com/people/liu-bei-bei-55-36" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:1528843876@qq.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2017 
+		
+		<a href="/about" target="_blank" title="刘备备">刘备备</a>
+		
+		
+		</p>
+</div>
+
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?77e3c54cad81ed7b0020dd2bad00c3b1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+<!-- add calendar widget -->
+
+
+  </body>
+</html>
+
+
