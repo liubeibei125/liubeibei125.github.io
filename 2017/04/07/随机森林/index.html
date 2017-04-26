@@ -8,17 +8,19 @@
     
         <meta name="keywords" content="算法" />
     
-    <meta name="description" content="原理，从训练集中有放回的取出n个样本单元，形成m个训练集，在每一个节点随机抽取m个变量，作为分割该节点的候选变量，每一个节点处的变量数应一致。形成大量决策树，无需剪枝，终端节点的所属类别由节点对应众数决定，对于新样本点，应用所有决策树，选择结果的众数表示预测结果。 简单来说，随机森林就是由多棵CART（Classification And Regression Tree）构成的。对于每棵树，它们">
+    <meta name="description" content="原理，从训练集中有放回的取出n个样本单元，形成m个训练集，在每一个节点随机抽取m个变量，作为分割该节点的候选变量，每一个节点处的变量数应一致。形成大量决策树，无需剪枝，终端节点的所属类别由节点对应众数决定，对于新样本点，应用所有决策树，选择结果的众数表示预测结果。 简单来说，随机森林就是由多棵CART（Classification And Regression Tree）构成的。对于每棵树，它">
 <meta name="keywords" content="算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="随机森林">
 <meta property="og:url" content="http://yoursite.com/2017/04/07/随机森林/index.html">
 <meta property="og:site_name" content="欢迎来到数学的世界">
-<meta property="og:description" content="原理，从训练集中有放回的取出n个样本单元，形成m个训练集，在每一个节点随机抽取m个变量，作为分割该节点的候选变量，每一个节点处的变量数应一致。形成大量决策树，无需剪枝，终端节点的所属类别由节点对应众数决定，对于新样本点，应用所有决策树，选择结果的众数表示预测结果。 简单来说，随机森林就是由多棵CART（Classification And Regression Tree）构成的。对于每棵树，它们">
-<meta property="og:updated_time" content="2017-04-08T02:59:50.739Z">
+<meta property="og:description" content="原理，从训练集中有放回的取出n个样本单元，形成m个训练集，在每一个节点随机抽取m个变量，作为分割该节点的候选变量，每一个节点处的变量数应一致。形成大量决策树，无需剪枝，终端节点的所属类别由节点对应众数决定，对于新样本点，应用所有决策树，选择结果的众数表示预测结果。 简单来说，随机森林就是由多棵CART（Classification And Regression Tree）构成的。对于每棵树，它">
+<meta property="og:image" content="http://op0i3ktqj.bkt.clouddn.com/timg%20%287%29.jpg">
+<meta property="og:updated_time" content="2017-04-26T10:46:36.766Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="随机森林">
-<meta name="twitter:description" content="原理，从训练集中有放回的取出n个样本单元，形成m个训练集，在每一个节点随机抽取m个变量，作为分割该节点的候选变量，每一个节点处的变量数应一致。形成大量决策树，无需剪枝，终端节点的所属类别由节点对应众数决定，对于新样本点，应用所有决策树，选择结果的众数表示预测结果。 简单来说，随机森林就是由多棵CART（Classification And Regression Tree）构成的。对于每棵树，它们">
+<meta name="twitter:description" content="原理，从训练集中有放回的取出n个样本单元，形成m个训练集，在每一个节点随机抽取m个变量，作为分割该节点的候选变量，每一个节点处的变量数应一致。形成大量决策树，无需剪枝，终端节点的所属类别由节点对应众数决定，对于新样本点，应用所有决策树，选择结果的众数表示预测结果。 简单来说，随机森林就是由多棵CART（Classification And Regression Tree）构成的。对于每棵树，它">
+<meta name="twitter:image" content="http://op0i3ktqj.bkt.clouddn.com/timg%20%287%29.jpg">
     
 
     
@@ -71,7 +73,7 @@
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/R语言/">R语言</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/excel/">excel</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/sklearn/">sklearn</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/sql/">sql</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/动漫/">动漫</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/应用案列/">应用案列</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/算法理解/">算法理解</a></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/R/">R</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/R语言/">R语言</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/excel/">excel</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/sklearn/">sklearn</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/sql/">sql</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/动漫/">动漫</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/应用案列/">应用案列</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/算法理解/">算法理解</a></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about/index.html">About</a>
@@ -166,7 +168,8 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <blockquote>
+            <p><img src="http://op0i3ktqj.bkt.clouddn.com/timg%20%287%29.jpg" alt="Alt text"></p>
+<blockquote>
 <p>原理，从训练集中有放回的取出n个样本单元，形成m个训练集，在每一个节点随机抽取m个变量，作为分割该节点的候选变量，每一个节点处的变量数应一致。形成大量决策树，无需剪枝，终端节点的所属类别由节点对应众数决定，对于新样本点，应用所有决策树，选择结果的众数表示预测结果。</p>
 <p>简单来说，随机森林就是由多棵CART（Classification And Regression Tree）构成的。对于每棵树，它们使用的训练集是从总的训练集中有放回采样出来的，这意味着，总的训练集中的有些样本可能多次出现在一棵树的训练集中，也可能从未出现在一棵树的训练集中。在训练每棵树的节点时，使用的特征是从所有特征中按照一定比例随机地无放回的抽取的，根据Leo Breiman的建议，假设总的特征数量为M，这个比例可以是sqrt(M),1/2sqrt(M),2sqrt(M)。</p>
 </blockquote>
@@ -193,7 +196,7 @@ predict（fit，data）
 
 
 
-    <a data-url="http://yoursite.com/2017/04/07/随机森林/" data-id="cj1yttkf1002p84ncgdaob21g" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/04/07/随机森林/" data-id="cj1yuyzwy002fgcncp55fab8v" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -365,7 +368,7 @@ predict（fit，data）
                             <a href="/2017/04/21/多功能shiny网站搭建源码/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(http://op0i3ktqj.bkt.clouddn.com/timg%20%2812%29.jpg)" alt="多功能shiny网站搭建源码" class="thumbnail-image"></span>
     
     
 </a>
@@ -385,7 +388,7 @@ predict（fit，data）
                             <a href="/2017/04/17/豆瓣相册爬虫/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(http://op0i3ktqj.bkt.clouddn.com/timg%20%2818%29.jpg)" alt="豆瓣相册爬虫" class="thumbnail-image"></span>
     
     
 </a>
@@ -405,7 +408,7 @@ predict（fit，data）
                             <a href="/2017/04/17/基于shiny的天气查询系统/" class="thumbnail">
     
     
-        <span style="background-image:url(http://oo19quur7.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170417170435.png)" alt="基于shiny的天气查询系统" class="thumbnail-image"></span>
+        <span style="background-image:url(http://op0i3ktqj.bkt.clouddn.com/timg%20%288%29.jpg)" alt="基于shiny的天气查询系统" class="thumbnail-image"></span>
     
     
 </a>
@@ -425,7 +428,7 @@ predict（fit，data）
                             <a href="/2017/04/14/sklearn-K均值/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(http://op0i3ktqj.bkt.clouddn.com/timg%20%2827%29.jpg)" alt="sklearn-K均值" class="thumbnail-image"></span>
     
     
 </a>
@@ -445,7 +448,7 @@ predict（fit，data）
                             <a href="/2017/04/14/sklearn-朴素贝叶斯/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(http://op0i3ktqj.bkt.clouddn.com/timg%20%289%29.jpg)" alt="sklearn-朴素贝叶斯" class="thumbnail-image"></span>
     
     
 </a>
@@ -468,7 +471,7 @@ predict（fit，data）
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/R语言/">R语言</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/excel/">excel</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sklearn/">sklearn</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sql/">sql</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动漫/">动漫</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/应用案列/">应用案列</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法理解/">算法理解</a><span class="category-list-count">12</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/R/">R</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/R语言/">R语言</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/excel/">excel</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sklearn/">sklearn</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sql/">sql</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动漫/">动漫</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/应用案列/">应用案列</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法理解/">算法理解</a><span class="category-list-count">12</span></li></ul>
         </div>
     </div>
 

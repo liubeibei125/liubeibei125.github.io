@@ -15,10 +15,12 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/13/系统聚类/index.html">
 <meta property="og:site_name" content="欢迎来到数学的世界">
 <meta property="og:description" content="1.单连接法，最短距离法，单连接方法认为，只要单个样本之间的相异度小，就认为两个组就是紧密靠拢的，而不管组间其他样本的相异度如何。这倾向于合并由一系列本身位置（原始数据集中样本的排列）靠近的样本。这种现象称为“链条”（ｃｈａｉｎｎｉｎｇ）是该方法的不足之处。故单连接方法产生的聚类可能破坏类的“紧凑性”。">
-<meta property="og:updated_time" content="2017-04-13T10:18:58.704Z">
+<meta property="og:image" content="http://op0i3ktqj.bkt.clouddn.com/timg%20%2825%29.jpg">
+<meta property="og:updated_time" content="2017-04-26T10:47:30.641Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="系统聚类">
 <meta name="twitter:description" content="1.单连接法，最短距离法，单连接方法认为，只要单个样本之间的相异度小，就认为两个组就是紧密靠拢的，而不管组间其他样本的相异度如何。这倾向于合并由一系列本身位置（原始数据集中样本的排列）靠近的样本。这种现象称为“链条”（ｃｈａｉｎｎｉｎｇ）是该方法的不足之处。故单连接方法产生的聚类可能破坏类的“紧凑性”。">
+<meta name="twitter:image" content="http://op0i3ktqj.bkt.clouddn.com/timg%20%2825%29.jpg">
     
 
     
@@ -71,7 +73,7 @@
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/R语言/">R语言</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/excel/">excel</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/sklearn/">sklearn</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/sql/">sql</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/动漫/">动漫</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/应用案列/">应用案列</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/算法理解/">算法理解</a></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/R/">R</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/R语言/">R语言</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/excel/">excel</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/sklearn/">sklearn</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/sql/">sql</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/动漫/">动漫</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/应用案列/">应用案列</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/算法理解/">算法理解</a></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about/index.html">About</a>
@@ -166,7 +168,8 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <blockquote>
+            <p><img src="http://op0i3ktqj.bkt.clouddn.com/timg%20%2825%29.jpg" alt="Alt text"></p>
+<blockquote>
 <p>1.单连接法，最短距离法，单连接方法认为，只要单个样本之间的相异度小，就认为两个组就是紧密靠拢的，而不管组间其他样本的相异度如何。这倾向于合并由一系列本身位置（原始数据集中样本的排列）靠近的样本。这种现象称为“链条”（ｃｈａｉｎｎｉｎｇ）是该方法的不足之处。故单连接方法产生的聚类可能破坏类的“紧凑性”。<br><a id="more"></a><br>2.完全连接法，最长距离法，类与类之间的最长距离的最短，对异常值敏感</p>
 <p>3.离差平方和法，该方法认为，如果分类正确，同类样本的离差平方和应当较小，类与类的离差平方和应当较大。此方法类似于前面描述的几种聚类方法，都是先将ｎ个样本自成一类，此时Ｓ＝０，然后将其中两类合并成一类，即每次缩小一类。每缩小一类离差平方和Ｓ就要增大，每次都是选择使Ｓ增加最小的两类合并，直至所有的样本归为一类为止。</p>
 <p>采用离差平方和法，样本间的距离必须采用欧氏距离。在实际应用中，离差平方和分类效果较好，应用也比较广泛，对异常值敏感</p>
@@ -208,7 +211,7 @@ cutree（fit，k=5）
 
 
 
-    <a data-url="http://yoursite.com/2017/04/13/系统聚类/" data-id="cj1yttkeu002h84ncb4wl6fdb" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/04/13/系统聚类/" data-id="cj1yuyzx6002mgcnc307ed61p" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -380,7 +383,7 @@ cutree（fit，k=5）
                             <a href="/2017/04/21/多功能shiny网站搭建源码/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(http://op0i3ktqj.bkt.clouddn.com/timg%20%2812%29.jpg)" alt="多功能shiny网站搭建源码" class="thumbnail-image"></span>
     
     
 </a>
@@ -400,7 +403,7 @@ cutree（fit，k=5）
                             <a href="/2017/04/17/豆瓣相册爬虫/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(http://op0i3ktqj.bkt.clouddn.com/timg%20%2818%29.jpg)" alt="豆瓣相册爬虫" class="thumbnail-image"></span>
     
     
 </a>
@@ -420,7 +423,7 @@ cutree（fit，k=5）
                             <a href="/2017/04/17/基于shiny的天气查询系统/" class="thumbnail">
     
     
-        <span style="background-image:url(http://oo19quur7.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170417170435.png)" alt="基于shiny的天气查询系统" class="thumbnail-image"></span>
+        <span style="background-image:url(http://op0i3ktqj.bkt.clouddn.com/timg%20%288%29.jpg)" alt="基于shiny的天气查询系统" class="thumbnail-image"></span>
     
     
 </a>
@@ -440,7 +443,7 @@ cutree（fit，k=5）
                             <a href="/2017/04/14/sklearn-K均值/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(http://op0i3ktqj.bkt.clouddn.com/timg%20%2827%29.jpg)" alt="sklearn-K均值" class="thumbnail-image"></span>
     
     
 </a>
@@ -460,7 +463,7 @@ cutree（fit，k=5）
                             <a href="/2017/04/14/sklearn-朴素贝叶斯/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(http://op0i3ktqj.bkt.clouddn.com/timg%20%289%29.jpg)" alt="sklearn-朴素贝叶斯" class="thumbnail-image"></span>
     
     
 </a>
@@ -483,7 +486,7 @@ cutree（fit，k=5）
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/R语言/">R语言</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/excel/">excel</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sklearn/">sklearn</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sql/">sql</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动漫/">动漫</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/应用案列/">应用案列</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法理解/">算法理解</a><span class="category-list-count">12</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/R/">R</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/R语言/">R语言</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/excel/">excel</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sklearn/">sklearn</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sql/">sql</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动漫/">动漫</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/应用案列/">应用案列</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法理解/">算法理解</a><span class="category-list-count">12</span></li></ul>
         </div>
     </div>
 
