@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>sql语句卡片 | 欢迎来到数学的世界</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="sql" />
+    
+    <meta name="description" content="基本数据类型  char（），varchar（），float（m，d），decimal（m，d），int，tinyint，date，year，time，datetime，enum（）枚举，text注意tinyint（m） zerofill  0填充">
+<meta name="keywords" content="sql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sql语句卡片">
+<meta property="og:url" content="http://yoursite.com/2017/04/08/sql语句卡片/index.html">
+<meta property="og:site_name" content="欢迎来到数学的世界">
+<meta property="og:description" content="基本数据类型  char（），varchar（），float（m，d），decimal（m，d），int，tinyint，date，year，time，datetime，enum（）枚举，text注意tinyint（m） zerofill  0填充">
+<meta property="og:updated_time" content="2017-04-08T05:53:19.482Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="sql语句卡片">
+<meta name="twitter:description" content="基本数据类型  char（），varchar（），float（m，d），decimal（m，d），int，tinyint，date，year，time，datetime，enum（）枚举，text注意tinyint（m） zerofill  0填充">
+    
+
+    
+        <link rel="alternate" href="/" title="欢迎来到数学的世界" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">我走的很慢，但我从不后退。</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/R语言/">R语言</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/excel/">excel</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/sklearn/">sklearn</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/sql/">sql</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/动漫/">动漫</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/应用案列/">应用案列</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/算法理解/">算法理解</a></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/sql/">sql</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-sql语句卡片" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        sql语句卡片
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/04/08/sql语句卡片/" class="article-date">
+            <time datetime="2017-04-08T05:36:33.000Z" itemprop="datePublished">2017-04-08</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/sql/">sql</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>基本数据类型</p>
+<blockquote>
+<p>char（），varchar（），float（m，d），decimal（m，d），int，tinyint，date，year，time，datetime，enum（）枚举，text<br>注意tinyint（m） zerofill  0填充<br><a id="more"></a><br>增删改<br>insert into tablename<br>（a，b，c）<br>values<br>（a，b，c）</p>
+<p>insert into tablename<br>select语句</p>
+<p>delete from tnm<br>where 条件</p>
+<p>update tnm<br>set 语句<br>where 条件</p>
+</blockquote>
+<p>列增删改</p>
+<blockquote>
+<p>alter table tnm add 列名  列声明</p>
+<p>alter table tnm drop 列名</p>
+<p>alter table tnm change oldname newname 列声明</p>
+<p>列声明，not Null，unsigned，default 默认值，primary key，auto_increment。</p>
+</blockquote>
+<p>创建新表</p>
+<blockquote>
+<p>create table tnm<br>（列1 列声明，<br>列2，列声明）</p>
+</blockquote>
+<p>查询语句</p>
+<blockquote>
+<p>select 列<br>from 表<br>where 条件<br>group by 列<br>having 条件（对上面语句的结果筛选）<br>order by 排序 desc（降序）<br>limit a，b</p>
+</blockquote>
+<p>条件运算函数</p>
+<blockquote>
+<p>count，sum，avg，and，or，in（），between a and b，</p>
+<p>通配符like ％，_，distinct 列名唯一值</p>
+<p>%  替代一个字符或多个字符</p>
+<p>_替代一个字符</p>
+<p>[abc] []中的任何一个字符</p>
+<p>[!abc] 不是[]中的任何一个字符</p>
+</blockquote>
+<p>注意</p>
+<blockquote>
+<p>select sum(列&lt;60)结果为满足条件的个数</p>
+</blockquote>
+<p>from子查询</p>
+<pre><code>select 列
+from（select 列
+from 表
+where 语句
+……）
+where 条件
+……
+</code></pre><p>where子查询</p>
+<pre><code>select 列
+from 表
+where 列 in（select 语句）
+</code></pre><p>合并查询语句</p>
+<pre><code>（select 语句）
+union（union all）
+（select 语句）
+order by 列名
+</code></pre><p>左连接（把连接后结果当做表）</p>
+<pre><code>select 列
+from t1 left join t2 as t3
+on t1.ID=t2.ID
+left join t4 as t5
+on t1.ID=t4.id
+where 条件
+</code></pre><p>右连接right join</p>
+<p>内连接inner join</p>
+<p>视图view</p>
+<blockquote>
+<p>简化查询，控制权限，大数据分表，表数据改变影响相应视图的结果，视图也能影响表，但视图不总是可以改的。<br>create view 视图名 as<br>select 语句</p>
+<p>drop view 视图名<br>alter view as select语句</p>
+<p>视图的algorithm=merge合并查询语句╱temptable创造临时表╱undefined系统自动确定</p>
+</blockquote>
+<p>定义字符集charset utf-8</p>
+<p>触发器trigger</p>
+<blockquote>
+<p>监视增删改触发增删改，监视地点，事件，触发时间，事件</p>
+<pre><code>creat trigger 名字
+after╱before  insert╱update╱delete  on  表名
+（触发时间                      监视事件，监视地点）
+for  each  row
+begin
+sql语句（触发事件）
+end
+</code></pre></blockquote>
+<p>触发器引用行变量</p>
+<blockquote>
+<p>对于insert来说，新增行用new.列名表示</p>
+<pre><code>creat trigger 名字
+after  insert  on  表名
+for  each  row
+begin
+update table set 数目=数目-new.xiadan  
+where  ID=new.gid
+end
+</code></pre></blockquote>
+<p>对于delete来说，删除行用old表示，每一列用old.列名表示，语法同上</p>
+<p>对于update来说，修改前用old.列名表示，修改后用new.列名表示</p>
+<p>before先运行触发事件sql语句，再运行监视事件，列如可以控制下单数目，防止刷单。<br>if  条件    then    语句     end  if</p>
+<p>存储引擎与事务</p>
+<pre><code>               myisam        innodb
+批量插入速度      高              低
+事务安全                         支持
+全文索引         支持
+锁机制           表锁             行锁
+create table  名（）engine=innodb
+</code></pre><p>事务</p>
+<blockquote>
+<p>事务指一组操作要么都完成，要么都不执行，不能撤销，一致性，隔离性</p>
+<p>start  transaction；（唯一要求加；的）<br>sql语句；<br>commit；提交，rollback回滚；</p>
+</blockquote>
+<p>数据库备份与恢复</p>
+<blockquote>
+<p>mysqldump -u 用户名  -p  密码  库名  （表名）&gt;地址╱备份文件名<br>mysqldump -u 用户名  -p  密码  库名1  库名2&gt;地址╱备份文件名<br>恢复source&lt;地址文件名，详细以后再看，不重要</p>
+</blockquote>
+<p>索引</p>
+<blockquote>
+<p>二叉树索引，hash索引，加快了查询速度，但降低了增删改速度，增加表大小</p>
+<p>where后面列变量可以用索引，分类变量不用索引</p>
+<p>类型，普通索引index，仅仅加快查询速度。</p>
+<p>唯一索引unique，行上值不能重复。</p>
+<p>主健索引primary key，主健索引是唯一索引，但唯一索引不是主健索引，<br>主健索引只能有一个。</p>
+<p>全文索引fulltext。</p>
+<p>查看索引show index from 表</p>
+<p>建立索引alter table 表  add  index╱unique… ［索引名］（列名）</p>
+<p>建立主健索引alter table 表 add primary key（列名）主健没有索引名</p>
+</blockquote>
+<p>删除索引</p>
+<pre><code>alter table 表  drop  index  索引名╱primary key
+</code></pre>
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2017/04/08/sql语句卡片/" data-id="cj1yttkdu001c84ncakftqcjk" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="/" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="/" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="/" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="/" target="_blank">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2017/04/08/R语言常用函数/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            R语言常用函数
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2017/04/08/r参考卡片/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">r参考卡片</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/21/多功能shiny网站搭建源码/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/应用案列/">应用案列</a></p>
+                            <p class="item-title"><a href="/2017/04/21/多功能shiny网站搭建源码/" class="title">多功能shiny网站搭建源码</a></p>
+                            <p class="item-date"><time datetime="2017-04-21T04:00:34.000Z" itemprop="datePublished">2017-04-21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/17/豆瓣相册爬虫/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/应用案列/">应用案列</a></p>
+                            <p class="item-title"><a href="/2017/04/17/豆瓣相册爬虫/" class="title">豆瓣相册爬虫</a></p>
+                            <p class="item-date"><time datetime="2017-04-17T09:30:55.000Z" itemprop="datePublished">2017-04-17</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/17/基于shiny的天气查询系统/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://oo19quur7.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170417170435.png)" alt="基于shiny的天气查询系统" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/应用案列/">应用案列</a></p>
+                            <p class="item-title"><a href="/2017/04/17/基于shiny的天气查询系统/" class="title">基于shiny的天气查询系统</a></p>
+                            <p class="item-date"><time datetime="2017-04-17T08:48:50.000Z" itemprop="datePublished">2017-04-17</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/14/sklearn-K均值/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/sklearn/">sklearn</a></p>
+                            <p class="item-title"><a href="/2017/04/14/sklearn-K均值/" class="title">sklearn-K均值</a></p>
+                            <p class="item-date"><time datetime="2017-04-14T10:17:42.000Z" itemprop="datePublished">2017-04-14</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/14/sklearn-朴素贝叶斯/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/sklearn/">sklearn</a></p>
+                            <p class="item-title"><a href="/2017/04/14/sklearn-朴素贝叶斯/" class="title">sklearn-朴素贝叶斯</a></p>
+                            <p class="item-date"><time datetime="2017-04-14T10:14:03.000Z" itemprop="datePublished">2017-04-14</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/R语言/">R语言</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/excel/">excel</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sklearn/">sklearn</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sql/">sql</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动漫/">动漫</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/应用案列/">应用案列</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法理解/">算法理解</a><span class="category-list-count">12</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">30</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/R/">R</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/R语言/">R语言</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/R，数据分析/">R，数据分析</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/excel/">excel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shiny/">shiny</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/">sql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动漫/">动漫</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图册/">图册</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/实战/">实战</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据分析/">数据分析</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a><span class="tag-list-count">18</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/R/" style="font-size: 10px;">R</a> <a href="/tags/R语言/" style="font-size: 16px;">R语言</a> <a href="/tags/R，数据分析/" style="font-size: 10px;">R，数据分析</a> <a href="/tags/excel/" style="font-size: 10px;">excel</a> <a href="/tags/python/" style="font-size: 18px;">python</a> <a href="/tags/shiny/" style="font-size: 12px;">shiny</a> <a href="/tags/sql/" style="font-size: 12px;">sql</a> <a href="/tags/动漫/" style="font-size: 12px;">动漫</a> <a href="/tags/图册/" style="font-size: 12px;">图册</a> <a href="/tags/实战/" style="font-size: 12px;">实战</a> <a href="/tags/数据分析/" style="font-size: 14px;">数据分析</a> <a href="/tags/算法/" style="font-size: 20px;">算法</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 刘备备</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://yoursite.com/2017/04/08/sql语句卡片/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>关联算法 | 欢迎来到数学的世界</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="算法" />
+    
+    <meta name="description" content="用于从数据中发现数据项之间的关系。  信任度，把购买商品1记为事件A，购买商品2记为事件B，则1=&amp;gt;2的信任度为同时购买12的次数除以购买1的次数，衡量商品12 的关联度。confidence（item1=&amp;gt;item2）=P（AB）╱P（A）。">
+<meta name="keywords" content="算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关联算法">
+<meta property="og:url" content="http://yoursite.com/2017/04/13/关联算法/index.html">
+<meta property="og:site_name" content="欢迎来到数学的世界">
+<meta property="og:description" content="用于从数据中发现数据项之间的关系。  信任度，把购买商品1记为事件A，购买商品2记为事件B，则1=&amp;gt;2的信任度为同时购买12的次数除以购买1的次数，衡量商品12 的关联度。confidence（item1=&amp;gt;item2）=P（AB）╱P（A）。">
+<meta property="og:updated_time" content="2017-04-13T10:24:57.260Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关联算法">
+<meta name="twitter:description" content="用于从数据中发现数据项之间的关系。  信任度，把购买商品1记为事件A，购买商品2记为事件B，则1=&amp;gt;2的信任度为同时购买12的次数除以购买1的次数，衡量商品12 的关联度。confidence（item1=&amp;gt;item2）=P（AB）╱P（A）。">
+    
+
+    
+        <link rel="alternate" href="/" title="欢迎来到数学的世界" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">我走的很慢，但我从不后退。</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/R语言/">R语言</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/excel/">excel</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/sklearn/">sklearn</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/sql/">sql</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/动漫/">动漫</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/应用案列/">应用案列</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/算法理解/">算法理解</a></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/算法理解/">算法理解</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-关联算法" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        关联算法
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/04/13/关联算法/" class="article-date">
+            <time datetime="2017-04-13T10:20:43.000Z" itemprop="datePublished">2017-04-13</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/算法/">算法</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>用于从数据中发现数据项之间的关系。</p>
+<blockquote>
+<p>信任度，把购买商品1记为事件A，购买商品2记为事件B，则1=&gt;2的信任度为同时购买12的次数除以购买1的次数，衡量商品12 的关联度。confidence（item1=&gt;item2）=P（AB）╱P（A）。<br><a id="more"></a><br>支持度，如果商品12的信任度很大，但是在总体集合中同时购买商品12的人并不多，那么信任度的结论并没有什么意义。1=&gt;2的支持度=同时购买商品12的次数除以集合总数，support（item1=&gt;item2）=P（AB）。item2本身的支持度support（item2）=P（B）。</p>
+<p>提升度，<br>lift（item1=&gt;item2）=confidence（item1=&gt;item2）╱support（item2）。</p>
+<p>综上表示，如果用户不做任何推荐购买商品2的概率为support（item2），如果购买了商品1后给用户推荐2，则购买概率为confidence（item1=&gt;item2），提升度大于1，说明通过商品1推荐商品2的购买概率比未推荐前有提高。</p>
+</blockquote>
+<p>关联分析实质上就是在集合中找到符合以下条件的关联规则</p>
+<pre><code>itemi=&gt;itemj。
+confidence（itemi=&gt;itemj）&gt;min_cof，
+support（item1=&gt;item2）&gt;min_sup，
+</code></pre><blockquote>
+<p>并且lift&gt;1的关联规则。</p>
+</blockquote>
+<p>arules包里面的apriori函数</p>
+<blockquote>
+<p>数据预处理，如果是疏散矩阵01矩阵，则<br>    a.class&lt;-as（a.matrix，“transactions”）</p>
+<p>如果是分类变量矩阵或数据框，不做处理。</p>
+<p>apriori（data，parameter=list（supp，conf，target=“rules”），appearance=list（rhs=，default=“lhs”）或者appearance=list（lhs=，default=“rhs”）用来筛选关联规则）<br>lhs，rhs表示关联规则itemi=&gt;itemj的左右两边的item。如rhs=“item3”，表示筛选出itemi=&gt;item3的规则。</p>
+<p>inspect（rule）</p>
+<p>Python实现：<a href="http://blog.csdn.net/huruzun/article/details/40835053" target="_blank" rel="external">http://blog.csdn.net/huruzun/article/details/40835053</a></p>
+</blockquote>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2017/04/13/关联算法/" data-id="cj1yttke4001l84nccylpt5jx" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="/" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="/" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="/" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="/" target="_blank">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2017/04/13/系统聚类/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            系统聚类
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2017/04/13/序列关联算法/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">序列关联算法</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/21/多功能shiny网站搭建源码/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/应用案列/">应用案列</a></p>
+                            <p class="item-title"><a href="/2017/04/21/多功能shiny网站搭建源码/" class="title">多功能shiny网站搭建源码</a></p>
+                            <p class="item-date"><time datetime="2017-04-21T04:00:34.000Z" itemprop="datePublished">2017-04-21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/17/豆瓣相册爬虫/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/应用案列/">应用案列</a></p>
+                            <p class="item-title"><a href="/2017/04/17/豆瓣相册爬虫/" class="title">豆瓣相册爬虫</a></p>
+                            <p class="item-date"><time datetime="2017-04-17T09:30:55.000Z" itemprop="datePublished">2017-04-17</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/17/基于shiny的天气查询系统/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://oo19quur7.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170417170435.png)" alt="基于shiny的天气查询系统" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/应用案列/">应用案列</a></p>
+                            <p class="item-title"><a href="/2017/04/17/基于shiny的天气查询系统/" class="title">基于shiny的天气查询系统</a></p>
+                            <p class="item-date"><time datetime="2017-04-17T08:48:50.000Z" itemprop="datePublished">2017-04-17</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/14/sklearn-K均值/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/sklearn/">sklearn</a></p>
+                            <p class="item-title"><a href="/2017/04/14/sklearn-K均值/" class="title">sklearn-K均值</a></p>
+                            <p class="item-date"><time datetime="2017-04-14T10:17:42.000Z" itemprop="datePublished">2017-04-14</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/14/sklearn-朴素贝叶斯/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/sklearn/">sklearn</a></p>
+                            <p class="item-title"><a href="/2017/04/14/sklearn-朴素贝叶斯/" class="title">sklearn-朴素贝叶斯</a></p>
+                            <p class="item-date"><time datetime="2017-04-14T10:14:03.000Z" itemprop="datePublished">2017-04-14</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/R语言/">R语言</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/excel/">excel</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sklearn/">sklearn</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sql/">sql</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动漫/">动漫</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/应用案列/">应用案列</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法理解/">算法理解</a><span class="category-list-count">12</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">30</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/R/">R</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/R语言/">R语言</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/R，数据分析/">R，数据分析</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/excel/">excel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shiny/">shiny</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/">sql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动漫/">动漫</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图册/">图册</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/实战/">实战</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据分析/">数据分析</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a><span class="tag-list-count">18</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/R/" style="font-size: 10px;">R</a> <a href="/tags/R语言/" style="font-size: 16px;">R语言</a> <a href="/tags/R，数据分析/" style="font-size: 10px;">R，数据分析</a> <a href="/tags/excel/" style="font-size: 10px;">excel</a> <a href="/tags/python/" style="font-size: 18px;">python</a> <a href="/tags/shiny/" style="font-size: 12px;">shiny</a> <a href="/tags/sql/" style="font-size: 12px;">sql</a> <a href="/tags/动漫/" style="font-size: 12px;">动漫</a> <a href="/tags/图册/" style="font-size: 12px;">图册</a> <a href="/tags/实战/" style="font-size: 12px;">实战</a> <a href="/tags/数据分析/" style="font-size: 14px;">数据分析</a> <a href="/tags/算法/" style="font-size: 20px;">算法</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 刘备备</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://yoursite.com/2017/04/13/关联算法/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

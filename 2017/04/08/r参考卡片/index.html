@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>r参考卡片 | 欢迎来到数学的世界</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="R，数据分析" />
+    
+    <meta name="description" content="1.变量变换 as.array(x),as.data.frame(x),as.numeric(x), as.logical(x),as.complex(x),as.character(x), ...转换变量类型；使用如下命令可得到全部列表，methods(as) factor()：将一个向量转化为一个因子">
+<meta name="keywords" content="R，数据分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="r参考卡片">
+<meta property="og:url" content="http://yoursite.com/2017/04/08/r参考卡片/index.html">
+<meta property="og:site_name" content="欢迎来到数学的世界">
+<meta property="og:description" content="1.变量变换 as.array(x),as.data.frame(x),as.numeric(x), as.logical(x),as.complex(x),as.character(x), ...转换变量类型；使用如下命令可得到全部列表，methods(as) factor()：将一个向量转化为一个因子">
+<meta property="og:updated_time" content="2017-04-08T06:11:02.335Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="r参考卡片">
+<meta name="twitter:description" content="1.变量变换 as.array(x),as.data.frame(x),as.numeric(x), as.logical(x),as.complex(x),as.character(x), ...转换变量类型；使用如下命令可得到全部列表，methods(as) factor()：将一个向量转化为一个因子">
+    
+
+    
+        <link rel="alternate" href="/" title="欢迎来到数学的世界" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">我走的很慢，但我从不后退。</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/R语言/">R语言</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/excel/">excel</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/sklearn/">sklearn</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/sql/">sql</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/动漫/">动漫</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/应用案列/">应用案列</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/算法理解/">算法理解</a></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/R语言/">R语言</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-r参考卡片" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        r参考卡片
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/04/08/r参考卡片/" class="article-date">
+            <time datetime="2017-04-08T05:54:21.000Z" itemprop="datePublished">2017-04-08</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/R，数据分析/">R，数据分析</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>1.变量变换</p>
+<pre><code>as.array(x),as.data.frame(x),as.numeric(x),
+as.logical(x),as.complex(x),as.character(x),
+...转换变量类型；使用如下命令可得到全部列表，methods(as)
+factor()：将一个向量转化为一个因子
+</code></pre><a id="more"></a>
+<p>2.变量信息</p>
+<pre><code>is.na(x),is.null(x),is.array(x),is.data.frame(x).
+is.numeric(x),is.complex(x),is.character (x),...
+检验变量的类型；使用如下命令得到全部列表，methods(is)
+length(x):x中元素的个数
+dim(x):查看变量的维数；重新设置的维数，例如dim(x)=c(3,2)
+dimnames(x):重新设置对象的名称
+nrow(x):行的个数
+ncol(x):列的个数
+class(x):得到或设置x的类；class(x)&lt;-c(3,2)
+unclass(x):删除x的类
+attr(x,which):得到或设置x的属性which
+attributes(obj):得到或设置obj的属性列表
+fix,edit:对数据框数据进行表格形式的编辑
+</code></pre><p>3.数据选取和操作</p>
+<pre><code>which.max(x):返回x中最大元素的指标
+which.min(x):返回x中最小元素的指标
+rev(x):翻转x中所有的元素
+sort(x):升序排列x中的元素；降序排列使用：rev(sort(x))
+cut(x,breaks):将x分割成为几段（或因子）；breaks为段数或分割点向量
+match(x,y):返回一个和x长度相同且和y中元素相等的向量不等则返回NA
+which(x==a):如果比较操作为真（TRUE）,返回向量x的指针
+choose(n,k):组合数的计算
+na.omit(x):去除缺失值(NA)（去除相关行如果x为矩阵或数据框）
+na.fail(x):返回错误信息，如果x包含至少一个NA
+unique(x):如果x为向量或数据框，返回唯一值
+table(x):返回一个由x不同值个数组成的表格（通常用于整数或因子），即频数表
+subset(x,...):根据条件（...选取x中元素，如x$V1&lt;10）;如果x为数据框,选项select使用负号给出保留 或去除的变量 subset(x, subset, select,     drop = FALSE, ...)
+sample(x,size):不放回的随即在向量x中抽取size个元素,选项replace=TRUE允许放回抽取
+prop.table(x,margin=):根据margin使用分数表示表格，wumargin时，所有元素和为1
+</code></pre><p>factor(x,levels=) 把向量x编码称为因子<br>factor(x = character(), levels, labels = levels,exclude =</p>
+<p> NA, ordered = is.ordered(x))</p>
+<blockquote>
+<p>gl() 产生因子变量<br>gl(n,k,lenth=n*k,labels=)<br>通过指定水平方式产生水平因子；k为水平的个数，n为重复的次数</p>
+</blockquote>
+<p>rbind() cbind()<br>        rbind(…)以行的形式组合矩阵，数据框，或其它<br>        cbind(…)以列的方式组合，其他同rbind()</p>
+<pre><code>min(x):返回x中最小的元素，同max
+rev(x) 翻转x中的所有元素
+sort(x) 升序排列x中的元素；
+降序排列使用rev(sort(x)),要得到排列的小标用order()
+choose(n,k) 组合数计算
+排列组合中的C（x, y） 从x个元素中任取y个元素的子集数目。
+which()  返回满足条件的下表
+sample(x,size) 不放回的随机在向量x中抽取size个元素选项
+replace+TRUE允许放回抽样
+rank():计算向量的秩
+range(x):返回c(min(x),max(x))
+sum(x):x中各元素的加和
+diff(x):向量x的差分
+prod(x):x中元素的连乘积
+mean(x):x的均值
+median(x):x的中位数
+quantile(x,probs=):满足给定概率的样本分位数（默认为0,0.25,0.75,1）
+weight.mean(x,w):加权平均，w即为weight,即权值。
+rank(x):x中元素的秩
+var(x):向量x的样本方差；如果x是矩阵或数据框，协方差矩阵将被计算 
+cor(x):如果x是矩阵或数据框，相关系数矩阵将被计算
+sd(x):x的标准差；sd(x)=sqrt(var(x))
+var(x,y) or cov(x,y):x和y间的协方差；如果x,y为矩阵或数据框，返回x和y各列的协方差
+cor(x,y):x和y的线性相关系数；或者相关矩阵，如果x和y为矩阵或者数据框
+round(x,n):x的约数，精确到n位
+log(x,base):计算x以base为基的对数，默认基为exp(1)
+scale(x):如果x是一个矩阵，则中心化和标准化数据；
+若只标准化数据，则使用选项center=FALSE，
+若只 中心化使用scale=FALSE(默认center=TRUE,      
+scale=TRUE)
+pmin(x,y,...):x[i],y[i]相比较小者，组成新的向量
+pmax(x,y,...):x[i],y[i]相比较大者，组成新的向量
+Re(x):复数的实部
+Im(x):复数的虚部
+abs(x):绝对值
+Arg(x):复数角度(in radians)
+Conj(x):共轭复数
+fft(x):数组x的快速傅里叶变换
+mvfft(x):矩阵x的每一列的傅里叶变换
+factorial()：计算n!
+cumsum():cumulative sums
+cumprod():cumulative products
+D(expression(exp(x^2)),&quot;x&quot;) ：求导
+integrate(function(x) x^2,0,1)：积分
+</code></pre><blockquote>
+<p>注意：大多数数学函数使用逻辑参数na.rm=FALSE来指定是否移除缺失值(NA)</p>
+</blockquote>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2017/04/08/r参考卡片/" data-id="cj1yttkd4000i84ncgayqaotn" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="/" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="/" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="/" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="/" target="_blank">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2017/04/08/sql语句卡片/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            sql语句卡片
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2017/04/08/mysql数据类型/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">mysql数据类型</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/21/多功能shiny网站搭建源码/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/应用案列/">应用案列</a></p>
+                            <p class="item-title"><a href="/2017/04/21/多功能shiny网站搭建源码/" class="title">多功能shiny网站搭建源码</a></p>
+                            <p class="item-date"><time datetime="2017-04-21T04:00:34.000Z" itemprop="datePublished">2017-04-21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/17/豆瓣相册爬虫/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/应用案列/">应用案列</a></p>
+                            <p class="item-title"><a href="/2017/04/17/豆瓣相册爬虫/" class="title">豆瓣相册爬虫</a></p>
+                            <p class="item-date"><time datetime="2017-04-17T09:30:55.000Z" itemprop="datePublished">2017-04-17</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/17/基于shiny的天气查询系统/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://oo19quur7.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170417170435.png)" alt="基于shiny的天气查询系统" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/应用案列/">应用案列</a></p>
+                            <p class="item-title"><a href="/2017/04/17/基于shiny的天气查询系统/" class="title">基于shiny的天气查询系统</a></p>
+                            <p class="item-date"><time datetime="2017-04-17T08:48:50.000Z" itemprop="datePublished">2017-04-17</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/14/sklearn-K均值/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/sklearn/">sklearn</a></p>
+                            <p class="item-title"><a href="/2017/04/14/sklearn-K均值/" class="title">sklearn-K均值</a></p>
+                            <p class="item-date"><time datetime="2017-04-14T10:17:42.000Z" itemprop="datePublished">2017-04-14</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/14/sklearn-朴素贝叶斯/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/sklearn/">sklearn</a></p>
+                            <p class="item-title"><a href="/2017/04/14/sklearn-朴素贝叶斯/" class="title">sklearn-朴素贝叶斯</a></p>
+                            <p class="item-date"><time datetime="2017-04-14T10:14:03.000Z" itemprop="datePublished">2017-04-14</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/R语言/">R语言</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/excel/">excel</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sklearn/">sklearn</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sql/">sql</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动漫/">动漫</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/应用案列/">应用案列</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法理解/">算法理解</a><span class="category-list-count">12</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">30</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/R/">R</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/R语言/">R语言</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/R，数据分析/">R，数据分析</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/excel/">excel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shiny/">shiny</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/">sql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动漫/">动漫</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图册/">图册</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/实战/">实战</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据分析/">数据分析</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a><span class="tag-list-count">18</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/R/" style="font-size: 10px;">R</a> <a href="/tags/R语言/" style="font-size: 16px;">R语言</a> <a href="/tags/R，数据分析/" style="font-size: 10px;">R，数据分析</a> <a href="/tags/excel/" style="font-size: 10px;">excel</a> <a href="/tags/python/" style="font-size: 18px;">python</a> <a href="/tags/shiny/" style="font-size: 12px;">shiny</a> <a href="/tags/sql/" style="font-size: 12px;">sql</a> <a href="/tags/动漫/" style="font-size: 12px;">动漫</a> <a href="/tags/图册/" style="font-size: 12px;">图册</a> <a href="/tags/实战/" style="font-size: 12px;">实战</a> <a href="/tags/数据分析/" style="font-size: 14px;">数据分析</a> <a href="/tags/算法/" style="font-size: 20px;">算法</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 刘备备</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://yoursite.com/2017/04/08/r参考卡片/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

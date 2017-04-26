@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>多功能shiny网站搭建源码 | 欢迎来到数学的世界</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="R语言,shiny,实战" />
+    
+    <meta name="description" content="目前实现的功能有，查看图片URL，文字，在线简体转繁体，词云，河南天气查询，在线爬虫爬取图片文字，在线实时观看漫画。 网址shiny">
+<meta name="keywords" content="R语言,shiny,实战">
+<meta property="og:type" content="article">
+<meta property="og:title" content="多功能shiny网站搭建源码">
+<meta property="og:url" content="http://yoursite.com/2017/04/21/多功能shiny网站搭建源码/index.html">
+<meta property="og:site_name" content="欢迎来到数学的世界">
+<meta property="og:description" content="目前实现的功能有，查看图片URL，文字，在线简体转繁体，词云，河南天气查询，在线爬虫爬取图片文字，在线实时观看漫画。 网址shiny">
+<meta property="og:updated_time" content="2017-04-26T09:07:33.849Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="多功能shiny网站搭建源码">
+<meta name="twitter:description" content="目前实现的功能有，查看图片URL，文字，在线简体转繁体，词云，河南天气查询，在线爬虫爬取图片文字，在线实时观看漫画。 网址shiny">
+    
+
+    
+        <link rel="alternate" href="/" title="欢迎来到数学的世界" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">我走的很慢，但我从不后退。</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/R语言/">R语言</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/excel/">excel</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/sklearn/">sklearn</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/sql/">sql</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/动漫/">动漫</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/应用案列/">应用案列</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/算法理解/">算法理解</a></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/应用案列/">应用案列</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-多功能shiny网站搭建源码" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        多功能shiny网站搭建源码
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/04/21/多功能shiny网站搭建源码/" class="article-date">
+            <time datetime="2017-04-21T04:00:34.000Z" itemprop="datePublished">2017-04-21</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/R语言/">R语言</a>, <a class="tag-link" href="/tags/shiny/">shiny</a>, <a class="tag-link" href="/tags/实战/">实战</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>目前实现的功能有，查看图片URL，文字，在线简体转繁体，词云，河南天气查询，在线爬虫爬取图片文字，在线实时观看漫画。</p>
+<p>网址<br><a href="https://liubeibei125.shinyapps.io/ddd12/" target="_blank" rel="external">shiny</a><br><a id="more"></a></p>
+<p>源代码如下：</p>
+<p>UI端：</p>
+<pre><code>library(shiny)
+library(shinythemes)
+library(wordcloud2)
+library(ropencc)
+library(rvest)
+
+shinyUI(tagList(
+  navbarPage(
+    &quot;&quot;,
+   theme = shinythemes::shinytheme(&quot;slate&quot;),
+   tabPanel(&quot;百思不得姐&quot;,
+           sidebarPanel(
+             fileInput(&apos;file1&apos;, &apos;图片url文件&apos;),
+             helpText(&quot;要求的文件格式，txt文件，\n回车键作为分割，里面保存的是图片的url&quot;),
+             radioButtons(&quot;dist&quot;, &quot;按照你的需求选择:&quot;,
+                          list(&quot;我自己上传文件&quot; =&quot;a&quot;,
+                               &quot;使用内置图片文件1&quot;=&quot;b&quot;,
+                               &quot;使用内置图片文件2&quot;=&quot;c&quot;
+                          )),
+
+             actionButton(&quot;updata&quot;, &quot;下一张&quot;),
+             tags$br(),
+             tags$br(),
+             ###table1
+             helpText(&quot;选择合适的选项，然后点击下一张&quot;),
+             fileInput(&apos;file&apos;, &apos;文字文件&apos;),
+             helpText(&quot;要求的文件格式，txt文件，\n回车键作为分割，里面保存的是文字&quot;),
+             radioButtons(&quot;dist1&quot;, &quot;按照你的需求选择:&quot;,
+                          list(&quot;我自己上传文件&quot; =TRUE,
+                               &quot;使用内置文字文件&quot;=FALSE
+                          )),
+             numericInput(&quot;num&quot;, &quot;选择显示个数:&quot;,5),
+             actionButton(&quot;next1&quot;, &quot;下一条&quot;),
+             helpText(&quot;选择合适的选项，然后点击下一条&quot;)
+             ###table2
+           ),
+           ####uioutput
+           mainPanel(
+             tabsetPanel(
+               tabPanel(&quot;图片&quot;,
+                        h4(&quot;案列图片来自爬虫爬取&quot;),
+                        uiOutput(&quot;moreControls&quot;)
+
+               ),
+               tabPanel(&quot;文字&quot;,
+                        h4(&quot;案列文字来自爬虫爬取&quot;),
+                        tableOutput(
+                          &quot;text&quot;
+                        )
+
+                        )
+             )
+           )
+  ),
+  tabPanel(&quot;简体转繁体&quot;,
+           sidebarPanel(
+             fileInput(&apos;file2&apos;, &apos;请上传txt文件&apos;),
+             actionButton(&quot;gofan&quot;, &quot;输出繁体&quot;),
+             tags$br(),
+             tags$br(),
+             textInput(&quot;wenben&quot;,&quot;请输入简体文字：&quot;,&quot;你好,世界&quot;),
+             actionButton(&quot;view&quot;, &quot;输出繁体&quot;)
+           ),
+             mainPanel(
+               tabsetPanel(
+                 tabPanel(&quot;上传文件转换&quot;,
+                          h4(&quot;结果展示&quot;),
+                          tableOutput(&quot;text1&quot;)
+
+                 ),
+                 tabPanel(&quot;输入文本转换&quot;,
+                          h4(&quot;结果展示&quot;),
+                          textOutput(&quot;text2&quot;)
+
+                 )
+               ))
+             ),
+  tabPanel(&quot;词云-love&quot;,
+           sidebarPanel(
+             textInput(&quot;name&quot;,&quot;请输入名字:&quot;,&quot;you name&quot;),
+             actionButton(&quot;ciyun&quot;, &quot;生成词云图&quot;),
+             helpText(&quot;你好，输入姓名点击按钮自动生成词云图，该功能暂时不完善&quot;)
+           ),
+           mainPanel(
+             tabsetPanel(
+               tabPanel(&quot;词云-love&quot;,
+                        h4(&quot;词云-love&quot;),
+                        wordcloud2Output(&quot;image&quot;, width = &quot;100%&quot;, height = &quot;400px&quot;)
+
+
+               ),
+                 tabPanel(&quot;词云-用户输入&quot;,
+                          h4(&quot;词云-用户输入&quot;),
+                          textOutput(&quot;yyy&quot;)
+
+
+                 )
+           )
+)
+),
+
+ tabPanel(&quot;在线爬虫&quot;,
+       sidebarPanel(
+         numericInput(&quot;num2&quot;, label = &quot;1~50之间&quot;, value = 1),
+         numericInput(&quot;num1&quot;, label = &quot;1~20之间&quot;, value = 1),
+         actionButton(&quot;zaixian&quot;, &quot;更新页面&quot;),
+         helpText(&quot;你好，请选择1~50代表页码，1~20代表第几页的第几个内容，请不要超过这两个数字大小&quot;),
+         tags$br(),
+         helpText(&quot;服务器由shinyapps.io免费提供，所以速度较慢&quot;)
+       ),
+       mainPanel(
+         tabsetPanel(
+           tabPanel(&quot;在线爬虫&quot;,
+                    h4(&quot;内容来自百思不得姐图片区&quot;),
+                    tableOutput(&quot;re1&quot;),
+                    uiOutput(&quot;re2&quot;)
+
+
+           )
+         )
+       )
+ ),
+
+ tabPanel(&quot;河南天气系统&quot;,
+       sidebarPanel(
+         textInput(&quot;sql&quot;,&quot;市级:&quot;,&quot;郑州&quot;),
+         textInput(&quot;sql1&quot;,&quot;县级:&quot;,&quot;郑州&quot;),
+         actionButton(&quot;tianqi&quot;, &quot;更新页面&quot;),
+         helpText(&quot;请分别输入市县，如洛阳-伊川，信息实时来自于中国天气网&quot;),
+         tags$br(),
+         helpText(&quot;服务器由shinyapps.io免费提供，所以速度较慢&quot;)
+       ),
+       mainPanel(
+         tabsetPanel(
+           tabPanel(&quot;天气查询&quot;,
+                    h4(&quot;信息来自中国天气网&quot;),
+                    tableOutput(&quot;tianqi&quot;)
+           )
+         )
+       )
+),
+tabPanel(&quot;恐怖漫画&quot;,
+       sidebarPanel(
+         numericInput(&quot;kbnum&quot;, label = &quot;1~25之间&quot;, value = 1),
+         numericInput(&quot;kbnum1&quot;, label = &quot;按照需求选择&quot;, value = 1),
+         actionButton(&quot;kb2&quot;, &quot;更新页面&quot;),
+         helpText(&quot;服务器由shinyapps.io免费提供，所以速度较慢&quot;)
+       ),
+       mainPanel(
+
+         uiOutput(&quot;kbui&quot;)
+       )
+
+)
+
+
+         )
+       )
+)
+</code></pre><p>服务端：</p>
+<pre><code>library(shiny)
+library(shinythemes)
+library(wordcloud2)
+library(ropencc)
+library(rvest)
+
+shinyServer(function(input, output) {
+
+ sliderValues &lt;- reactive({
+  aa&lt;-switch(input$dist,
+       a=1,
+       b=2,
+       c=3,
+       1)
+
+ })
+
+ sliderValues1 &lt;- reactive({
+  aa&lt;-sliderValues()
+  if(aa==1){
+   inFile &lt;- input$file1
+   if (is.null(inFile))
+     return(NULL)
+   zzz&lt;-scan(inFile$datapath,sep=&quot;\n&quot;,what = &quot;&quot;,encoding = &quot;UTF-8&quot;)
+
+}else if(aa==2){
+  zzz&lt;-scan(&quot;./zzz.txt&quot;,sep=&quot;\n&quot;,what = &quot;&quot;,encoding = &quot;UTF-8&quot;)
+}else{
+  zzz&lt;-scan(&quot;./mei.txt&quot;,sep=&quot;\n&quot;,what = &quot;&quot;,encoding = &quot;UTF-8&quot;)
+}
+
+})
+
+df &lt;- eventReactive(input$updata, {
+aa&lt;-sliderValues()
+zzz&lt;-sliderValues1()
+if(aa==1){
+x&lt;-sample(1:length(zzz),1,replace = FALSE)
+}else if(aa==2){
+  x&lt;-sample(1:1000,1,replace = FALSE)
+}else{
+  x&lt;-sample(1:339,1,replace = FALSE)
+}
+})
+
+
+output$moreControls &lt;- renderUI({
+df&lt;-df()
+zzz&lt;-sliderValues1()
+
+pre&lt;-zzz[[df]]
+tags$img(src=pre)
+})
+###table1
+xh&lt;-reactive({
+if(input$dist1){
+  inFile &lt;- input$file1
+  if (is.null(inFile))
+    return(NULL)
+  xh&lt;-scan(inFile$datapath,sep=&quot;\n&quot;,what = &quot;&quot;,encoding = &quot;UTF-8&quot;)
+}else{
+  xh&lt;-scan(&quot;./xiaohua.txt&quot;,sep=&quot;\n&quot;,what = &quot;&quot;,encoding = &quot;UTF-8&quot;)
+}
+})
+
+
+df1&lt;- eventReactive(input$next1, {
+x&lt;-sample(1:997,1,replace = FALSE)
+})
+
+output$text&lt;-renderTable({
+xh&lt;-xh()
+df1&lt;-df1()
+y&lt;-input$num
+xh[df1:(df1+y-1)]
+
+})
+###table2
+###navbar1
+
+na21&lt;- eventReactive(input$gofan,{
+inFile &lt;- input$file2
+if (is.null(inFile))
+  return(NULL)
+fan&lt;-scan(inFile$datapath,sep=&quot;\n&quot;,what = &quot;&quot;,encoding = &quot;UTF-8&quot;)
+})
+
+na22&lt;- eventReactive(input$view, {
+na22&lt;-input$wenben
+</code></pre><p>  })</p>
+<pre><code>output$text1&lt;-renderTable({
+fan&lt;-na21()
+converter(S2T)[fan]
+ })
+##table1
+output$text2&lt;-renderText({
+na22&lt;-na22()
+converter(S2T)[na22]
+})
+##na2
+
+
+
+ciyun&lt;-eventReactive(input$ciyun, {
+name&lt;-input$name
+cipin&lt;-c(rep(&quot;happy&quot;,10),rep(&quot;miss&quot;,12),rep(&quot;love&quot;,14),rep(&quot;you&quot;,10),rep(&quot;like&quot;,12),
+         rep(&quot;sweet&quot;,10),rep(&quot;hourse&quot;,12),rep(&quot;surprise&quot;,13),rep(&quot;dream&quot;,12),rep(&quot;free&quot;,12),
+         rep(&quot;with you&quot;,14),rep(&quot;life&quot;,13),rep(&quot; together&quot;,13),rep(&quot;eternity&quot;,12),rep(&quot;destiny&quot;,6),rep(&quot;cherish&quot;,5),
+         rep(&quot;sunflower&quot;,10),rep(&quot;galaxy&quot;,5),rep(&quot;moment&quot;,14),rep(&quot;bubble&quot;,3),rep(&quot;smile&quot;,7),rep(&quot;lollipop&quot;,8),rep(&quot;umbrella&quot;,8))
+cipin1&lt;-c(cipin,rep(name,15))
+citab&lt;-table(cipin1)
+})
+
+output$yyy&lt;-renderText({
+input$name
+})
+
+
+output$image&lt;-renderWordcloud2({
+citab&lt;-ciyun()
+wordcloud2(citab,size = 0.5,color = &apos;random-dark&apos;,backgroundColor = &quot;snow&quot;,shape=&quot;diamond&quot;)
+})
+##na3
+
+
+zaixian&lt;- eventReactive(input$zaixian, {
+url&lt;-paste(&quot;http://www.budejie.com/pic/&quot;,input$num2,sep=&quot;&quot;)
+web&lt;-read_html(url,encoding = &quot;UTF-8&quot;)
+x&lt;-web%&gt;%html_nodes(&quot;div.j-r-list-tool-ct-fx&quot;)%&gt;%html_nodes(&quot;div&quot;)%&gt;%html_attr(&quot;data-text&quot;)
+y&lt;-web%&gt;%html_nodes(&quot;div.j-r-list-c-img&quot;)%&gt;%html_nodes(&quot;img&quot;)%&gt;%html_attr(&quot;data-original&quot;)
+re&lt;-list()
+for(i in 1:20){
+  re[[x[i]]]&lt;-y[i]
+}
+re
+})
+
+output$re1 &lt;- renderTable({
+re&lt;-zaixian()
+names(re[input$num1])
+})
+
+output$re2 &lt;- renderUI({
+re&lt;-zaixian()
+ree&lt;-re[[input$num1]]
+tags$img(src=ree)
+})
+</code></pre><p>  ###na4</p>
+<pre><code>tianqieve&lt;-eventReactive(input$tianqi,{
+web11&lt;-read_html(&quot;http://www.weather.com.cn/textFC/henan.shtml&quot;,encoding=&quot;UTF-8&quot;)
+web12&lt;-web11%&gt;%html_nodes(&quot;div.conMidtab3&quot;)
+y&lt;-web12%&gt;%html_nodes(&quot;td.rowsPan&quot;)%&gt;%html_text()
+y&lt;-y[1:18]
+i&lt;-which(y==input$sql)
+i&lt;-as.numeric(i)
+x&lt;-web12[[i]]%&gt;%html_text()
+x&lt;-strsplit(x,split = &quot;详情&quot;)
+x&lt;-unlist(x)
+x&lt;-gsub(&quot;\n{1,2}&quot;,&quot; &quot;,x)
+x&lt;-strsplit(x,split = &quot; &quot;)
+x&lt;-do.call(cbind,x)
+x&lt;-as.data.frame(x,stringsAsFactors=F)
+x&lt;-x[-1,]
+x&lt;-x[,-dim(x)[2]]
+colnames(x)&lt;-x[1,]
+x[[1]]&lt;-c(x[[1]][-1],NA)
+x&lt;-x[-dim(x)[1],]
+rownames(x)&lt;-c(&quot;城市&quot;,&quot;天气现象-白天&quot;,&quot;风向-白天&quot;,&quot;风力-白天&quot;,&quot;气温-白天&quot;,&quot;天气现象-夜间&quot;,&quot;风向-夜间&quot;,&quot;风力-夜间&quot;,&quot;气温-夜间&quot;)
+z&lt;-x[,input$sql1,drop=F]
+})
+
+output$tianqi&lt;-renderTable({
+z&lt;-tianqieve()
+t(z)
+})
+
+###na5
+kb1&lt;-reactive({
+urlkb&lt;-paste(&quot;http://heibaimanhua.com/weimanhua/kbmh/page/&quot;,input$kbnum,sep=&quot;&quot;)
+webkb&lt;-read_html(urlkb,encoding = &quot;UTF-8&quot;)
+kbx&lt;-webkb%&gt;%html_nodes(&quot;article.excerpt.excerpt-one&quot;)%&gt;%html_nodes(&quot;a&quot;)%&gt;%html_attr(&quot;title&quot;)
+kby&lt;-webkb%&gt;%html_nodes(&quot;article.excerpt.excerpt-one&quot;)%&gt;%html_nodes(&quot;a&quot;)%&gt;%html_attr(&quot;href&quot;)
+kbkb&lt;-list()
+for(i in 1:length(kbx)){
+  kbkb[[kbx[i]]]&lt;-kby[i]
+}
+kbkb
+})
+
+output$kbkbtext&lt;-renderTable({
+kb1&lt;-kb1()
+paste(1:length(names(kb1)),names(kb1),sep=&quot;,&quot;)
+})
+
+kb2&lt;-eventReactive(input$kb2,{
+kb1&lt;-kb1()
+kbnum1&lt;-input$kbnum1
+urlkb1&lt;-kb1[[kbnum1]]
+webkb1&lt;-read_html(urlkb1,encoding = &quot;UTF-8&quot;)
+kbjie&lt;-webkb1%&gt;%html_nodes(&quot;article.article-content&quot;)%&gt;%html_nodes(&quot;img&quot;)%&gt;%html_attr(&quot;src&quot;)
+})
+
+output$kbui&lt;-renderUI({
+kb2&lt;-kb2()
+tabsetPanel(
+  tabPanel(&quot;目录&quot;,
+
+           tableOutput(&quot;kbkbtext&quot;)
+
+  ),
+  tabPanel(&quot;在线漫画&quot;,
+           tags$img(src=kb2[1]),
+           tags$img(src=kb2[2]),
+           tags$img(src=kb2[3]),
+           tags$img(src=kb2[4]),
+           tags$img(src=kb2[5]),
+           tags$img(src=kb2[6]),
+           tags$img(src=kb2[7]),
+           tags$img(src=kb2[8]),
+           tags$img(src=kb2[9]),
+           tags$img(src=kb2[10]),
+           tags$img(src=kb2[11]),
+           tags$img(src=kb2[12]),
+           tags$img(src=kb2[13]),
+           tags$img(src=kb2[14]),
+           tags$img(src=kb2[15]),
+           tags$img(src=kb2[16]),
+           tags$img(src=kb2[17])
+
+  ))
+})
+})
+</code></pre>
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2017/04/21/多功能shiny网站搭建源码/" data-id="cj1yttkef001y84ncfoqh7q2w" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="/" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="/" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="/" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="/" target="_blank">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2017/04/17/豆瓣相册爬虫/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            豆瓣相册爬虫
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/21/多功能shiny网站搭建源码/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/应用案列/">应用案列</a></p>
+                            <p class="item-title"><a href="/2017/04/21/多功能shiny网站搭建源码/" class="title">多功能shiny网站搭建源码</a></p>
+                            <p class="item-date"><time datetime="2017-04-21T04:00:34.000Z" itemprop="datePublished">2017-04-21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/17/豆瓣相册爬虫/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/应用案列/">应用案列</a></p>
+                            <p class="item-title"><a href="/2017/04/17/豆瓣相册爬虫/" class="title">豆瓣相册爬虫</a></p>
+                            <p class="item-date"><time datetime="2017-04-17T09:30:55.000Z" itemprop="datePublished">2017-04-17</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/17/基于shiny的天气查询系统/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://oo19quur7.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170417170435.png)" alt="基于shiny的天气查询系统" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/应用案列/">应用案列</a></p>
+                            <p class="item-title"><a href="/2017/04/17/基于shiny的天气查询系统/" class="title">基于shiny的天气查询系统</a></p>
+                            <p class="item-date"><time datetime="2017-04-17T08:48:50.000Z" itemprop="datePublished">2017-04-17</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/14/sklearn-K均值/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/sklearn/">sklearn</a></p>
+                            <p class="item-title"><a href="/2017/04/14/sklearn-K均值/" class="title">sklearn-K均值</a></p>
+                            <p class="item-date"><time datetime="2017-04-14T10:17:42.000Z" itemprop="datePublished">2017-04-14</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/14/sklearn-朴素贝叶斯/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/sklearn/">sklearn</a></p>
+                            <p class="item-title"><a href="/2017/04/14/sklearn-朴素贝叶斯/" class="title">sklearn-朴素贝叶斯</a></p>
+                            <p class="item-date"><time datetime="2017-04-14T10:14:03.000Z" itemprop="datePublished">2017-04-14</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/R语言/">R语言</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/excel/">excel</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sklearn/">sklearn</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sql/">sql</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动漫/">动漫</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/应用案列/">应用案列</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法理解/">算法理解</a><span class="category-list-count">12</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">30</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/R/">R</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/R语言/">R语言</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/R，数据分析/">R，数据分析</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/excel/">excel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shiny/">shiny</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/">sql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动漫/">动漫</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图册/">图册</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/实战/">实战</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据分析/">数据分析</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a><span class="tag-list-count">18</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/R/" style="font-size: 10px;">R</a> <a href="/tags/R语言/" style="font-size: 16px;">R语言</a> <a href="/tags/R，数据分析/" style="font-size: 10px;">R，数据分析</a> <a href="/tags/excel/" style="font-size: 10px;">excel</a> <a href="/tags/python/" style="font-size: 18px;">python</a> <a href="/tags/shiny/" style="font-size: 12px;">shiny</a> <a href="/tags/sql/" style="font-size: 12px;">sql</a> <a href="/tags/动漫/" style="font-size: 12px;">动漫</a> <a href="/tags/图册/" style="font-size: 12px;">图册</a> <a href="/tags/实战/" style="font-size: 12px;">实战</a> <a href="/tags/数据分析/" style="font-size: 14px;">数据分析</a> <a href="/tags/算法/" style="font-size: 20px;">算法</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 刘备备</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://yoursite.com/2017/04/21/多功能shiny网站搭建源码/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
