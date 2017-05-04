@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>python-datatime模块 | 欢迎来到数学的世界</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="" />
+    
+    <meta name="description" content="os模块 os.getcwd()返回当前工作目录 os.chdir（“dir”）更改当前工作目录 dir（os），help（os） glob模块 glob.glob(“*.py”)从当前目录搜索文件 日期和时间：datatime模块 from datetime import date,datetime print datetime.today()">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python-datatime模块">
+<meta property="og:url" content="http://yoursite.com/2017/05/04/python-datatime模块/index.html">
+<meta property="og:site_name" content="欢迎来到数学的世界">
+<meta property="og:description" content="os模块 os.getcwd()返回当前工作目录 os.chdir（“dir”）更改当前工作目录 dir（os），help（os） glob模块 glob.glob(“*.py”)从当前目录搜索文件 日期和时间：datatime模块 from datetime import date,datetime print datetime.today()">
+<meta property="og:image" content="http://www.bz55.com/uploads/allimg/150629/139-150629102624.jpg">
+<meta property="og:updated_time" content="2017-05-04T07:07:36.380Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python-datatime模块">
+<meta name="twitter:description" content="os模块 os.getcwd()返回当前工作目录 os.chdir（“dir”）更改当前工作目录 dir（os），help（os） glob模块 glob.glob(“*.py”)从当前目录搜索文件 日期和时间：datatime模块 from datetime import date,datetime print datetime.today()">
+<meta name="twitter:image" content="http://www.bz55.com/uploads/allimg/150629/139-150629102624.jpg">
+    
+
+    
+
+    
+        <link rel="icon" href="/imags/jacman.jpg" />
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?77e3c54cad81ed7b0020dd2bad00c3b1# enter Baidu Analytics hash key";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">我走的很慢，但我每一步都走的很稳</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Inici</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/R/">R</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/excel/">excel</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/python基础/">python基础</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/shiny/">shiny</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/sklearn/">sklearn</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/sql/">sql</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/动漫/">动漫</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/应用案列/">应用案列</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/算法理解/">算法理解</a></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">Quant a</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Cercar" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'categories',
+            TAGS: 'etiquetes',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/python基础/">python基础</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-python-datatime模块" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        python-datatime模块
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/05/04/python-datatime模块/" class="article-date">
+            <time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time>
+        </a>
+    </div>
+
+                
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="http://www.bz55.com/uploads/allimg/150629/139-150629102624.jpg" alt="alt"></p>
+<p>os模块</p>
+<p>os.getcwd()返回当前工作目录</p>
+<p>os.chdir（“dir”）更改当前工作目录</p>
+<p>dir（os），help（os）</p>
+<p>glob模块</p>
+<p>glob.glob(“*.py”)从当前目录搜索文件</p>
+<p>日期和时间：datatime模块</p>
+<p>from datetime import date,datetime</p>
+<p>print datetime.today()</p>
+<a id="more"></a>
+<p>datetime模块定义了两个常量：datetime.MINYEAR和datetime.MAXYEAR，分别表示datetime所能表示的最小、最大年份。其中，MINYEAR = 1，MAXYEAR = 9999。</p>
+<p>•datetime.date：表示日期的类。常用的属性有year, month, day； </p>
+<p>•datetime.time：表示时间的类。常用的属性有hour, minute, second, microsecond； </p>
+<p>•datetime.datetime：表示日期时间。 </p>
+<p>•datetime.timedelta：表示时间间隔，即两个时间点之间的长度。</p>
+<p>上面的类型对象不可变</p>
+<p>1.data类datetime.date</p>
+<p>date类定义了一些常用的类方法与类属性：</p>
+<p>date.today()：返回一个表示当前本地日期的date对象；</p>
+<p>date.max、date.min：date对象所能表示的最大、最小日期；</p>
+<p>date.fromtimestamp(timestamp)：根据给定的时间戮，返回一个date对象；</p>
+<p>date提供的实例方法和属性：</p>
+<p>date.year、date.month、date.day：年、月、日；</p>
+<p>date.replace(year, month, day)：生成一个新的日期对象，用参数指定的年，月，日代替原有对象中的属性。（now = date(2015,6,10)</p>
+<p>tomorrow = now.replace(day = 11)）</p>
+<p>date.weekday()：返回weekday，如果是星期一，返回0；如果是星期2，返回1，以此类推；</p>
+<p>data.isoweekday()：返回weekday，如果是星期一，返回1；如果是星期2，返回2，以此类推；</p>
+<p>date.isocalendar()：返回格式如(year，month，day)的元组；</p>
+<p>date.isoformat()：返回格式如’YYYY-MM-DD’的字符串；</p>
+<p>date.strftime(fmt)：自定义格式化字符串。</p>
+<p>date2 = date1 + timedelta # 日期加上一个间隔，返回一个新的日期对象（timedelta将在下面介绍，表示时间间隔）</p>
+<p>date2 = date1 - timedelta # 日期隔去间隔，返回一个新的日期对象</p>
+<p>timedelta = date1 - date2 # 两个日期相减，返回一个时间间隔对象</p>
+<p>date1 &lt; date2 # 两个日期进行比较</p>
+<p>2.time类</p>
+<p>time类提供的实例方法和属性：</p>
+<p>time.hour、time.minute、time.second、time.microsecond：时、分、秒、微秒；</p>
+<p>time.tzinfo：时区信息；</p>
+<p>time.replace([hour[, minute[, second[, microsecond[, tzinfo]]]]])：创建一个新的时间对象，用参数指定的时、分、秒、微秒代替原有对象中的属性（原有对象仍保持不变）；</p>
+<p>tm.replace(hour = 8) </p>
+<p>time.isoformat()：返回型如”HH:MM:SS”格式的字符串表示；</p>
+<p>time.strftime(fmt)：返回自定义格式化字符串。</p>
+<p>像date一样，time也可以对两个time对象进行比较，或者相减返回一个时间间隔对象。</p>
+<p>3.datatime类：</p>
+<p>datetime.today()：返回一个表示当前本地时间的datetime对象；</p>
+<p>datetime.now([tz])：返回一个表示当前本地时间的datetime对象，如果提供了参数tz，则获取tz参数所指时区的本地时间；</p>
+<p>datetime.fromtimestamp(timestamp[, tz])：根据时间戮创建一个datetime对象，参数tz指定时区信息；</p>
+<p>datetime.utcfromtimestamp(timestamp)：根据时间戮创建一个datetime对象；</p>
+<p>datetime.combine(date, time)：根据date和time，创建一个datetime对象；</p>
+<p>datetime.strptime(date_string, format)：将格式字符串转换为datetime对象；</p>
+<p>datetime.year、month、day、hour、minute、second、microsecond、tzinfo：</p>
+<p>datetime.date()：获取date对象；</p>
+<p>datetime.time()：获取time对象；</p>
+<p>datetime.replace([year[, month[, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]]]]])：</p>
+<p>datetime.weekday()#不准确，晚一天相对于北京时间</p>
+<p>datetime.strftime(format)</p>
+<p>像date一样，也可以对两个datetime对象进行比较，或者相减返回一个时间间隔对象，或者日期时间加上一个间隔返回一个新的日期时间对象。</p>
+<p>格式字符串</p>
+<p>datetime、date、time都提供了strftime()方法，该方法接收一个格式字符串，输出日期时间的字符串表示。</p>
+<p>格式字符    意义</p>
+<p>%a    星期的简写,如星期三为Web</p>
+<p>%A    星期的全写,如星期三为Wednesday</p>
+<p>%b    月份的简写,如4月份为Apr</p>
+<p>%B    月份的全写,如4月份为April</p>
+<p>%c    日期时间的字符串表示。（如： 04/07/10 10:43:39）</p>
+<p>%d    日在这个月中的天数（是这个月的第几天）</p>
+<p>%f    微秒（范围[0,999999]）</p>
+<p>%H    小时（24小时制，[0, 23]）</p>
+<p>%I    小时（12小时制，[0, 11]）</p>
+<p>%j    日在年中的天数 [001,366]（是当年的第几天）</p>
+<p>%m    月份（[01,12]）</p>
+<p>%M    分钟（[00,59]）</p>
+<p>%p    AM或者PM</p>
+<p>%S    秒（范围为[00,61]）</p>
+<p>%U    周在当年的周数当年的第几周），星期天作为周的第一天</p>
+<p>%w    今天在这周的天数，范围为[0, 6]，6表示星期天</p>
+<p>%W    周在当年的周数（是当年的第几周），星期一作为周的第一天</p>
+<p>%x    日期字符串（如：04/07/10）</p>
+<p>%X    时间字符串（如：10:43:39）</p>
+<p>%y    2个数字表示的年份</p>
+<p>%Y    4个数字表示的年份</p>
+<p>%z    与utc时间的间隔 （如果是本地时间，返回空字符串）</p>
+<p>%Z    时区名称（如果是本地时间，返回空字符串）</p>
+<p>%%    %% =&gt; %</p>
+<p>demo:</p>
+<p>dt = datetime.now() </p>
+<p>print ‘(%Y-%m-%d %H:%M:%S %f): ‘, dt.strftime(‘%Y-%m-%d %H:%M:%S %f’) </p>
+<p>print ‘(%Y-%m-%d %H:%M:%S %p): ‘, dt.strftime(‘%y-%m-%d %I:%M:%S %p’) </p>
+<p>print ‘%%a: %s ‘ % dt.strftime(‘%a’) </p>
+<p>print ‘%%A: %s ‘ % dt.strftime(‘%A’) </p>
+<p>print ‘%%b: %s ‘ % dt.strftime(‘%b’) </p>
+<p>print ‘%%B: %s ‘ % dt.strftime(‘%B’) </p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2017/05/04/python-datatime模块/" data-id="cj2a4wve00021mcnczr6j50yr" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="uyan_frame"></div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>seguir:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="/" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="/" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="/" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/liubeibei125" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="http://weibo.com/3861042298" target="_blank">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2017/05/04/python-函数式编程/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">més nou</strong>
+        <p class="article-nav-title">
+        
+            python-函数式编程
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2017/05/04/python-异常处理/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">antic</strong>
+        <p class="article-nav-title">python-异常处理</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/05/04/python-字符串/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150629/139-150629102621.jpg)" alt="python-字符串" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/python基础/">python基础</a></p>
+                            <p class="item-title"><a href="/2017/05/04/python-字符串/" class="title">python-字符串</a></p>
+                            <p class="item-date"><time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/05/04/python-字典/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150629/139-150629102630.jpg)" alt="python-字典" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/python基础/">python基础</a></p>
+                            <p class="item-title"><a href="/2017/05/04/python-字典/" class="title">python-字典</a></p>
+                            <p class="item-date"><time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/05/04/python-元组/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150825/140-150R5094H3.jpg)" alt="python-元组" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/python基础/">python基础</a></p>
+                            <p class="item-title"><a href="/2017/05/04/python-元组/" class="title">python-元组</a></p>
+                            <p class="item-date"><time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/05/04/python-列表/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150825/140-150R5094H2-50.jpg)" alt="python-列表" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/python基础/">python基础</a></p>
+                            <p class="item-title"><a href="/2017/05/04/python-列表/" class="title">python-列表</a></p>
+                            <p class="item-date"><time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/05/04/python-基础0/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150629/139-150629102617.jpg)" alt="python-基础0" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/python基础/">python基础</a></p>
+                            <p class="item-title"><a href="/2017/05/04/python-基础0/" class="title">python-基础0</a></p>
+                            <p class="item-date"><time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://bcy.net/start/">半次元</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/R/">R</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/excel/">excel</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python基础/">python基础</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/shiny/">shiny</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sklearn/">sklearn</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sql/">sql</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动漫/">动漫</a><span class="category-list-count">691</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/应用案列/">应用案列</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法理解/">算法理解</a><span class="category-list-count">12</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">arxius</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">724</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">etiqueta cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/R/" style="font-size: 10px;">R</a> <a href="/tags/R语言/" style="font-size: 18.33px;">R语言</a> <a href="/tags/R，数据分析/" style="font-size: 10px;">R，数据分析</a> <a href="/tags/excel/" style="font-size: 10px;">excel</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/shiny/" style="font-size: 15px;">shiny</a> <a href="/tags/sql/" style="font-size: 11.67px;">sql</a> <a href="/tags/动漫/" style="font-size: 11.67px;">动漫</a> <a href="/tags/图册/" style="font-size: 11.67px;">图册</a> <a href="/tags/实战/" style="font-size: 15px;">实战</a> <a href="/tags/数据分析/" style="font-size: 13.33px;">数据分析</a> <a href="/tags/算法/" style="font-size: 20px;">算法</a>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 刘备备</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2132012"></script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
