@@ -160,102 +160,6 @@ var _hmt = _hmt || [];
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/05/04/python-函数/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150629/139-150629102627.jpg)" alt="python-函数" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/python基础/">python基础</a>
-            </div>
-            <div class="date"><time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/05/04/python-函数/">python-函数</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-通过help(abs)查看abs函数的帮助信息。
-调用函数的时候，如果传入的参数数量不对，会报TypeError的错误
-如果传入的参数数量是对的，但参数类型不能被函数所接受，也会报TypeError的错误
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/05/04/python-元组/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150825/140-150R5094H3.jpg)" alt="python-元组" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/python基础/">python基础</a>
-            </div>
-            <div class="date"><time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/05/04/python-元组/">python-元组</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-元组是元素不可变的列表
-空元组tup=（）
-只有一个元素的元组tup=（50，）
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
         <a href="/2017/05/04/python-字典/" class="thumbnail">
     
     
@@ -306,10 +210,10 @@ dict［“a”］
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/05/04/python-格式化处理/" class="thumbnail">
+        <a href="/2017/05/04/python-基础数据结构/" class="thumbnail">
     
     
-        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150825/140-150R5094H4-50.jpg)" alt="python-格式化处理" class="thumbnail-image"></span>
+        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150825/140-150R5094H4.jpg)" alt="python-基础数据结构" class="thumbnail-image"></span>
     
     
         
@@ -331,16 +235,20 @@ dict［“a”］
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/05/04/python-格式化处理/">python-格式化处理</a>
+        <a href="/2017/05/04/python-基础数据结构/">python-基础数据结构</a>
         </h1>
     
 
         <p class="article-excerpt">
             
-％d，有符号的十进制整数
-％u，无符号十进制整数
-％o，无符号8进制整数
-％a，浮点数，16进制数字
+Python的变量不需要声明，但必须被赋值该变量才存在。多个变量赋值被分配同一个内存。
+六种数据类型
+number（数字），int float bool complex，
+string（字符串），+连接，*复制字符串，不可以被改变
+list（列表），+，*，可以被改变
+tuple（元组），+，不可变的列表
+set（集合），无序不重复序列，空集合用set（）不用｛｝
+dict（字典），空字典｛｝，是一种映射类型
         </p>
     </div>
 </article>
@@ -357,10 +265,10 @@ dict［“a”］
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/05/04/python-迭代器/" class="thumbnail">
+        <a href="/2017/05/04/python-datatime模块/" class="thumbnail">
     
     
-        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150629/139-150629102628.jpg)" alt="python-迭代器" class="thumbnail-image"></span>
+        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150629/139-150629102624.jpg)" alt="python-datatime模块" class="thumbnail-image"></span>
     
     
         
@@ -382,17 +290,21 @@ dict［“a”］
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/05/04/python-迭代器/">python-迭代器</a>
+        <a href="/2017/05/04/python-datatime模块/">python-datatime模块</a>
         </h1>
     
 
         <p class="article-excerpt">
             
-切片：
-L = [‘Michael’, ‘Sarah’, ‘Tracy’, ‘Bob’, ‘Jack’]
-L[-2:]#取L的最后一个
-[‘Bob’, ‘Jack’]
-L[-2:-1]#不取L的最后一个
+os模块
+os.getcwd()返回当前工作目录
+os.chdir（“dir”）更改当前工作目录
+dir（os），help（os）
+glob模块
+glob.glob(“*.py”)从当前目录搜索文件
+日期和时间：datatime模块
+from datetime import date,datetime
+print datetime.today()
         </p>
     </div>
 </article>
@@ -401,6 +313,60 @@ L[-2:-1]#不取L的最后一个
     
     
     
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/05/04/python-数字/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150629/139-150629102632.jpg)" alt="python-数字" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+</span>
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/python基础/">python基础</a>
+            </div>
+            <div class="date"><time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/05/04/python-数字/">python-数字</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            
+数值类型不能被改变，如果重新赋值等于重新分配内存空间
+del x删除对象引用
+数字类型转换int（），float（）
+不同数值类型运算会把整形变为浮点型
+abs（），fabs（），ceil（），floor（）
+sqrt（），max（），min（），round（x，n），modf（）返回整数部分和小数部分
+pow（x，y）x**y的值
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+    
+    
+    
+    
+        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -449,6 +415,54 @@ encode（）编码
 endswith（str，beg，end）查找是否是str结尾，返回布尔值。
 startswith（）。
 
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/05/04/python-迭代器/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150629/139-150629102628.jpg)" alt="python-迭代器" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+</span>
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/python基础/">python基础</a>
+            </div>
+            <div class="date"><time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/05/04/python-迭代器/">python-迭代器</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            
+切片：
+L = [‘Michael’, ‘Sarah’, ‘Tracy’, ‘Bob’, ‘Jack’]
+L[-2:]#取L的最后一个
+[‘Bob’, ‘Jack’]
+L[-2:-1]#不取L的最后一个
         </p>
     </div>
 </article>
@@ -512,10 +526,10 @@ format（）的使用
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/04/30/shiny部署到shinyapps-io/" class="thumbnail">
+        <a href="/2017/05/04/python-格式化处理/" class="thumbnail">
     
     
-        <span style="background-image:url(http://op0i3ktqj.bkt.clouddn.com/59u58PIC7QK_1024.jpg)" alt="shiny部署到shinyapps.io" class="thumbnail-image"></span>
+        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150825/140-150R5094H4-50.jpg)" alt="python-格式化处理" class="thumbnail-image"></span>
     
     
         
@@ -530,21 +544,23 @@ format（）的使用
         
         <div class="article-meta">
             <div class="category">
-            <a class="article-category-link" href="/categories/shiny/">shiny</a>
+            <a class="article-category-link" href="/categories/python基础/">python基础</a>
             </div>
-            <div class="date"><time datetime="2017-04-30T02:28:33.000Z" itemprop="datePublished">2017-04-30</time></div>
+            <div class="date"><time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time></div>
         </div>
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/04/30/shiny部署到shinyapps-io/">shiny部署到shinyapps.io</a>
+        <a href="/2017/05/04/python-格式化处理/">python-格式化处理</a>
         </h1>
     
 
         <p class="article-excerpt">
             
-一切操作基于Rstudio
-shinyapps网站shinyapps.io
+％d，有符号的十进制整数
+％u，无符号十进制整数
+％o，无符号8进制整数
+％a，浮点数，16进制数字
         </p>
     </div>
 </article>
@@ -625,10 +641,10 @@ shinyapps网站shinyapps.io
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2017/05/04/python-数字/" class="thumbnail">
+                            <a href="/2017/06/03/总结几个实用的R技巧/" class="thumbnail">
     
     
-        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150629/139-150629102632.jpg)" alt="python-数字" class="thumbnail-image"></span>
+        <span class="thumbnail-image thumbnail-none"></span>
     
     
 </a>
@@ -636,9 +652,9 @@ shinyapps网站shinyapps.io
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/python基础/">python基础</a></p>
-                            <p class="item-title"><a href="/2017/05/04/python-数字/" class="title">python-数字</a></p>
-                            <p class="item-date"><time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/R/">R</a></p>
+                            <p class="item-title"><a href="/2017/06/03/总结几个实用的R技巧/" class="title">总结几个实用的R技巧.md</a></p>
+                            <p class="item-date"><time datetime="2017-06-03T08:03:35.000Z" itemprop="datePublished">2017-06-03</time></p>
                         </div>
                     </li>
                 
@@ -665,10 +681,10 @@ shinyapps网站shinyapps.io
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2017/05/04/python-基础0/" class="thumbnail">
+                            <a href="/2017/05/04/python-元组/" class="thumbnail">
     
     
-        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150629/139-150629102617.jpg)" alt="python-基础0" class="thumbnail-image"></span>
+        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150825/140-150R5094H3.jpg)" alt="python-元组" class="thumbnail-image"></span>
     
     
 </a>
@@ -677,7 +693,27 @@ shinyapps网站shinyapps.io
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/python基础/">python基础</a></p>
-                            <p class="item-title"><a href="/2017/05/04/python-基础0/" class="title">python-基础0</a></p>
+                            <p class="item-title"><a href="/2017/05/04/python-元组/" class="title">python-元组</a></p>
+                            <p class="item-date"><time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/05/04/python-函数/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150629/139-150629102627.jpg)" alt="python-函数" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/python基础/">python基础</a></p>
+                            <p class="item-title"><a href="/2017/05/04/python-函数/" class="title">python-函数</a></p>
                             <p class="item-date"><time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time></p>
                         </div>
                     </li>
@@ -698,26 +734,6 @@ shinyapps网站shinyapps.io
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/python基础/">python基础</a></p>
                             <p class="item-title"><a href="/2017/05/04/python-函数式编程/" class="title">python-函数式编程</a></p>
-                            <p class="item-date"><time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2017/05/04/python-列表/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150825/140-150R5094H2-50.jpg)" alt="python-列表" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/python基础/">python基础</a></p>
-                            <p class="item-title"><a href="/2017/05/04/python-列表/" class="title">python-列表</a></p>
                             <p class="item-date"><time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time></p>
                         </div>
                     </li>
@@ -751,7 +767,7 @@ shinyapps网站shinyapps.io
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/R/">R</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/excel/">excel</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python基础/">python基础</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/shiny/">shiny</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sklearn/">sklearn</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sql/">sql</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动漫/">动漫</a><span class="category-list-count">554</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/应用案列/">应用案列</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法理解/">算法理解</a><span class="category-list-count">12</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/R/">R</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/excel/">excel</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python基础/">python基础</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/shiny/">shiny</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sklearn/">sklearn</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/sql/">sql</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/动漫/">动漫</a><span class="category-list-count">554</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/应用案列/">应用案列</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法理解/">算法理解</a><span class="category-list-count">12</span></li></ul>
         </div>
     </div>
 
@@ -761,7 +777,7 @@ shinyapps网站shinyapps.io
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">arxius</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">587</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">587</span></li></ul>
         </div>
     </div>
 
@@ -771,7 +787,7 @@ shinyapps网站shinyapps.io
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">etiqueta cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/R/" style="font-size: 10px;">R</a> <a href="/tags/R语言/" style="font-size: 18.33px;">R语言</a> <a href="/tags/R，数据分析/" style="font-size: 10px;">R，数据分析</a> <a href="/tags/excel/" style="font-size: 10px;">excel</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/shiny/" style="font-size: 15px;">shiny</a> <a href="/tags/sql/" style="font-size: 11.67px;">sql</a> <a href="/tags/动漫/" style="font-size: 11.67px;">动漫</a> <a href="/tags/图册/" style="font-size: 11.67px;">图册</a> <a href="/tags/实战/" style="font-size: 15px;">实战</a> <a href="/tags/数据分析/" style="font-size: 13.33px;">数据分析</a> <a href="/tags/算法/" style="font-size: 20px;">算法</a>
+            <a href="/tags/R/" style="font-size: 11.67px;">R</a> <a href="/tags/R语言/" style="font-size: 18.33px;">R语言</a> <a href="/tags/R，数据分析/" style="font-size: 10px;">R，数据分析</a> <a href="/tags/excel/" style="font-size: 10px;">excel</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/shiny/" style="font-size: 15px;">shiny</a> <a href="/tags/sql/" style="font-size: 11.67px;">sql</a> <a href="/tags/动漫/" style="font-size: 11.67px;">动漫</a> <a href="/tags/图册/" style="font-size: 11.67px;">图册</a> <a href="/tags/实战/" style="font-size: 15px;">实战</a> <a href="/tags/数据分析/" style="font-size: 13.33px;">数据分析</a> <a href="/tags/算法/" style="font-size: 20px;">算法</a>
         </div>
     </div>
 
