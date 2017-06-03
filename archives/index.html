@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Arxiu | 欢迎来到数学的世界</title>
+    <title>Archive | 欢迎来到数学的世界</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="description" content="欢迎参观我的网站，这里有我的学习记录，但时间有限，大部分内容都在有道云笔记">
@@ -75,13 +75,13 @@ var _hmt = _hmt || [];
                         <ul id="main-nav">
                             
                                 <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/">Inici</a>
+                                    <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
                                         <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/R/">R</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/excel/">excel</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/python基础/">python基础</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/shiny/">shiny</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/sklearn/">sklearn</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/sql/">sql</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/动漫/">动漫</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/应用案列/">应用案列</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/算法理解/">算法理解</a></li></ul>
                                     
                                 <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/about/index.html">Quant a</a>
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
                                 </li>
                             
                         </ul>
@@ -89,7 +89,7 @@ var _hmt = _hmt || [];
                             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Cercar" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -110,8 +110,8 @@ var _hmt = _hmt || [];
         TRANSLATION: {
             POSTS: 'Posts',
             PAGES: 'Pages',
-            CATEGORIES: 'categories',
-            TAGS: 'etiquetes',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -137,7 +137,7 @@ var _hmt = _hmt || [];
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-archive"></i>Arxiu
+    <i class="icon fa fa-archive"></i>Archive
     </h1>
 </div>
                         <div class="main-body-content">
@@ -163,7 +163,7 @@ var _hmt = _hmt || [];
         <a href="/2017/06/03/总结几个实用的R技巧/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(http://oo19quur7.bkt.clouddn.com/%5BROAME%5D%5B20170413%5D%5B183116%5D%5B0002%5D%5B307991%5D.jpg)" alt="总结几个实用的R技巧.md" class="thumbnail-image"></span>
     
     
         
@@ -191,6 +191,7 @@ var _hmt = _hmt || [];
 
         <p class="article-excerpt">
             
+
 根据数据的值改变因子水平顺序 - reorder()
 
 
@@ -219,10 +220,10 @@ f=mapvalues(f,c(&quot;small&quot;,&quot;medium&quot;, &quot;large&quot;),c(&quot
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/05/04/python-异常处理/" class="thumbnail">
+        <a href="/2017/05/04/python-字符串/" class="thumbnail">
     
     
-        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150629/139-150629102618.jpg)" alt="python-异常处理" class="thumbnail-image"></span>
+        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150629/139-150629102621.jpg)" alt="python-字符串" class="thumbnail-image"></span>
     
     
         
@@ -244,15 +245,25 @@ f=mapvalues(f,c(&quot;small&quot;,&quot;medium&quot;, &quot;large&quot;),c(&quot
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/05/04/python-异常处理/">python-异常处理</a>
+        <a href="/2017/05/04/python-字符串/">python-字符串</a>
         </h1>
     
 
         <p class="article-excerpt">
             
-1.语法错误SyntaxError，少些函数字母等错误
-2.异常，             try：                  语句             except error：                   语句             else ：                    try语句没有异常发生会执行else，有异常发生不执行
-当有多个except时候 最后一个except后可以没有异常名称
+可以使用［］来截取字符串，字符串可变。
+字符串运算符
++，*，［］，［:］，in，not in，r“”。
+字符串格式化见另一篇笔记
+Python3中，所有字符串都是unicode字符串
+Python字符串内置函数
+capitalize（）将字符串首字母转大写
+count（str，beg，end）计算str次数
+decode（encoding，errors=“strict”）解码
+encode（）编码
+endswith（str，beg，end）查找是否是str结尾，返回布尔值。
+startswith（）。
+
         </p>
     </div>
 </article>
@@ -265,52 +276,6 @@ f=mapvalues(f,c(&quot;small&quot;,&quot;medium&quot;, &quot;large&quot;),c(&quot
     
     
         <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/05/04/python-元组/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150825/140-150R5094H3.jpg)" alt="python-元组" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/python基础/">python基础</a>
-            </div>
-            <div class="date"><time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/05/04/python-元组/">python-元组</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-元组是元素不可变的列表
-空元组tup=（）
-只有一个元素的元组tup=（50，）
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -349,6 +314,52 @@ f=mapvalues(f,c(&quot;small&quot;,&quot;medium&quot;, &quot;large&quot;),c(&quot
 通过help(abs)查看abs函数的帮助信息。
 调用函数的时候，如果传入的参数数量不对，会报TypeError的错误
 如果传入的参数数量是对的，但参数类型不能被函数所接受，也会报TypeError的错误
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/05/04/python-元组/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150825/140-150R5094H3.jpg)" alt="python-元组" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+</span>
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/python基础/">python基础</a>
+            </div>
+            <div class="date"><time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/05/04/python-元组/">python-元组</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            
+元组是元素不可变的列表
+空元组tup=（）
+只有一个元素的元组tup=（50，）
         </p>
     </div>
 </article>
@@ -413,59 +424,6 @@ a=abs
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/05/04/python-列表/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150825/140-150R5094H2-50.jpg)" alt="python-列表" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/python基础/">python基础</a>
-            </div>
-            <div class="date"><time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/05/04/python-列表/">python-列表</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-列表操作包含索引，切片，加，乘，检查成员。
-列表数据项可以为不同的类型。
-列表可变，［］索引，［：］切片。
-删除列表中元素del list［2］。
-列表脚本操作符
-len（）长度，+组合，*重复，in是否存在，
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
         <a href="/2017/05/04/python-基础0/" class="thumbnail">
     
     
@@ -511,10 +469,14 @@ for line in open(file,&quot;r&quot;):
     </div>
 </article>
     
+        </div>
+    
 
     
     
     
+    
+        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -569,6 +531,55 @@ y  1  2   3  4
     </div>
 </article>
     
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/05/04/python-列表/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150825/140-150R5094H2-50.jpg)" alt="python-列表" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+</span>
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/python基础/">python基础</a>
+            </div>
+            <div class="date"><time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/05/04/python-列表/">python-列表</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            
+列表操作包含索引，切片，加，乘，检查成员。
+列表数据项可以为不同的类型。
+列表可变，［］索引，［：］切片。
+删除列表中元素del list［2］。
+列表脚本操作符
+len（）长度，+组合，*重复，in是否存在，
+        </p>
+    </div>
+</article>
+    
         </div>
     
 
@@ -577,7 +588,7 @@ y  1  2   3  4
 
 
     <nav id="page-nav">
-        <span class="pages">Pàgina 1 de 76</span>
+        <span class="pages">Page 1 of 76</span>
         <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/76/">76</a><a class="extend next" rel="next" href="/archives/page/2/">&raquo;</a>
     </nav>
 
@@ -587,7 +598,7 @@ y  1  2   3  4
                     <aside id="sidebar">
     <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
     <div class="sidebar-top">
-        <p>seguir:</p>
+        <p>follow:</p>
         <ul class="social-links">
             
                 
@@ -648,7 +659,7 @@ y  1  2   3  4
                             <a href="/2017/06/03/总结几个实用的R技巧/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(http://oo19quur7.bkt.clouddn.com/%5BROAME%5D%5B20170413%5D%5B183116%5D%5B0002%5D%5B307991%5D.jpg)" alt="总结几个实用的R技巧.md" class="thumbnail-image"></span>
     
     
 </a>
@@ -665,30 +676,10 @@ y  1  2   3  4
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2017/05/04/python-异常处理/" class="thumbnail">
+                            <a href="/2017/05/04/python-字符串/" class="thumbnail">
     
     
-        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150629/139-150629102618.jpg)" alt="python-异常处理" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/python基础/">python基础</a></p>
-                            <p class="item-title"><a href="/2017/05/04/python-异常处理/" class="title">python-异常处理</a></p>
-                            <p class="item-date"><time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2017/05/04/python-元组/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150825/140-150R5094H3.jpg)" alt="python-元组" class="thumbnail-image"></span>
+        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150629/139-150629102621.jpg)" alt="python-字符串" class="thumbnail-image"></span>
     
     
 </a>
@@ -697,7 +688,7 @@ y  1  2   3  4
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/python基础/">python基础</a></p>
-                            <p class="item-title"><a href="/2017/05/04/python-元组/" class="title">python-元组</a></p>
+                            <p class="item-title"><a href="/2017/05/04/python-字符串/" class="title">python-字符串</a></p>
                             <p class="item-date"><time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time></p>
                         </div>
                     </li>
@@ -718,6 +709,26 @@ y  1  2   3  4
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/python基础/">python基础</a></p>
                             <p class="item-title"><a href="/2017/05/04/python-函数/" class="title">python-函数</a></p>
+                            <p class="item-date"><time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/05/04/python-元组/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150825/140-150R5094H3.jpg)" alt="python-元组" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/python基础/">python基础</a></p>
+                            <p class="item-title"><a href="/2017/05/04/python-元组/" class="title">python-元组</a></p>
                             <p class="item-date"><time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time></p>
                         </div>
                     </li>
@@ -779,7 +790,7 @@ y  1  2   3  4
             
                 
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">arxius</h3>
+        <h3 class="widget-title">archives</h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">587</span></li></ul>
         </div>
@@ -789,7 +800,7 @@ y  1  2   3  4
             
                 
     <div class="widget-wrap widget-float">
-        <h3 class="widget-title">etiqueta cloud</h3>
+        <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
             <a href="/tags/R/" style="font-size: 11.67px;">R</a> <a href="/tags/R语言/" style="font-size: 18.33px;">R语言</a> <a href="/tags/R，数据分析/" style="font-size: 10px;">R，数据分析</a> <a href="/tags/excel/" style="font-size: 10px;">excel</a> <a href="/tags/python/" style="font-size: 16.67px;">python</a> <a href="/tags/shiny/" style="font-size: 15px;">shiny</a> <a href="/tags/sql/" style="font-size: 11.67px;">sql</a> <a href="/tags/动漫/" style="font-size: 11.67px;">动漫</a> <a href="/tags/图册/" style="font-size: 11.67px;">图册</a> <a href="/tags/实战/" style="font-size: 15px;">实战</a> <a href="/tags/数据分析/" style="font-size: 13.33px;">数据分析</a> <a href="/tags/算法/" style="font-size: 20px;">算法</a>
         </div>
