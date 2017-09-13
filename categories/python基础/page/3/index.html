@@ -3,24 +3,18 @@
 <head>
     <meta charset="utf-8">
     
-    <title>基于shiny的天气查询系统 | 欢迎来到数学的世界</title>
+    <title>Categoria: python基础 | 欢迎来到数学的世界</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="R语言,shiny,实战" />
-    
-    <meta name="description" content="思想很简单，基于Rvest函数制作爬虫，应用shiny搭建平台展示，源代码如下，测试本地可运行，但deploy到shinyapps出错，若你有好的思路，欢迎与我交流">
-<meta name="keywords" content="R语言,shiny,实战">
-<meta property="og:type" content="article">
-<meta property="og:title" content="基于shiny的天气查询系统">
-<meta property="og:url" content="http://yoursite.com/2017/04/17/基于shiny的天气查询系统/index.html">
+    <meta name="description" content="欢迎参观我的网站，这里有我的学习记录，但时间有限，大部分内容都在有道云笔记">
+<meta property="og:type" content="website">
+<meta property="og:title" content="欢迎来到数学的世界">
+<meta property="og:url" content="http://yoursite.com/categories/python基础/page/3/index.html">
 <meta property="og:site_name" content="欢迎来到数学的世界">
-<meta property="og:description" content="思想很简单，基于Rvest函数制作爬虫，应用shiny搭建平台展示，源代码如下，测试本地可运行，但deploy到shinyapps出错，若你有好的思路，欢迎与我交流">
-<meta property="og:image" content="http://op0i3ktqj.bkt.clouddn.com/timg%20%288%29.jpg">
-<meta property="og:updated_time" content="2017-04-28T02:24:38.894Z">
+<meta property="og:description" content="欢迎参观我的网站，这里有我的学习记录，但时间有限，大部分内容都在有道云笔记">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="基于shiny的天气查询系统">
-<meta name="twitter:description" content="思想很简单，基于Rvest函数制作爬虫，应用shiny搭建平台展示，源代码如下，测试本地可运行，但deploy到shinyapps出错，若你有好的思路，欢迎与我交流">
-<meta name="twitter:image" content="http://op0i3ktqj.bkt.clouddn.com/timg%20%288%29.jpg">
+<meta name="twitter:title" content="欢迎来到数学的世界">
+<meta name="twitter:description" content="欢迎参观我的网站，这里有我的学习记录，但时间有限，大部分内容都在有道云笔记">
     
 
     
@@ -143,220 +137,79 @@ var _hmt = _hmt || [];
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/shiny/">shiny</a>
+    <i class="icon fa fa-folder-open"></i>Categoria: <em class="page-title-link">python基础</em>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-基于shiny的天气查询系统" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
+                            
+
+    
+    
         
-            <header class="article-header">
-                
+        
+        <section class="archives-wrap">
+            <div class="archive-year-wrap">
+                <a href="/archives/2017" class="archive-year"><i class="icon fa fa-calendar-o"></i>2017</a>
+            </div>
+            <div class="archives">
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/05/04/python-异常处理/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://www.bz55.com/uploads/allimg/150629/139-150629102618.jpg)" alt="python-异常处理" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+</span>
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/python基础/">python基础</a>
+            </div>
+            <div class="date"><time datetime="2017-05-03T16:00:00.000Z" itemprop="datePublished">2017-05-04</time></div>
+        </div>
+        
     
         <h1 class="article-title" itemprop="name">
-        基于shiny的天气查询系统
+        <a href="/2017/05/04/python-异常处理/">python-异常处理</a>
         </h1>
     
 
-            </header>
-        
-        
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2017/04/17/基于shiny的天气查询系统/" class="article-date">
-            <time datetime="2017-04-17T08:48:50.000Z" itemprop="datePublished">2017-04-17</time>
-        </a>
-    </div>
-
-                
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/R语言/">R语言</a>, <a class="tag-link" href="/tags/shiny/">shiny</a>, <a class="tag-link" href="/tags/实战/">实战</a>
-    </div>
-
-            </div>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            <p><img src="http://op0i3ktqj.bkt.clouddn.com/timg%20%288%29.jpg" alt="Alt text"></p>
-<p>思想很简单，基于Rvest函数制作爬虫，应用shiny搭建平台展示，源代码如下，测试本地可运行，但deploy到shinyapps出错，若你有好的思路，欢迎与我交流</p>
-<a id="more"></a>
-<p>UI端：</p>
-<pre><code>library(shiny)
-library(rvest)
-
-shinyUI(fluidPage(
-
-titlePanel(&quot;weather forecast&quot;),
-#标题
-
-sidebarLayout(
-sidebarPanel(
-  textInput(&quot;city&quot;,&quot;city:&quot;,&quot;河南 商丘 城区&quot;),
-  actionButton(&quot;gocity&quot;, &quot;gocity&quot;),
-  #定义按钮，点击查询天气
-
-  radioButtons(&quot;new&quot;, &quot;new:&quot;,
-               list(&quot;true&quot; = TRUE,
-                    &quot;false&quot; = FALSE
-              )),
-  actionButton(&quot;updata&quot;, &quot;updata&quot;)
-  #定义按钮，点击从中国天气网爬天气信息
-),
-
-
-mainPanel(
-
-tableOutput(&quot;tianqi&quot;))
-#接受服务端输出
-
-   )
- )
-)
-</code></pre><p>服务端：</p>
-<pre><code>library(shiny)
-library(rvest)
-
-shinyServer(function(input, output) {
-
-datasetInput &lt;- reactive({
-
-  df1()
- })
-  #接收按钮事件df1
-
-observeEvent(input$gocity, {
-  cat(&quot;Showing&quot;, input$city, &quot;\n&quot;)
- })
-
-df &lt;- eventReactive(input$gocity, {
-  xx=datasetInput()
-  xx[,input$city]
-
- })
-# 定义查询城市的按钮事件df
-observeEvent(input$updata, {
-  cat(&quot;Showing&quot;, input$new, &quot;\n&quot;)
- })
-
-df1 &lt;- eventReactive(input$updata, {
- web&lt;-read_html(&quot;http://www.weather.com.cn/textFC/henan.shtml&quot;,encoding=&quot;UTF-8&quot;)
- position&lt;-web %&gt;% html_nodes(&quot;div.conMidtab3&quot;)%&gt;%html_nodes(&quot;a&quot;)%&gt;%html_attr(&quot;href&quot;)
- position&lt;-na.omit(position)
- position&lt;-as.vector(position)
- position&lt;-position[!duplicated(position)]
-
- tt&lt;-list()
- for(i in position){
-   web&lt;-read_html(i,encoding = &quot;UTF-8&quot;)
-   pos1&lt;-web%&gt;%html_nodes(&quot;div.crumbs.fl&quot;)%&gt;%html_nodes(&quot;a&quot;)%&gt;%html_text()
-   pos2&lt;-web%&gt;%html_nodes(&quot;div.crumbs.fl&quot;)%&gt;%html_nodes(&quot;span&quot;)%&gt;%html_text()
-   pos2&lt;-pos2[[3]]
-   cityname&lt;-paste(pos1[[1]],pos1[[2]],pos2,sep=&quot; &quot;)
-   tianqi&lt;-web%&gt;%html_nodes(&quot;script&quot;)%&gt;%html_text()
-   tianqi&lt;-tianqi[[4]]
-   rules&lt;-gregexpr(&quot;[0-9]+日[0-9]+时.{10,20}风&quot;,tianqi)
-   tianqi&lt;-regmatches(tianqi,rules)
-   tianqi&lt;-unlist(tianqi)
-   tianqi&lt;-gsub(&quot;[nd][0-9][0-9],&quot;,&quot;&quot;,tianqi)
-   tt[[cityname]]&lt;-tianqi
- }
-
- xx&lt;-do.call(cbind,tt)
-
-})
-#定义按钮事件df1，爬虫，爬虫涉及rvest包，正则表达式，xml解析
-#等内容，不在详细备注
-
-
-output$tianqi &lt;- renderTable({
- df()
-})
-#接收按钮事件df，输出到ui端
-})
-</code></pre><p>本地截图：</p>
-<p><img src="http://oo19quur7.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170417170435.png" alt="Alt text"></p>
-<p><img src="http://oo19quur7.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170417170516.png" alt="Alt text"></p>
-<p><img src="http://oo19quur7.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20170417170625.png" alt="Alt text"></p>
-
-        </div>
-        <footer class="article-footer">
+        <p class="article-excerpt">
             
-
-
-
-    <a data-url="http://yoursite.com/2017/04/17/基于shiny的天气查询系统/" data-id="cj7insj9b003vdwncky1ov6qg" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
-<script>
-    (function ($) {
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-        </footer>
+1.语法错误SyntaxError，少些函数字母等错误
+2.异常，             try：                  语句             except error：                   语句             else ：                    try语句没有异常发生会执行else，有异常发生不执行
+当有多个except时候 最后一个except后可以没有异常名称
+        </p>
     </div>
 </article>
-
-    <section id="comments">
     
-        
-    <div id="uyan_frame"></div>
-
+        </div>
     
-    </section>
+
+
+    </div></section>
+
+
+    <nav id="page-nav">
+        <span class="pages">Pàgina 3 de 3</span>
+        <a class="extend prev" rel="prev" href="/categories/python基础/page/2/">&laquo;</a><a class="page-number" href="/categories/python基础/">1</a><a class="page-number" href="/categories/python基础/page/2/">2</a><span class="page-number current">3</span>
+    </nav>
+
 
 
                         </div>
@@ -409,29 +262,6 @@ output$tianqi &lt;- renderTable({
             
         </ul>
     </div>
-    
-        
-<nav id="article-nav">
-    
-        <a href="/2017/04/14/sklearn-K均值/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">més nou</strong>
-        <p class="article-nav-title">
-        
-            sklearn-K均值
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
-    
-    
-        <a href="/2017/04/17/豆瓣相册爬虫/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">antic</strong>
-        <p class="article-nav-title">豆瓣相册爬虫</p>
-        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
-        </a>
-    
-</nav>
-
     
     <div class="widgets-container">
         
